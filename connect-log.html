@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>コネクトログ — 週次ラポール評価</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .flip-card { perspective: 1000px; }
+    .flip-inner { position: relative; transform-style: preserve-3d; transition: transform 0.55s cubic-bezier(0.4,0,0.2,1); }
+    .flip-card.flipped .flip-inner { transform: rotateY(180deg); }
+    .flip-front, .flip-back { backface-visibility: hidden; -webkit-backface-visibility: hidden; }
+    .flip-back { transform: rotateY(180deg); position: absolute; inset: 0; }
+    .progress-bar { width: 0%; transition: width 1.2s cubic-bezier(0.4,0,0.2,1); }
+    .delta-up   { color: #34d399; }
+    .delta-down { color: #f87171; }
+    @keyframes hint-pulse { 0%,100%{opacity:.5} 50%{opacity:1} }
+    .hint-pulse { animation: hint-pulse 2s ease-in-out infinite; }
+  </style>
+</head>
+<body class="bg-slate-950 min-h-screen text-white">
+
+<header class="border-b border-slate-800/60 px-4 py-3 sticky top-0 bg-slate-950/95 backdrop-blur z-10">
+  <div class="max-w-3xl mx-auto flex items-center justify-between gap-2">
+    <div class="flex items-center gap-2.5 flex-shrink-0">
+      <div class="w-9 h-9 rounded-2xl bg-gradient-to-br from-violet-500 to-blue-600 flex items-center justify-center flex-shrink-0">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>
+          <path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+        </svg>
+      </div>
+      <div>
+        <h1 class="text-base font-black tracking-tight leading-none">コネクトログ</h1>
+        <p class="text-xs text-slate-400 mt-0.5 hidden sm:block">Rapport Building Evaluator</p>
+      </div>
+    </div>
+    <div class="text-right">
+      <div class="text-xs font-bold text-white">第16週</div>
+      <div class="text-xs text-slate-400">4/13（月）〜 4/17（金）</div>
+    </div>
+  </div>
+</header>
+
+<main class="max-w-3xl mx-auto px-4 py-6 space-y-8">
+
+  <!-- ヒーロー -->
+  <section class="bg-slate-900 border border-slate-800 rounded-2xl p-5">
+    <div class="flex items-start gap-5">
+      <div class="flex-shrink-0 flex flex-col items-center gap-2">
+        <div class="relative w-24 h-24">
+          <svg class="w-full h-full -rotate-90" viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="42" fill="none" stroke="#1e293b" stroke-width="10"/>
+            <circle cx="50" cy="50" r="42" fill="none" stroke="url(#scoreGrad)" stroke-width="10" stroke-linecap="round"
+              stroke-dasharray="55 264"/>
+            <defs><linearGradient id="scoreGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#8b5cf6"/><stop offset="100%" stop-color="#3b82f6"/>
+            </linearGradient></defs>
+          </svg>
+          <div class="absolute inset-0 flex flex-col items-center justify-center">
+            <span class="text-3xl font-black text-white">21</span>
+            <span class="text-xs text-slate-400">週間平均</span>
+          </div>
+        </div>
+        <div id="heroFace" class="w-14 h-14"></div>
+      </div>
+      <div class="flex-1 min-w-0">
+        <div class="flex flex-wrap items-center gap-2 mb-1.5">
+          <span class="text-sm font-bold text-violet-300 bg-violet-500/15 border border-violet-500/30 px-2.5 py-0.5 rounded-full">Cランク</span>
+        </div>
+        <p class="text-slate-400 text-base leading-relaxed mb-3">前週比で大幅低下。一方的な説明に偏り、双方向対話が欠落。相手との信頼構築が急務。</p>
+        <div class="grid grid-cols-2 gap-2 text-base">
+          <div class="bg-slate-800/60 border border-slate-700/60 rounded-xl px-3 py-2">
+            <div class="text-slate-400 mb-0.5">セッション数</div>
+            <div class="font-black text-white">1件</div>
+          </div>
+          <div class="bg-slate-800/60 border border-slate-700/60 rounded-xl px-3 py-2">
+            <div class="text-slate-400 mb-0.5">総面談時間</div>
+            <div class="font-black text-white">0h 52m</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 項目別評価 -->
+  <section>
+    <h2 class="text-base font-bold text-slate-300 mb-0.5">項目別 週間評価（8項目）</h2>
+    <p class="text-xs text-slate-500 mb-3 hint-pulse">カードをタップすると詳細フィードバックが表示されます。</p>
+    <div id="itemGrid" class="grid grid-cols-1 gap-3"></div>
+    <div class="flex items-center gap-4 mt-3 text-base text-slate-400">
+      <div class="flex items-center gap-1.5"><div class="w-5 h-1.5 bg-slate-600 rounded-full"></div><span>先週</span></div>
+      <div class="flex items-center gap-1.5"><div class="w-5 h-2 bg-violet-500 rounded-full"></div><span>今週</span></div>
+    </div>
+  </section>
+
+  <!-- 来週の改善フォーカス -->
+  <section>
+    <h2 class="text-base font-bold text-slate-300 mb-3">来週に向けた改善フォーカス</h2>
+    <div id="improvementGrid" class="space-y-3"></div>
+    <div class="mt-4">
+      <h3 class="text-sm font-bold text-slate-400 mb-2">先週との全項目比較</h3>
+      <div id="comparisonBars" class="space-y-2"></div>
+    </div>
+  </section>
+
+</main>
+
+<script>
+  // ============================================================
+  // DATA
+  // ============================================================
+  const ITEMS = [
+    { id: 'listening', emoji: '👂', name: 'リスニング・レシオ', sub: '聴取比率', weekScores: [3], prevAvg: 5, comment: '改善の余地があります。週を通じた意識的な取り組みが必要です。', good: '改善傾向が続いています。', improve: '現状の傾聴比率を維持しつつ、さらに質の高い聴き方を意識しましょう。' },
+    { id: 'open', emoji: '💭', name: 'オープン・クエスチョン', sub: '開かれた質問の数', weekScores: [2], prevAvg: 5, comment: '改善の余地があります。週を通じた意識的な取り組みが必要です。', good: '改善傾向が続いています。', improve: '5W1H質問を意識的に増やし、オープン質問比率 70% 以上を目指しましょう。' },
+    { id: 'backch', emoji: '💬', name: 'バックチャネリング', sub: '相槌の質と頻度', weekScores: [1], prevAvg: 5, comment: '改善の余地があります。週を通じた意識的な取り組みが必要です。', good: '改善傾向が続いています。', improve: '相槌の多様性を意識し、「なるほど」以外の感情的な言葉も取り入れましょう。' },
+    { id: 'mirror', emoji: '🪞', name: 'ミラーリング', sub: '言葉・態度の反映', weekScores: [2], prevAvg: 5, comment: '改善の余地があります。週を通じた意識的な取り組みが必要です。', good: '改善傾向が続いています。', improve: '相手の感情語をそのまま繰り返し、質問に変える練習をしましょう。' },
+    { id: 'selfdis', emoji: '⏱', name: '自己開示のタイミング', sub: '共感的な自己開示', weekScores: [1], prevAvg: 5, comment: '改善の余地があります。週を通じた意識的な取り組みが必要です。', good: '改善傾向が続いています。', improve: '相手が話し終えてから自己開示する習慣を継続しましょう。' },
+    { id: 'empathy', emoji: '❤', name: '感情への共感度', sub: '感情の認識と共鳴', weekScores: [2], prevAvg: 5, comment: '改善の余地があります。週を通じた意識的な取り組みが必要です。', good: '改善傾向が続いています。', improve: 'この高水準を維持してください。' },
+    { id: 'personal', emoji: '🌱', name: 'パーソナル情報の収穫', sub: '個人情報の引き出し', weekScores: [0], prevAvg: 5, comment: '改善の余地があります。週を通じた意識的な取り組みが必要です。', good: '改善傾向が続いています。', improve: '「最近ハマっていることは？」などオープン質問から深掘りしましょう。' },
+    { id: 'safety', emoji: '🛡', name: '心理的安全性の提供', sub: '安心感の醸成', weekScores: [4], prevAvg: 5, comment: '改善の余地があります。週を通じた意識的な取り組みが必要です。', good: '改善傾向が続いています。', improve: '週後半の安全性向上を週初から出せると全体の質が上がります。' }
+  ];
+
+  const FOCUS_ITEMS = [{ itemId: 'listening', focus: '傾聴スキルの強化。相手の意見を積極的に引き出す姿勢の構築' }, { itemId: 'open', focus: '開放的な質問手法の導入。Yes/No質問から拡大質問への転換' }, { itemId: 'empathy', focus: '共感表現の強化。相手の立場・感情への理解を示すコミュニケーション' }];
+
+  function avg(arr) { return Math.round(arr.reduce((a,b)=>a+b,0)/arr.length*10)/10; }
+
+  // ============================================================
+  // THRESHOLDS
+  // ============================================================
+  const THRESHOLDS = [
+    { min:8.5, label:'S',   text:'text-amber-300',  bg:'bg-amber-500/15',  border:'border-amber-500/30',  cardBorder:'border-amber-500/40',  faceBg:'rgba(245,158,11,0.08)', faceStroke:'#fcd34d' },
+    { min:7,   label:'A+',  text:'text-violet-300', bg:'bg-violet-500/15', border:'border-violet-500/30', cardBorder:'border-violet-500/40', faceBg:'rgba(139,92,246,0.08)', faceStroke:'#c4b5fd' },
+    { min:5.5, label:'B+',  text:'text-blue-300',   bg:'bg-blue-500/15',   border:'border-blue-500/30',   cardBorder:'border-blue-500/40',   faceBg:'rgba(59,130,246,0.08)', faceStroke:'#93c5fd' },
+    { min:4,   label:'B',   text:'text-slate-300',  bg:'bg-slate-700/40',  border:'border-slate-600/40',  cardBorder:'border-slate-700',     faceBg:'rgba(100,116,139,0.1)', faceStroke:'#94a3b8' },
+    { min:0,   label:'C',   text:'text-rose-300',   bg:'bg-rose-500/15',   border:'border-rose-500/30',   cardBorder:'border-rose-500/40',   faceBg:'rgba(239,68,68,0.08)',  faceStroke:'#fca5a5' },
+  ];
+  function getT(score) { return THRESHOLDS.find(t => score >= t.min); }
+
+  function faceSvg(score, s) {
+    const w = 2.2;
+    if (score >= 8) return `<svg viewBox="0 0 40 40" fill="none" stroke="${s}" stroke-width="${w}" stroke-linecap="round" stroke-linejoin="round"><circle cx="20" cy="20" r="17"/><path d="M13 25 Q20 31 27 25"/><circle cx="14.5" cy="16" r="1.5" fill="${s}" stroke="none"/><circle cx="25.5" cy="16" r="1.5" fill="${s}" stroke="none"/></svg>`;
+    if (score >= 6) return `<svg viewBox="0 0 40 40" fill="none" stroke="${s}" stroke-width="${w}" stroke-linecap="round" stroke-linejoin="round"><circle cx="20" cy="20" r="17"/><path d="M13 26 Q20 29 27 26"/><circle cx="14.5" cy="16" r="1.5" fill="${s}" stroke="none"/><circle cx="25.5" cy="16" r="1.5" fill="${s}" stroke="none"/></svg>`;
+    if (score >= 4) return `<svg viewBox="0 0 40 40" fill="none" stroke="${s}" stroke-width="${w}" stroke-linecap="round" stroke-linejoin="round"><circle cx="20" cy="20" r="17"/><line x1="13" y1="27" x2="27" y2="27"/><circle cx="14.5" cy="16" r="1.5" fill="${s}" stroke="none"/><circle cx="25.5" cy="16" r="1.5" fill="${s}" stroke="none"/></svg>`;
+    return `<svg viewBox="0 0 40 40" fill="none" stroke="${s}" stroke-width="${w}" stroke-linecap="round" stroke-linejoin="round"><circle cx="20" cy="20" r="17"/><path d="M13 27 Q20 20 27 27"/><circle cx="14.5" cy="16" r="1.5" fill="${s}" stroke="none"/><circle cx="25.5" cy="16" r="1.5" fill="${s}" stroke="none"/></svg>`;
+  }
+
+  // ============================================================
+  // INIT
+  // ============================================================
+  function init() {
+    const totalScore = 21;
+    const target = getT(totalScore / 10);
+    document.getElementById('heroFace').innerHTML = faceSvg(totalScore / 10, target.faceStroke);
+    renderItemGrid();
+    renderImprovement();
+  }
+
+  function renderItemGrid() {
+    const grid = document.getElementById('itemGrid');
+    grid.innerHTML = ITEMS.map(item => {
+      const weekAvg = avg(item.weekScores);
+      const t = getT(weekAvg);
+      const delta = Math.round((weekAvg - item.prevAvg) * 10) / 10;
+      const deltaLabel = delta > 0 ? `上昇 +${delta}` : delta < 0 ? `下降 ${delta}` : '変化なし';
+      const deltaCls   = delta > 0 ? 'delta-up' : delta < 0 ? 'delta-down' : 'text-slate-500';
+      const isGood = weekAvg >= 7;
+      const face = faceSvg(weekAvg, t.faceStroke);
+      return `
+        <div class="flip-card" style="height:160px" role="button" tabindex="0">
+          <div class="flip-inner w-full h-full">
+            <div class="flip-front absolute inset-0 bg-slate-900 ${t.cardBorder} border rounded-2xl p-3 flex items-center gap-4">
+              <div class="flex-shrink-0 flex flex-col items-center justify-center gap-1 w-28 h-full rounded-xl" style="background:${t.faceBg}">
+                <div class="w-14 h-14">${face}</div>
+                <div class="flex items-baseline gap-0.5">
+                  <span class="text-3xl font-black ${t.text}">${weekAvg}</span>
+                  <span class="text-slate-500 text-xs">/10</span>
+                </div>
+              </div>
+              <div class="flex-1 min-w-0 flex flex-col justify-between h-full py-0.5">
+                <div>
+                  <div class="flex items-center gap-2 mb-1">
+                    <div class="w-6 h-6 rounded-lg ${t.bg} border ${t.border} flex items-center justify-center text-sm flex-shrink-0">${item.emoji}</div>
+                    <div class="font-bold text-sm leading-tight">${item.name}</div>
+                  </div>
+                  <div class="text-xs text-slate-500">${item.sub}</div>
+                </div>
+                <div class="flex items-center justify-between">
+                  <span class="${t.bg} ${t.text} text-xs px-2 py-0.5 rounded-full border ${t.border} font-semibold">${t.label}</span>
+                  <span class="text-xs ${deltaCls} font-semibold">${deltaLabel}</span>
+                </div>
+                <div class="text-xs text-slate-600 hint-pulse">タップで詳細</div>
+              </div>
+            </div>
+            <div class="flip-back bg-slate-900 ${t.cardBorder} border rounded-2xl p-3 flex items-stretch gap-3 overflow-hidden">
+              <div class="flex-shrink-0 flex flex-col items-center justify-center gap-1 w-20">
+                <div class="w-8 h-8 rounded-lg ${t.bg} border ${t.border} flex items-center justify-center text-base">${item.emoji}</div>
+                <span class="text-xs font-bold ${t.text} text-center">${weekAvg}<span class="text-slate-500">/10</span></span>
+                <span class="${t.bg} ${t.text} text-xs px-1.5 py-0.5 rounded-full border ${t.border} font-bold">${t.label}</span>
+              </div>
+              <div class="flex-1 min-w-0 flex flex-col gap-1.5 overflow-y-auto">
+                ${isGood ? `<div class="bg-emerald-500/10 border border-emerald-500/20 rounded-lg px-2 py-1.5"><div class="text-xs font-bold text-emerald-300 mb-0.5">よかった点</div><p class="text-xs text-slate-300 leading-relaxed">${item.good}</p></div>` : ''}
+                <div class="bg-violet-500/10 border border-violet-500/20 rounded-lg px-2 py-1.5 flex-1">
+                  <div class="text-xs font-bold text-violet-300 mb-0.5">${isGood ? '継続のヒント' : '改善のヒント'}</div>
+                  <p class="text-xs text-slate-300 leading-relaxed">${item.improve}</p>
+                </div>
+                <div class="text-xs text-slate-600 hint-pulse">タップで戻る</div>
+              </div>
+            </div>
+          </div>
+        </div>`;
+    }).join('');
+    grid.querySelectorAll('.flip-card').forEach(card => {
+      const toggle = () => card.classList.toggle('flipped');
+      card.addEventListener('click', toggle);
+      card.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); } });
+    });
+  }
+
+  function renderImprovement() {
+    const sorted = ITEMS.map(item => ({ ...item, weekAvg: avg(item.weekScores), delta: Math.round((avg(item.weekScores) - item.prevAvg)*10)/10 })).sort((a,b) => a.weekAvg - b.weekAvg);
+    const worst = sorted.slice(0,3);
+    const best  = sorted.slice(-1)[0];
+    const grid  = document.getElementById('improvementGrid');
+    grid.innerHTML = worst.map((item,i) => {
+      const deltaStr = item.delta >= 0 ? `上昇 +${item.delta}` : `下降 ${item.delta}`;
+      const deltaCls = item.delta >= 0 ? 'delta-up' : 'delta-down';
+      return `<div class="p-3 bg-rose-500/5 border border-rose-500/20 rounded-xl">
+        <div class="flex items-center gap-2 mb-1.5">
+          <div class="w-5 h-5 rounded-full bg-rose-500 flex items-center justify-center text-white text-xs font-black flex-shrink-0">${i+1}</div>
+          <span class="font-bold text-sm">${item.name}</span>
+          <span class="ml-auto text-xs ${deltaCls} font-bold">${deltaStr}</span>
+        </div>
+        <p class="text-xs text-slate-400 leading-relaxed mb-1.5">${item.comment}</p>
+        <div class="text-xs text-violet-400 font-semibold bg-violet-500/10 rounded-lg px-2.5 py-1.5 border border-violet-500/20">${item.improve}</div>
+      </div>`;
+    }).join('') + `<div class="p-3 bg-emerald-500/5 border border-emerald-500/20 rounded-xl">
+      <div class="flex items-center gap-2 mb-1.5">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+        <span class="font-bold text-sm text-emerald-300">今週のよかった点</span>
+      </div>
+      <p class="text-xs text-slate-400 leading-relaxed mb-1.5">${best.name}が週平均 ${best.weekAvg} と高水準で安定しています。</p>
+      <div class="text-xs text-emerald-400 font-semibold bg-emerald-500/10 rounded-lg px-2.5 py-1.5 border border-emerald-500/20">この調子を来週も継続してください。</div>
+    </div>`;
+
+    const bars = document.getElementById('comparisonBars');
+    bars.innerHTML = ITEMS.map(item => {
+      const weekAvg = avg(item.weekScores);
+      const prevPct = Math.round(item.prevAvg * 10);
+      const currPct = Math.round(weekAvg * 10);
+      const delta   = Math.round((weekAvg - item.prevAvg)*10)/10;
+      const deltaStr = delta >= 0 ? `+${delta}` : `${delta}`;
+      const deltaCls = delta >= 0 ? 'delta-up' : 'delta-down';
+      return `<div class="flex items-center gap-2">
+        <span class="text-xs text-slate-400 w-28 flex-shrink-0">${item.name}</span>
+        <div class="flex-1 flex flex-col gap-0.5">
+          <div class="h-1.5 bg-slate-800 rounded-full overflow-hidden"><div class="h-full bg-slate-600 rounded-full progress-bar" style="width:${prevPct}%"></div></div>
+          <div class="h-2 bg-slate-800 rounded-full overflow-hidden"><div class="h-full bg-violet-500 rounded-full progress-bar" style="width:${currPct}%"></div></div>
+        </div>
+        <span class="text-xs ${deltaCls} font-bold w-8 text-right flex-shrink-0">${deltaStr}</span>
+      </div>`;
+    }).join('');
+
+    requestAnimationFrame(() => {
+      document.querySelectorAll('.progress-bar').forEach(el => { const w = el.style.width; el.style.width='0%'; requestAnimationFrame(() => { requestAnimationFrame(() => { el.style.width = w; }); }); });
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', init);
+</script>
+</body>
+</html>
