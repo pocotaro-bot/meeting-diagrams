@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<title>商談メモ: 自分自身さんとの対話型</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<style>
+  body { background: #f8fafc; color: #1e293b; font-family: 'Hiragino Kana Gothic ProN','Hiragino Sans','Yu Gothic','Meiryo',sans-serif; -webkit-tap-highlight-color: transparent; }
+  .ads-card { background: #fff; border: 1px solid #e2e8f0; border-radius: 1rem; }
+  @media print { .no-print { display: none !important; } }
+</style>
+</head>
+<body class="min-h-screen pb-16" style="padding-bottom:env(safe-area-inset-bottom,16px)">
+
+<!-- ヘッダー -->
+<header class="sticky top-0 z-10 bg-white/90 backdrop-blur border-b border-slate-200">
+  <div class="max-w-2xl mx-auto px-4 py-3 flex items-center justify-between">
+    <span class="text-base font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-full">商談メモ</span>
+    <button onclick="window.print()" class="no-print flex items-center gap-1.5 text-sm text-slate-400 hover:text-blue-600 transition-colors">
+      <i data-lucide="printer" class="w-4 h-4"></i> PDF
+    </button>
+  </div>
+</header>
+
+<main class="max-w-2xl mx-auto px-4 py-8 space-y-8">
+
+  <!-- ヒーロー -->
+  <div class="ads-card p-6">
+    <p class="text-xs text-slate-400 mb-1">これはデモ用サンプルです</p>
+    <h1 class="text-2xl sm:text-3xl font-black text-slate-900 leading-tight mb-2">
+      自分自身さんとの対話型
+    </h1>
+    <p class="text-base text-slate-500 mb-4">県民ショーの食品について</p>
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-base">
+      <div>
+        <p class="text-slate-400 flex items-center gap-1 mb-0.5"><i data-lucide="calendar" class="w-3.5 h-3.5"></i> 日時</p>
+        <p class="font-semibold text-slate-700">2026年4月19日</p>
+      </div>
+      <div>
+        <p class="text-slate-400 flex items-center gap-1 mb-0.5"><i data-lucide="user" class="w-3.5 h-3.5"></i> 相手</p>
+        <p class="font-semibold text-slate-700">自分自身</p>
+        
+        
+      </div>
+      <div><p class="text-slate-400 flex items-center gap-1 mb-0.5"><i data-lucide="map-pin" class="w-3.5 h-3.5"></i> 場所</p><p class="font-semibold text-slate-700">不明</p></div>
+      
+    </div>
+  </div>
+
+  <!-- 相手を知る -->
+  <section>
+    <h2 class="text-lg font-black text-slate-700 mb-3 flex items-center gap-2">
+      <i data-lucide="user-search" class="w-5 h-5 text-blue-500"></i> 相手を知る
+    </h2>
+    <div class="grid sm:grid-cols-3 gap-3">
+      <div class="ads-card border-amber-200 bg-amber-50 p-4">
+    <p class="text-base font-bold text-amber-600 uppercase tracking-wide mb-1">課題</p>
+    <p class="text-base font-black text-amber-700 leading-snug mb-2">食品の種類と特徴の把握</p>
+    <p class="text-sm text-slate-600 leading-relaxed">551の肉まん、豚まんの違いが判別しにくく、また各種中華まんの特徴や美味しさについて整理が必要であるという状況が示唆されている。</p>
+  </div>
+      <div class="ads-card border-blue-200 bg-blue-50 p-4">
+    <p class="text-base font-bold text-blue-600 uppercase tracking-wide mb-1">価値観</p>
+    <p class="text-base font-black text-blue-700 leading-snug mb-2">食品品質の評価</p>
+    <p class="text-sm text-slate-600 leading-relaxed">丸岡の餃子が美味しいこと、551のシューマイが美味しいことなど、提供者や商品ごとの品質差を認識して評価する姿勢が見られる。</p>
+  </div>
+      <div class="ads-card border-green-200 bg-green-50 p-4">
+    <p class="text-base font-bold text-green-600 uppercase tracking-wide mb-1">期待</p>
+    <p class="text-base font-black text-green-700 leading-snug mb-2">商品知識の深化</p>
+    <p class="text-sm text-slate-600 leading-relaxed">今後、551の肉まん・豚まんの違いをより詳しく理解し、各商品の特徴を明確に説明できるようになることが期待される。</p>
+  </div>
+    </div>
+  </section>
+
+  <!-- キーポイント -->
+  <section>
+    <h2 class="text-lg font-black text-slate-700 mb-3 flex items-center gap-2">
+      <i data-lucide="star" class="w-5 h-5 text-amber-500"></i> キーポイント
+    </h2>
+    <div class="space-y-3">
+      <div class="ads-card p-5">
+    <div class="flex items-start gap-3">
+      <span class="shrink-0 w-7 h-7 rounded-full bg-amber-500 text-white text-sm font-black flex items-center justify-center">1</span>
+      <div class="flex-1 min-w-0">
+        <p class="text-lg font-black text-slate-800 leading-snug mb-2">551の肉まん・豚まん販売</p>
+        <p class="text-base text-slate-600 leading-relaxed mb-2">県民ショーのイベントで551ブランドの肉まんと豚まんが販売されているという情報が出た。</p>
+        
+        <p class="text-base font-bold text-blue-600 mt-2">県民ショーで551の肉まん、豚まんをやっているとのこと</p>
+      </div>
+    </div>
+  </div><div class="ads-card p-5">
+    <div class="flex items-start gap-3">
+      <span class="shrink-0 w-7 h-7 rounded-full bg-amber-500 text-white text-sm font-black flex items-center justify-center">2</span>
+      <div class="flex-1 min-w-0">
+        <p class="text-lg font-black text-slate-800 leading-snug mb-2">豚まんと肉まんの違い</p>
+        <p class="text-base text-slate-600 leading-relaxed mb-2">両商品の差別化ポイントが明確になっていないため、顧客説明時に課題となる可能性があるという話が出た。</p>
+        
+        <p class="text-base font-bold text-blue-600 mt-2">豚まんと肉まんの違いが分からないという課題</p>
+      </div>
+    </div>
+  </div><div class="ads-card p-5">
+    <div class="flex items-start gap-3">
+      <span class="shrink-0 w-7 h-7 rounded-full bg-amber-500 text-white text-sm font-black flex items-center justify-center">3</span>
+      <div class="flex-1 min-w-0">
+        <p class="text-lg font-black text-slate-800 leading-snug mb-2">丸岡の餃子評価</p>
+        <p class="text-base text-slate-600 leading-relaxed mb-2">丸岡ブランドの餃子については他社比較で美味しいとの評価が出ているとのこと。</p>
+        
+        <p class="text-base font-bold text-blue-600 mt-2">丸岡の餃子が美味しいと感じている</p>
+      </div>
+    </div>
+  </div><div class="ads-card p-5">
+    <div class="flex items-start gap-3">
+      <span class="shrink-0 w-7 h-7 rounded-full bg-amber-500 text-white text-sm font-black flex items-center justify-center">4</span>
+      <div class="flex-1 min-w-0">
+        <p class="text-lg font-black text-slate-800 leading-snug mb-2">シューマイの品質</p>
+        <p class="text-base text-slate-600 leading-relaxed mb-2">551が提供するシューマイについては高い品質評価がされているという話が出た。</p>
+        
+        <p class="text-base font-bold text-blue-600 mt-2">551のシューマイは美味しい</p>
+      </div>
+    </div>
+  </div>
+    </div>
+  </section>
+
+  <!-- 次回の話題ネタ -->
+  
+  <section>
+    <h2 class="text-lg font-black text-slate-700 mb-3 flex items-center gap-2">
+      <i data-lucide="message-circle" class="w-5 h-5 text-purple-500"></i> 次回また話したいこと
+    </h2>
+    <div class="grid sm:grid-cols-2 gap-3">
+      <div class="ads-card border-purple-200 bg-purple-50 p-4">
+    <p class="text-base font-bold text-purple-500 uppercase tracking-wide mb-2 flex items-center gap-1.5">
+      <i data-lucide="star" class="w-4 h-4"></i> 話題ネタ1
+    </p>
+    <p class="text-base font-black text-purple-800 leading-snug mb-1">551肉まん・豚まんの商品差別化</p>
+    <p class="text-sm text-slate-600 leading-relaxed">豚まんと肉まんの具体的な違い、製法、味の特徴、対象顧客などを詳しく確認し、営業時に明確に説明できる情報を整理する。</p>
+  </div><div class="ads-card border-purple-200 bg-purple-50 p-4">
+    <p class="text-base font-bold text-purple-500 uppercase tracking-wide mb-2 flex items-center gap-1.5">
+      <i data-lucide="coffee" class="w-4 h-4"></i> 話題ネタ2
+    </p>
+    <p class="text-base font-black text-purple-800 leading-snug mb-1">中華まん・餃子の競合比較分析</p>
+    <p class="text-sm text-slate-600 leading-relaxed">丸岡の餃子が美味しいという評価と551の商品群の品質を比較し、各ブランドの強み・弱みを把握して顧客訴求ポイントを構築する。</p>
+  </div>
+    </div>
+  </section>
+
+  <!-- ネクストアクション -->
+  
+  <section>
+    <h2 class="text-lg font-black text-slate-700 mb-3 flex items-center gap-2">
+      <i data-lucide="check-square" class="w-5 h-5 text-green-500"></i> ネクストアクション
+    </h2>
+    <div class="space-y-2">
+      <div class="ads-card p-4 flex items-start gap-3">
+    <i data-lucide="arrow-right-circle" class="w-5 h-5 text-green-500 shrink-0 mt-0.5"></i>
+    <div class="flex-1 min-w-0">
+      <div class="flex items-center gap-2 mb-0.5 flex-wrap">
+        <p class="text-lg font-black text-slate-800">551肉まん・豚まんの商品仕様確認</p>
+        <span class="text-sm font-bold px-2 py-0.5 rounded-full border bg-amber-50 border-amber-200 text-amber-700">今週中</span>
+      </div>
+      <p class="text-sm text-slate-500 leading-relaxed">営業資料や商品説明書から肉まんと豚まんの成分、製造工程、味の特徴などを整理する</p>
+    </div>
+  </div><div class="ads-card p-4 flex items-start gap-3">
+    <i data-lucide="arrow-right-circle" class="w-5 h-5 text-green-500 shrink-0 mt-0.5"></i>
+    <div class="flex-1 min-w-0">
+      <div class="flex items-center gap-2 mb-0.5 flex-wrap">
+        <p class="text-lg font-black text-slate-800">競合商品の比較分析</p>
+        <span class="text-sm font-bold px-2 py-0.5 rounded-full border bg-amber-50 border-amber-200 text-amber-700">来週中</span>
+      </div>
+      <p class="text-sm text-slate-500 leading-relaxed">丸岡の餃子と551の餃子を含む関連商品の比較情報を集約し、営業トークの材料とする</p>
+    </div>
+  </div>
+    </div>
+  </section>
+
+  <!-- キーワード -->
+  
+
+  <!-- 自己評価 -->
+  
+  <section>
+    <h2 class="text-lg font-black text-slate-700 mb-3 flex items-center gap-2">
+      <i data-lucide="bar-chart-2" class="w-5 h-5 text-rose-500"></i> 自己評価
+    </h2>
+    <div class="space-y-3">
+      <div class="ads-card border-rose-100 bg-rose-50 p-5">
+    <div class="flex items-start gap-3">
+      <i data-lucide="alert-circle" class="w-5 h-5 text-rose-400 shrink-0 mt-0.5"></i>
+      <div class="flex-1 min-w-0">
+        <p class="text-base font-black text-slate-800 mb-1">商品知識の不足</p>
+        <p class="text-base text-slate-600 leading-relaxed mb-3">「豚まんと肉まんの違いが分かりません」という発言から、取り扱い商品の基本的な特徴を理解していない状態が示唆される。営業場面では説得力を欠く可能性がある。</p>
+        <div class="bg-white border border-rose-100 rounded-xl p-3">
+          <p class="text-sm font-bold text-rose-500 mb-1">改善案</p>
+          <p class="text-base text-slate-700">販売前に商品説明書や営業資料を確認し、各商品の違いや特徴を事前に整理してから販売に臨むプロセスを構築する</p>
+        </div>
+      </div>
+    </div>
+  </div><div class="ads-card border-rose-100 bg-rose-50 p-5">
+    <div class="flex items-start gap-3">
+      <i data-lucide="alert-circle" class="w-5 h-5 text-rose-400 shrink-0 mt-0.5"></i>
+      <div class="flex-1 min-w-0">
+        <p class="text-base font-black text-slate-800 mb-1">構造的な説明の欠如</p>
+        <p class="text-base text-slate-600 leading-relaxed mb-3">商品評価がまとまりなく羅列されており、「なぜその商品が良いのか」という根拠が提示されていない。雑談的な印象が強い。</p>
+        <div class="bg-white border border-rose-100 rounded-xl p-3">
+          <p class="text-sm font-bold text-rose-500 mb-1">改善案</p>
+          <p class="text-base text-slate-700">商品紹介時は『商品名→特徴→利点→ターゲット』という構造で説明する癖をつけ、より体系的なコミュニケーションを心がける</p>
+        </div>
+      </div>
+    </div>
+  </div>
+    </div>
+    
+    <div class="ads-card p-5 mt-3">
+      <div class="flex items-center gap-2 mb-3">
+        <i data-lucide="check" class="w-4 h-4 text-green-500 shrink-0"></i>
+        <p class="text-lg font-bold text-slate-700">できていたこと</p>
+      </div>
+      <ul class="space-y-3 text-base text-slate-500">
+        <li class="flex items-start gap-2"><span class="text-green-500 font-bold shrink-0 mt-0.5">•</span><span>複数の商品について具体的に評価できており、商品への関心度が示されている</span></li><li class="flex items-start gap-2"><span class="text-green-500 font-bold shrink-0 mt-0.5">•</span><span>自分の理解に不明な点（豚まんと肉まんの違い）を認識しており、改善意欲がある</span></li><li class="flex items-start gap-2"><span class="text-green-500 font-bold shrink-0 mt-0.5">•</span><span>楽しい雰囲気で発言しており、コミュニケーション態度は前向きである</span></li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<footer class="max-w-2xl mx-auto px-4 pt-6 pb-10 border-t border-slate-200/60">
+  <p class="text-base text-slate-400 text-center">AI-Driven School の図解ツールで自動生成</p>
+</footer>
+
+<!-- 編集ボタン（右下 FAB） -->
+
+<a href="https://script.google.com/macros/s/AKfycbzo1FhVhCL4JliABgDk5xTv_vQmV6LhHdr04pM27tvkmitHe7Dh_m1ECAYxCOFe12TiSA/exec?slug=20260419-自分自身" class="no-print fixed bottom-6 right-6 z-50 flex items-center gap-2 bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white font-bold text-base px-5 py-3 rounded-full shadow-lg transition-colors" style="bottom:calc(1.5rem + env(safe-area-inset-bottom,0px))">
+  <i data-lucide="pencil" class="w-4 h-4"></i> 編集
+</a>
+
+<script id="meeting-data" type="application/json">{"meeting":{"date":"2026年4月19日","person_name":"自分自身","headline":"県民ショーの食品について","scene_type":"対話型","company":"","role":"","location":"不明","attendees_self":"","attendees_other":""},"know_them":{"issue":{"title":"食品の種類と特徴の把握","detail":"551の肉まん、豚まんの違いが判別しにくく、また各種中華まんの特徴や美味しさについて整理が必要であるという状況が示唆されている。"},"values":{"title":"食品品質の評価","detail":"丸岡の餃子が美味しいこと、551のシューマイが美味しいことなど、提供者や商品ごとの品質差を認識して評価する姿勢が見られる。"},"expectation":{"title":"商品知識の深化","detail":"今後、551の肉まん・豚まんの違いをより詳しく理解し、各商品の特徴を明確に説明できるようになることが期待される。"}},"key_points":[{"title":"551の肉まん・豚まん販売","highlight":"県民ショーで551の肉まん、豚まんをやっているとのこと","detail":"県民ショーのイベントで551ブランドの肉まんと豚まんが販売されているという情報が出た。","quote":""},{"title":"豚まんと肉まんの違い","highlight":"豚まんと肉まんの違いが分からないという課題","detail":"両商品の差別化ポイントが明確になっていないため、顧客説明時に課題となる可能性があるという話が出た。","quote":""},{"title":"丸岡の餃子評価","highlight":"丸岡の餃子が美味しいと感じている","detail":"丸岡ブランドの餃子については他社比較で美味しいとの評価が出ているとのこと。","quote":""},{"title":"シューマイの品質","highlight":"551のシューマイは美味しい","detail":"551が提供するシューマイについては高い品質評価がされているという話が出た。","quote":""}],"next_topics":[{"label":"話題ネタ1","title":"551肉まん・豚まんの商品差別化","detail":"豚まんと肉まんの具体的な違い、製法、味の特徴、対象顧客などを詳しく確認し、営業時に明確に説明できる情報を整理する。","icon":"star"},{"label":"話題ネタ2","title":"中華まん・餃子の競合比較分析","detail":"丸岡の餃子が美味しいという評価と551の商品群の品質を比較し、各ブランドの強み・弱みを把握して顧客訴求ポイントを構築する。","icon":"coffee"}],"next_actions":[{"title":"551肉まん・豚まんの商品仕様確認","detail":"営業資料や商品説明書から肉まんと豚まんの成分、製造工程、味の特徴などを整理する","deadline":"今週中"},{"title":"競合商品の比較分析","detail":"丸岡の餃子と551の餃子を含む関連商品の比較情報を集約し、営業トークの材料とする","deadline":"来週中"}],"self_evaluation":{"good_points":["複数の商品について具体的に評価できており、商品への関心度が示されている","自分の理解に不明な点（豚まんと肉まんの違い）を認識しており、改善意欲がある","楽しい雰囲気で発言しており、コミュニケーション態度は前向きである"],"improvements":[{"title":"商品知識の不足","detail":"「豚まんと肉まんの違いが分かりません」という発言から、取り扱い商品の基本的な特徴を理解していない状態が示唆される。営業場面では説得力を欠く可能性がある。","suggestion":"販売前に商品説明書や営業資料を確認し、各商品の違いや特徴を事前に整理してから販売に臨むプロセスを構築する"},{"title":"構造的な説明の欠如","detail":"商品評価がまとまりなく羅列されており、「なぜその商品が良いのか」という根拠が提示されていない。雑談的な印象が強い。","suggestion":"商品紹介時は『商品名→特徴→利点→ターゲット』という構造で説明する癖をつけ、より体系的なコミュニケーションを心がける"}]}}</script>
+<script>lucide.createIcons();</script>
+</body>
+</html>
