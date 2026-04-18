@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<title>商談メモ: &lt;UNKNOWN&gt;さんとの対話型</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<style>
+  body { background: #f8fafc; color: #1e293b; font-family: 'Hiragino Kana Gothic ProN','Hiragino Sans','Yu Gothic','Meiryo',sans-serif; -webkit-tap-highlight-color: transparent; }
+  .ads-card { background: #fff; border: 1px solid #e2e8f0; border-radius: 1rem; }
+  @media print { .no-print { display: none !important; } }
+</style>
+</head>
+<body class="min-h-screen pb-16" style="padding-bottom:env(safe-area-inset-bottom,16px)">
+
+<!-- ヘッダー -->
+<header class="sticky top-0 z-10 bg-white/90 backdrop-blur border-b border-slate-200">
+  <div class="max-w-2xl mx-auto px-4 py-3 flex items-center justify-between">
+    <span class="text-base font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-full">商談メモ</span>
+    <button onclick="window.print()" class="no-print flex items-center gap-1.5 text-sm text-slate-400 hover:text-blue-600 transition-colors">
+      <i data-lucide="printer" class="w-4 h-4"></i> PDF
+    </button>
+  </div>
+</header>
+
+<main class="max-w-2xl mx-auto px-4 py-8 space-y-8">
+
+  <!-- ヒーロー -->
+  <div class="ads-card p-6">
+    <p class="text-xs text-slate-400 mb-1">これはデモ用サンプルです</p>
+    <h1 class="text-2xl sm:text-3xl font-black text-slate-900 leading-tight mb-2">
+      &lt;UNKNOWN&gt;さんとの対話型
+    </h1>
+    <p class="text-base text-slate-500 mb-4">個人の音声メモ - 日常報告</p>
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-base">
+      <div>
+        <p class="text-slate-400 flex items-center gap-1 mb-0.5"><i data-lucide="calendar" class="w-3.5 h-3.5"></i> 日時</p>
+        <p class="font-semibold text-slate-700">2026年4月18日</p>
+      </div>
+      <div>
+        <p class="text-slate-400 flex items-center gap-1 mb-0.5"><i data-lucide="user" class="w-3.5 h-3.5"></i> 相手</p>
+        <p class="font-semibold text-slate-700">&lt;UNKNOWN&gt;</p>
+        
+        
+      </div>
+      <div><p class="text-slate-400 flex items-center gap-1 mb-0.5"><i data-lucide="map-pin" class="w-3.5 h-3.5"></i> 場所</p><p class="font-semibold text-slate-700">不明</p></div>
+      
+    </div>
+  </div>
+
+  <!-- 相手を知る -->
+  <section>
+    <h2 class="text-lg font-black text-slate-700 mb-3 flex items-center gap-2">
+      <i data-lucide="user-search" class="w-5 h-5 text-blue-500"></i> 相手を知る
+    </h2>
+    <div class="grid sm:grid-cols-3 gap-3">
+      <div class="ads-card border-amber-200 bg-amber-50 p-4">
+    <p class="text-base font-bold text-amber-600 uppercase tracking-wide mb-1">課題</p>
+    <p class="text-base font-black text-amber-700 leading-snug mb-2">個人的なレクリエーション状況</p>
+    <p class="text-sm text-slate-600 leading-relaxed">飲酒後の状態であり、判断力が低下している可能性があるため、重要な判断や決定については慎重に対応する必要がある。</p>
+  </div>
+      <div class="ads-card border-blue-200 bg-blue-50 p-4">
+    <p class="text-base font-bold text-blue-600 uppercase tracking-wide mb-1">価値観</p>
+    <p class="text-base font-black text-blue-700 leading-snug mb-2">人間関係と時間の大切さ</p>
+    <p class="text-sm text-slate-600 leading-relaxed">友人のショータが福岡から帰ってきたことを話題にしており、人間関係を重視する姿勢が見られる。明日離別することを認識しているのとのこと。</p>
+  </div>
+      <div class="ads-card border-green-200 bg-green-50 p-4">
+    <p class="text-base font-bold text-green-600 uppercase tracking-wide mb-1">期待</p>
+    <p class="text-base font-black text-green-700 leading-snug mb-2">充実した日常生活</p>
+    <p class="text-sm text-slate-600 leading-relaxed">「素晴らしい1日」との発言から、友人との再会や食事を通じた充実した時間を求めている様子が伺える。デザートでハーゲンダッツを食べる予定を楽しみにしているとのこと。</p>
+  </div>
+    </div>
+  </section>
+
+  <!-- キーポイント -->
+  <section>
+    <h2 class="text-lg font-black text-slate-700 mb-3 flex items-center gap-2">
+      <i data-lucide="star" class="w-5 h-5 text-amber-500"></i> キーポイント
+    </h2>
+    <div class="space-y-3">
+      <div class="ads-card p-5">
+    <div class="flex items-start gap-3">
+      <span class="shrink-0 w-7 h-7 rounded-full bg-amber-500 text-white text-sm font-black flex items-center justify-center">1</span>
+      <div class="flex-1 min-w-0">
+        <p class="text-lg font-black text-slate-800 leading-snug mb-2">飲酒の状況報告</p>
+        <p class="text-base text-slate-600 leading-relaxed mb-2">スーパードライを2本飲んだとのこと。現在、軽く酔いが回っている状態だという話が出た。</p>
+        <blockquote class="border-l-4 border-amber-300 pl-3 text-base text-amber-700 italic leading-snug">&ldquo;少し酔いが回っております&rdquo;</blockquote>
+        <p class="text-base font-bold text-blue-600 mt-2">酔いが回っている</p>
+      </div>
+    </div>
+  </div><div class="ads-card p-5">
+    <div class="flex items-start gap-3">
+      <span class="shrink-0 w-7 h-7 rounded-full bg-amber-500 text-white text-sm font-black flex items-center justify-center">2</span>
+      <div class="flex-1 min-w-0">
+        <p class="text-lg font-black text-slate-800 leading-snug mb-2">友人ショータの帰宅</p>
+        <p class="text-base text-slate-600 leading-relaxed mb-2">福岡から帰ってきたショータが明日には帰る予定だという話が出た。再会の時間を過ごしているとのこと。</p>
+        <blockquote class="border-l-4 border-amber-300 pl-3 text-base text-amber-700 italic leading-snug">&ldquo;ショータが帰ってきました。福岡から帰ってきて明日帰ります&rdquo;</blockquote>
+        <p class="text-base font-bold text-blue-600 mt-2">明日帰る予定</p>
+      </div>
+    </div>
+  </div><div class="ads-card p-5">
+    <div class="flex items-start gap-3">
+      <span class="shrink-0 w-7 h-7 rounded-full bg-amber-500 text-white text-sm font-black flex items-center justify-center">3</span>
+      <div class="flex-1 min-w-0">
+        <p class="text-lg font-black text-slate-800 leading-snug mb-2">デザート計画</p>
+        <p class="text-base text-slate-600 leading-relaxed mb-2">飲食の後、ハーゲンダッツをデザートとして食べる予定だという話が出た。</p>
+        <blockquote class="border-l-4 border-amber-300 pl-3 text-base text-amber-700 italic leading-snug">&ldquo;この後デザートにハーゲンダッツを食べる予定です&rdquo;</blockquote>
+        <p class="text-base font-bold text-blue-600 mt-2">ハーゲンダッツを食べる予定</p>
+      </div>
+    </div>
+  </div>
+    </div>
+  </section>
+
+  <!-- 次回の話題ネタ -->
+  
+  <section>
+    <h2 class="text-lg font-black text-slate-700 mb-3 flex items-center gap-2">
+      <i data-lucide="message-circle" class="w-5 h-5 text-purple-500"></i> 次回また話したいこと
+    </h2>
+    <div class="grid sm:grid-cols-2 gap-3">
+      <div class="ads-card border-purple-200 bg-purple-50 p-4">
+    <p class="text-base font-bold text-purple-500 uppercase tracking-wide mb-2 flex items-center gap-1.5">
+      <i data-lucide="heart" class="w-4 h-4"></i> 話題ネタ1
+    </p>
+    <p class="text-base font-black text-purple-800 leading-snug mb-1">ショータとの友人関係</p>
+    <p class="text-sm text-slate-600 leading-relaxed">福岡出張からの帰宅と明日の離別という限られた時間の中での再会の意義について、次回は友人関係維持の工夫やコミュニケーション頻度などについて掘り下げる。</p>
+  </div><div class="ads-card border-purple-200 bg-purple-50 p-4">
+    <p class="text-base font-bold text-purple-500 uppercase tracking-wide mb-2 flex items-center gap-1.5">
+      <i data-lucide="smile" class="w-4 h-4"></i> 話題ネタ2
+    </p>
+    <p class="text-base font-black text-purple-800 leading-snug mb-1">素晴らしい1日の過ごし方</p>
+    <p class="text-sm text-slate-600 leading-relaxed">食事や友人との時間を通じた充実の定義について、次回はプライベート時間の質的向上やリフレッシュ方法についてさらに詳しく聞く。</p>
+  </div>
+    </div>
+  </section>
+
+  <!-- ネクストアクション -->
+  
+  <section>
+    <h2 class="text-lg font-black text-slate-700 mb-3 flex items-center gap-2">
+      <i data-lucide="check-square" class="w-5 h-5 text-green-500"></i> ネクストアクション
+    </h2>
+    <div class="space-y-2">
+      <div class="ads-card p-4 flex items-start gap-3">
+    <i data-lucide="arrow-right-circle" class="w-5 h-5 text-green-500 shrink-0 mt-0.5"></i>
+    <div class="flex-1 min-w-0">
+      <div class="flex items-center gap-2 mb-0.5 flex-wrap">
+        <p class="text-lg font-black text-slate-800">ショータとの時間を大切にする</p>
+        <span class="text-sm font-bold px-2 py-0.5 rounded-full border bg-amber-50 border-amber-200 text-amber-700">今週中</span>
+      </div>
+      <p class="text-sm text-slate-500 leading-relaxed">明日の離別までの限られた時間を充実させるため、共有する時間をさらに有意義に過ごす計画を立てること。</p>
+    </div>
+  </div><div class="ads-card p-4 flex items-start gap-3">
+    <i data-lucide="arrow-right-circle" class="w-5 h-5 text-green-500 shrink-0 mt-0.5"></i>
+    <div class="flex-1 min-w-0">
+      <div class="flex items-center gap-2 mb-0.5 flex-wrap">
+        <p class="text-lg font-black text-slate-800">酔いが覚めた後の振り返り</p>
+        <span class="text-sm font-bold px-2 py-0.5 rounded-full border bg-amber-50 border-amber-200 text-amber-700">来週中</span>
+      </div>
+      <p class="text-sm text-slate-500 leading-relaxed">飲酒時の判断や発言について、酔いが覚めた後に冷静に振り返り、次の飲酒時に活かす。</p>
+    </div>
+  </div>
+    </div>
+  </section>
+
+  <!-- キーワード -->
+  
+
+  <!-- 自己評価 -->
+  
+  <section>
+    <h2 class="text-lg font-black text-slate-700 mb-3 flex items-center gap-2">
+      <i data-lucide="bar-chart-2" class="w-5 h-5 text-rose-500"></i> 自己評価
+    </h2>
+    <div class="space-y-3">
+      <div class="ads-card border-rose-100 bg-rose-50 p-5">
+    <div class="flex items-start gap-3">
+      <i data-lucide="alert-circle" class="w-5 h-5 text-rose-400 shrink-0 mt-0.5"></i>
+      <div class="flex-1 min-w-0">
+        <p class="text-base font-black text-slate-800 mb-1">飲酒状態での発言の論理性</p>
+        <p class="text-base text-slate-600 leading-relaxed mb-3">「少し酔いが回っております」との発言後、「何しに来たんでしょう」という若干投げやりな疑問が出ている。アルコールの影響で思考の一貫性が欠ける傾向が見られる。</p>
+        <div class="bg-white border border-rose-100 rounded-xl p-3">
+          <p class="text-sm font-bold text-rose-500 mb-1">改善案</p>
+          <p class="text-base text-slate-700">飲酒時には重要な決定や批判的な発言を控え、酔いが覚めた後に冷静に考え直すプロセスを設ける。</p>
+        </div>
+      </div>
+    </div>
+  </div><div class="ads-card border-rose-100 bg-rose-50 p-5">
+    <div class="flex items-start gap-3">
+      <i data-lucide="alert-circle" class="w-5 h-5 text-rose-400 shrink-0 mt-0.5"></i>
+      <div class="flex-1 min-w-0">
+        <p class="text-base font-black text-slate-800 mb-1">相手への関心表現の欠如</p>
+        <p class="text-base text-slate-600 leading-relaxed mb-3">ショータの福岡出張の目的や経過について全く質問がなく、自分の状態の報告に終始している。「何しに来たんでしょう」という疑問形は出るが、直接本人に確認する会話に至っていない。</p>
+        <div class="bg-white border border-rose-100 rounded-xl p-3">
+          <p class="text-sm font-bold text-rose-500 mb-1">改善案</p>
+          <p class="text-base text-slate-700">相手の話に対して、より能動的な質問や関心表現を心がけ、対話的なコミュニケーションを心がけること。</p>
+        </div>
+      </div>
+    </div>
+  </div><div class="ads-card border-rose-100 bg-rose-50 p-5">
+    <div class="flex items-start gap-3">
+      <i data-lucide="alert-circle" class="w-5 h-5 text-rose-400 shrink-0 mt-0.5"></i>
+      <div class="flex-1 min-w-0">
+        <p class="text-base font-black text-slate-800 mb-1">音声メモの目的の曖昧性</p>
+        <p class="text-base text-slate-600 leading-relaxed mb-3">飲酒後の雑談を音声メモとして記録する意図が不明確であり、後で情報として活用できる形式になっていない。</p>
+        <div class="bg-white border border-rose-100 rounded-xl p-3">
+          <p class="text-sm font-bold text-rose-500 mb-1">改善案</p>
+          <p class="text-base text-slate-700">音声メモ時は、後の確認時に価値のある情報か、単なる日記か、その目的を明確にしてから録音することを検討する。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+    </div>
+    
+    <div class="ads-card p-5 mt-3">
+      <div class="flex items-center gap-2 mb-3">
+        <i data-lucide="check" class="w-4 h-4 text-green-500 shrink-0"></i>
+        <p class="text-lg font-bold text-slate-700">できていたこと</p>
+      </div>
+      <ul class="space-y-3 text-base text-slate-500">
+        <li class="flex items-start gap-2"><span class="text-green-500 font-bold shrink-0 mt-0.5">•</span><span>日常の出来事を具体的かつ詳細に記録しようとする習慣がある</span></li><li class="flex items-start gap-2"><span class="text-green-500 font-bold shrink-0 mt-0.5">•</span><span>友人との再会に対して肯定的で、人間関係を大切にする姿勢が見られる</span></li><li class="flex items-start gap-2"><span class="text-green-500 font-bold shrink-0 mt-0.5">•</span><span>その時々の感情状態（酔いの程度など）を客観的に認識・表現できている</span></li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<footer class="max-w-2xl mx-auto px-4 pt-6 pb-10 border-t border-slate-200/60">
+  <p class="text-base text-slate-400 text-center">AI-Driven School の図解ツールで自動生成</p>
+</footer>
+
+<!-- 編集ボタン（右下 FAB） -->
+
+<a href="https://script.google.com/macros/s/AKfycbzo1FhVhCL4JliABgDk5xTv_vQmV6LhHdr04pM27tvkmitHe7Dh_m1ECAYxCOFe12TiSA/exec?slug=20260418-UNKNOWN" class="no-print fixed bottom-6 right-6 z-50 flex items-center gap-2 bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white font-bold text-base px-5 py-3 rounded-full shadow-lg transition-colors" style="bottom:calc(1.5rem + env(safe-area-inset-bottom,0px))">
+  <i data-lucide="pencil" class="w-4 h-4"></i> 編集
+</a>
+
+<script id="meeting-data" type="application/json">{"meeting":{"date":"2026年4月18日","person_name":"<UNKNOWN>","headline":"個人の音声メモ - 日常報告","scene_type":"対話型","company":"","role":"","location":"不明","attendees_self":"","attendees_other":""},"know_them":{"issue":{"title":"個人的なレクリエーション状況","detail":"飲酒後の状態であり、判断力が低下している可能性があるため、重要な判断や決定については慎重に対応する必要がある。"},"values":{"title":"人間関係と時間の大切さ","detail":"友人のショータが福岡から帰ってきたことを話題にしており、人間関係を重視する姿勢が見られる。明日離別することを認識しているのとのこと。"},"expectation":{"title":"充実した日常生活","detail":"「素晴らしい1日」との発言から、友人との再会や食事を通じた充実した時間を求めている様子が伺える。デザートでハーゲンダッツを食べる予定を楽しみにしているとのこと。"}},"key_points":[{"title":"飲酒の状況報告","detail":"スーパードライを2本飲んだとのこと。現在、軽く酔いが回っている状態だという話が出た。","highlight":"酔いが回っている","quote":"少し酔いが回っております"},{"title":"友人ショータの帰宅","detail":"福岡から帰ってきたショータが明日には帰る予定だという話が出た。再会の時間を過ごしているとのこと。","highlight":"明日帰る予定","quote":"ショータが帰ってきました。福岡から帰ってきて明日帰ります"},{"title":"デザート計画","detail":"飲食の後、ハーゲンダッツをデザートとして食べる予定だという話が出た。","highlight":"ハーゲンダッツを食べる予定","quote":"この後デザートにハーゲンダッツを食べる予定です"}],"next_topics":[{"label":"話題ネタ1","title":"ショータとの友人関係","detail":"福岡出張からの帰宅と明日の離別という限られた時間の中での再会の意義について、次回は友人関係維持の工夫やコミュニケーション頻度などについて掘り下げる。","icon":"heart"},{"label":"話題ネタ2","title":"素晴らしい1日の過ごし方","detail":"食事や友人との時間を通じた充実の定義について、次回はプライベート時間の質的向上やリフレッシュ方法についてさらに詳しく聞く。","icon":"smile"}],"next_actions":[{"title":"ショータとの時間を大切にする","detail":"明日の離別までの限られた時間を充実させるため、共有する時間をさらに有意義に過ごす計画を立てること。","deadline":"今週中"},{"title":"酔いが覚めた後の振り返り","detail":"飲酒時の判断や発言について、酔いが覚めた後に冷静に振り返り、次の飲酒時に活かす。","deadline":"来週中"}],"self_evaluation":{"good_points":["日常の出来事を具体的かつ詳細に記録しようとする習慣がある","友人との再会に対して肯定的で、人間関係を大切にする姿勢が見られる","その時々の感情状態（酔いの程度など）を客観的に認識・表現できている"],"improvements":[{"title":"飲酒状態での発言の論理性","detail":"「少し酔いが回っております」との発言後、「何しに来たんでしょう」という若干投げやりな疑問が出ている。アルコールの影響で思考の一貫性が欠ける傾向が見られる。","suggestion":"飲酒時には重要な決定や批判的な発言を控え、酔いが覚めた後に冷静に考え直すプロセスを設ける。"},{"title":"相手への関心表現の欠如","detail":"ショータの福岡出張の目的や経過について全く質問がなく、自分の状態の報告に終始している。「何しに来たんでしょう」という疑問形は出るが、直接本人に確認する会話に至っていない。","suggestion":"相手の話に対して、より能動的な質問や関心表現を心がけ、対話的なコミュニケーションを心がけること。"},{"title":"音声メモの目的の曖昧性","detail":"飲酒後の雑談を音声メモとして記録する意図が不明確であり、後で情報として活用できる形式になっていない。","suggestion":"音声メモ時は、後の確認時に価値のある情報か、単なる日記か、その目的を明確にしてから録音することを検討する。"}]}}</script>
+<script>lucide.createIcons();</script>
+</body>
+</html>
