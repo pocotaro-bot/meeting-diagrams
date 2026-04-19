@@ -4,249 +4,304 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#0c0f14">
 <title>図解 一覧</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 <style>
-  body { background:#f8fafc; color:#1e293b; font-family:'Hiragino Kana Gothic ProN','Hiragino Sans','Yu Gothic','Meiryo',sans-serif; }
-  .ads-card { background:#fff; border:1px solid #e2e8f0; border-radius:1rem; }
+  body {
+    font-family: Inter, 'Noto Sans JP', system-ui, sans-serif;
+    background: radial-gradient(120% 80% at 50% -20%, rgba(56, 189, 248, 0.08), transparent 50%),
+                radial-gradient(80% 50% at 100% 50%, rgba(139, 92, 246, 0.06), transparent 45%),
+                linear-gradient(180deg, #0c0f14 0%, #080a0e 100%);
+    color: #e2e8f0;
+    -webkit-font-smoothing: antialiased;
+  }
+  .ads-card {
+    background: linear-gradient(145deg, rgba(30, 41, 59, 0.55) 0%, rgba(15, 23, 42, 0.72) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.04) inset, 0 8px 32px rgba(0, 0, 0, 0.35);
+  }
+  .ads-card:hover {
+    border-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.06) inset, 0 16px 48px rgba(0, 0, 0, 0.45);
+  }
+  #search::placeholder { color: #64748b; }
+  #search::-webkit-search-cancel-button { -webkit-appearance: none; }
 </style>
 </head>
-<body class="min-h-screen pb-10" style="padding-bottom:env(safe-area-inset-bottom,16px)">
+<body class="min-h-screen pb-12" style="padding-bottom:max(3rem, env(safe-area-inset-bottom))">
 
-<header class="sticky top-0 z-10 bg-white/90 backdrop-blur border-b border-slate-200">
-  <div class="max-w-2xl mx-auto px-4 py-3">
-    <div class="flex items-center gap-3 mb-2">
-      <span class="text-xs font-bold text-blue-600 bg-blue-50 border border-blue-200 px-2 py-0.5 rounded-full">商談 11件</span>
-      <span class="text-xs font-bold text-violet-600 bg-violet-50 border border-violet-200 px-2 py-0.5 rounded-full">音声メモ 1件</span>
+<header class="sticky top-0 z-20 border-b border-white/[0.06] bg-[#0c0f14]/75 backdrop-blur-xl backdrop-saturate-150">
+  <div class="max-w-xl mx-auto px-4 pt-5 pb-4">
+    <div class="mb-4 flex items-end justify-between gap-3">
+      <div>
+        <p class="text-[10px] font-semibold uppercase tracking-[0.2em] text-slate-500">Meeting diagrams</p>
+        <h1 class="mt-0.5 text-xl font-bold tracking-tight text-slate-100">図解一覧</h1>
+      </div>
+      <div class="flex shrink-0 gap-1.5 text-right">
+        <span class="inline-flex items-center rounded-lg border border-sky-400/20 bg-sky-500/10 px-2 py-1 text-[10px] font-semibold text-sky-200/90">商談 11</span>
+        <span class="inline-flex items-center rounded-lg border border-violet-400/20 bg-violet-500/10 px-2 py-1 text-[10px] font-semibold text-violet-200/90">音声 1</span>
+      </div>
     </div>
-    <input id="search" type="search" placeholder="名前・会社・ワードで検索…"
-      class="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-base bg-slate-50 focus:outline-none focus:ring-2 focus:ring-blue-300"
-      oninput="filterCards(this.value)">
+    <div class="relative">
+      <svg class="pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+      <input id="search" type="search" placeholder="名前・会社・場所・同席者で検索…" autocomplete="off"
+        class="w-full rounded-xl border border-white/[0.08] bg-white/[0.04] py-3 pl-10 pr-4 text-sm text-slate-200 placeholder:text-slate-500 shadow-inner shadow-black/20 transition-shadow focus:border-sky-500/40 focus:outline-none focus:ring-2 focus:ring-sky-500/25"
+        oninput="filterCards(this.value)">
+    </div>
   </div>
 </header>
 
-<main class="max-w-2xl mx-auto px-4 py-4 space-y-3" id="cards">
+<main class="max-w-xl mx-auto px-4 py-5 space-y-3" id="cards">
 
-<a href="https://pocotaro-bot.github.io/meeting-diagrams/diagrams/20260419-自分自身.html" class="block ads-card border-l-4 border-l-blue-400 p-4 hover:shadow-md transition-shadow active:opacity-80" data-search="自分自身 県民ショーの食品について 不明 対話型 2026/04/19">
-  <div class="flex items-start justify-between gap-2">
+<a href="https://pocotaro-bot.github.io/meeting-diagrams/diagrams/20260419-自分自身.html" class="group block ads-card border-l-[3px] border-l-sky-400 shadow-sky-500/5 rounded-2xl p-5 transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/20 active:translate-y-0 active:opacity-95" data-search="自分自身 県民ショーの食品について 不明 対話型 2026/04/19">
+  <div class="flex items-start justify-between gap-4">
     <div class="flex-1 min-w-0">
-      <div class="flex items-center gap-2 mb-1">
-        <p class="text-xs text-slate-400">2026/04/19</p>
-        <span class="text-xs font-bold text-blue-600 bg-blue-50 border border-blue-200 px-2 py-0.5 rounded-full">商談</span>
+      <div class="flex flex-wrap items-center gap-x-2 gap-y-1 mb-2">
+        <time class="text-[11px] font-medium tabular-nums tracking-wide text-slate-500">2026/04/19</time>
+        <span class="inline-flex items-center text-[11px] font-semibold tracking-wide text-sky-200 bg-sky-500/15 border border-sky-400/25 px-2.5 py-1 rounded-lg">商談</span>
       </div>
-      <p class="text-lg font-black text-slate-800 leading-snug">
-        自分自身<span class="text-slate-500">さん</span>
+      <p class="text-[1.0625rem] font-bold text-slate-100 leading-snug tracking-tight">
+        自分自身<span class="font-medium text-slate-500">さん</span>
       </p>
       
-      <p class="text-sm text-slate-600 mt-1.5 leading-snug">県民ショーの食品について</p>
-      <span class="flex items-center gap-1 text-sm text-slate-400 mt-1"><svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>不明</span>
+      <p class="text-sm text-slate-500 mt-2.5 leading-relaxed border-t border-white/[0.06] pt-2.5">県民ショーの食品について</p>
+      <span class="flex items-center gap-1.5 text-xs text-slate-500 mt-2"><svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 shrink-0 text-slate-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>不明</span>
       
     </div>
-    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-slate-300 shrink-0 mt-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+    <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-white/[0.08] bg-white/[0.03] text-slate-500 transition-colors duration-300 group-hover:border-sky-400/30 group-hover:bg-sky-500/10 group-hover:text-sky-300">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 -translate-x-px transition-transform duration-300 group-hover:translate-x-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+    </div>
   </div>
 </a>
-<a href="https://pocotaro-bot.github.io/meeting-diagrams/diagrams/20260419-まこ.html" class="block ads-card border-l-4 border-l-blue-400 p-4 hover:shadow-md transition-shadow active:opacity-80" data-search="まこ ai学習における課題整理と改善方針の確認 不明 対話型 2026/04/19">
-  <div class="flex items-start justify-between gap-2">
+<a href="https://pocotaro-bot.github.io/meeting-diagrams/diagrams/20260419-まこ.html" class="group block ads-card border-l-[3px] border-l-sky-400 shadow-sky-500/5 rounded-2xl p-5 transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/20 active:translate-y-0 active:opacity-95" data-search="まこ ai学習における課題整理と改善方針の確認 不明 対話型 2026/04/19">
+  <div class="flex items-start justify-between gap-4">
     <div class="flex-1 min-w-0">
-      <div class="flex items-center gap-2 mb-1">
-        <p class="text-xs text-slate-400">2026/04/19</p>
-        <span class="text-xs font-bold text-blue-600 bg-blue-50 border border-blue-200 px-2 py-0.5 rounded-full">商談</span>
+      <div class="flex flex-wrap items-center gap-x-2 gap-y-1 mb-2">
+        <time class="text-[11px] font-medium tabular-nums tracking-wide text-slate-500">2026/04/19</time>
+        <span class="inline-flex items-center text-[11px] font-semibold tracking-wide text-sky-200 bg-sky-500/15 border border-sky-400/25 px-2.5 py-1 rounded-lg">商談</span>
       </div>
-      <p class="text-lg font-black text-slate-800 leading-snug">
-        まこ<span class="text-slate-500">さん</span>
+      <p class="text-[1.0625rem] font-bold text-slate-100 leading-snug tracking-tight">
+        まこ<span class="font-medium text-slate-500">さん</span>
       </p>
       
-      <p class="text-sm text-slate-600 mt-1.5 leading-snug">AI学習における課題整理と改善方針の確認</p>
-      <span class="flex items-center gap-1 text-sm text-slate-400 mt-1"><svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>不明</span>
+      <p class="text-sm text-slate-500 mt-2.5 leading-relaxed border-t border-white/[0.06] pt-2.5">AI学習における課題整理と改善方針の確認</p>
+      <span class="flex items-center gap-1.5 text-xs text-slate-500 mt-2"><svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 shrink-0 text-slate-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>不明</span>
       
     </div>
-    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-slate-300 shrink-0 mt-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+    <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-white/[0.08] bg-white/[0.03] text-slate-500 transition-colors duration-300 group-hover:border-sky-400/30 group-hover:bg-sky-500/10 group-hover:text-sky-300">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 -translate-x-px transition-transform duration-300 group-hover:translate-x-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+    </div>
   </div>
 </a>
-<a href="https://pocotaro-bot.github.io/meeting-diagrams/diagrams/20260419-UNKNOWN.html" class="block ads-card border-l-4 border-l-blue-400 p-4 hover:shadow-md transition-shadow active:opacity-80" data-search="翔太 aiの勉強進捗と課題認識について 車 真理 対話型 2026/04/19">
-  <div class="flex items-start justify-between gap-2">
+<a href="https://pocotaro-bot.github.io/meeting-diagrams/diagrams/20260419-UNKNOWN.html" class="group block ads-card border-l-[3px] border-l-sky-400 shadow-sky-500/5 rounded-2xl p-5 transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/20 active:translate-y-0 active:opacity-95" data-search="翔太 aiの勉強進捗と課題認識について 車 真理 対話型 2026/04/19">
+  <div class="flex items-start justify-between gap-4">
     <div class="flex-1 min-w-0">
-      <div class="flex items-center gap-2 mb-1">
-        <p class="text-xs text-slate-400">2026/04/19</p>
-        <span class="text-xs font-bold text-blue-600 bg-blue-50 border border-blue-200 px-2 py-0.5 rounded-full">商談</span>
+      <div class="flex flex-wrap items-center gap-x-2 gap-y-1 mb-2">
+        <time class="text-[11px] font-medium tabular-nums tracking-wide text-slate-500">2026/04/19</time>
+        <span class="inline-flex items-center text-[11px] font-semibold tracking-wide text-sky-200 bg-sky-500/15 border border-sky-400/25 px-2.5 py-1 rounded-lg">商談</span>
       </div>
-      <p class="text-lg font-black text-slate-800 leading-snug">
-        翔太<span class="text-slate-500">さん</span>
+      <p class="text-[1.0625rem] font-bold text-slate-100 leading-snug tracking-tight">
+        翔太<span class="font-medium text-slate-500">さん</span>
       </p>
       
-      <p class="text-sm text-slate-600 mt-1.5 leading-snug">AIの勉強進捗と課題認識について</p>
-      <span class="flex items-center gap-1 text-sm text-slate-400 mt-1"><svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>車</span>
-      <div class="mt-1"><span class="text-xs text-slate-400 ml-2">自社: 真理</span></div>
+      <p class="text-sm text-slate-500 mt-2.5 leading-relaxed border-t border-white/[0.06] pt-2.5">AIの勉強進捗と課題認識について</p>
+      <span class="flex items-center gap-1.5 text-xs text-slate-500 mt-2"><svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 shrink-0 text-slate-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>車</span>
+      <div class="mt-2.5 flex flex-wrap items-baseline gap-y-1"><span class="text-[11px] text-slate-500 ml-3">自社 <span class="text-slate-400">真理</span></span></div>
     </div>
-    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-slate-300 shrink-0 mt-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+    <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-white/[0.08] bg-white/[0.03] text-slate-500 transition-colors duration-300 group-hover:border-sky-400/30 group-hover:bg-sky-500/10 group-hover:text-sky-300">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 -translate-x-px transition-transform duration-300 group-hover:translate-x-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+    </div>
   </div>
 </a>
-<a href="https://pocotaro-bot.github.io/meeting-diagrams/diagrams/20260419-UNKNOWN.html" class="block ads-card border-l-4 border-l-blue-400 p-4 hover:shadow-md transition-shadow active:opacity-80" data-search="&lt;unknown&gt; アニメ「100m」についての雑談 不明 対話型 2026/04/19">
-  <div class="flex items-start justify-between gap-2">
+<a href="https://pocotaro-bot.github.io/meeting-diagrams/diagrams/20260419-UNKNOWN.html" class="group block ads-card border-l-[3px] border-l-sky-400 shadow-sky-500/5 rounded-2xl p-5 transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/20 active:translate-y-0 active:opacity-95" data-search="&lt;unknown&gt; アニメ「100m」についての雑談 不明 対話型 2026/04/19">
+  <div class="flex items-start justify-between gap-4">
     <div class="flex-1 min-w-0">
-      <div class="flex items-center gap-2 mb-1">
-        <p class="text-xs text-slate-400">2026/04/19</p>
-        <span class="text-xs font-bold text-blue-600 bg-blue-50 border border-blue-200 px-2 py-0.5 rounded-full">商談</span>
+      <div class="flex flex-wrap items-center gap-x-2 gap-y-1 mb-2">
+        <time class="text-[11px] font-medium tabular-nums tracking-wide text-slate-500">2026/04/19</time>
+        <span class="inline-flex items-center text-[11px] font-semibold tracking-wide text-sky-200 bg-sky-500/15 border border-sky-400/25 px-2.5 py-1 rounded-lg">商談</span>
       </div>
-      <p class="text-lg font-black text-slate-800 leading-snug">
-        &lt;UNKNOWN&gt;<span class="text-slate-500">さん</span>
+      <p class="text-[1.0625rem] font-bold text-slate-100 leading-snug tracking-tight">
+        &lt;UNKNOWN&gt;<span class="font-medium text-slate-500">さん</span>
       </p>
       
-      <p class="text-sm text-slate-600 mt-1.5 leading-snug">アニメ「100M」についての雑談</p>
-      <span class="flex items-center gap-1 text-sm text-slate-400 mt-1"><svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>不明</span>
+      <p class="text-sm text-slate-500 mt-2.5 leading-relaxed border-t border-white/[0.06] pt-2.5">アニメ「100M」についての雑談</p>
+      <span class="flex items-center gap-1.5 text-xs text-slate-500 mt-2"><svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 shrink-0 text-slate-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>不明</span>
       
     </div>
-    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-slate-300 shrink-0 mt-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+    <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-white/[0.08] bg-white/[0.03] text-slate-500 transition-colors duration-300 group-hover:border-sky-400/30 group-hover:bg-sky-500/10 group-hover:text-sky-300">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 -translate-x-px transition-transform duration-300 group-hover:translate-x-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+    </div>
   </div>
 </a>
-<a href="https://pocotaro-bot.github.io/meeting-diagrams/diagrams/20260419-不明.html" class="block ads-card border-l-4 border-l-blue-400 p-4 hover:shadow-md transition-shadow active:opacity-80" data-search="不明 個人の音声メモ・アニメ感想 対話型 2026/04/19">
-  <div class="flex items-start justify-between gap-2">
+<a href="https://pocotaro-bot.github.io/meeting-diagrams/diagrams/20260419-不明.html" class="group block ads-card border-l-[3px] border-l-sky-400 shadow-sky-500/5 rounded-2xl p-5 transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/20 active:translate-y-0 active:opacity-95" data-search="不明 個人の音声メモ・アニメ感想 対話型 2026/04/19">
+  <div class="flex items-start justify-between gap-4">
     <div class="flex-1 min-w-0">
-      <div class="flex items-center gap-2 mb-1">
-        <p class="text-xs text-slate-400">2026/04/19</p>
-        <span class="text-xs font-bold text-blue-600 bg-blue-50 border border-blue-200 px-2 py-0.5 rounded-full">商談</span>
+      <div class="flex flex-wrap items-center gap-x-2 gap-y-1 mb-2">
+        <time class="text-[11px] font-medium tabular-nums tracking-wide text-slate-500">2026/04/19</time>
+        <span class="inline-flex items-center text-[11px] font-semibold tracking-wide text-sky-200 bg-sky-500/15 border border-sky-400/25 px-2.5 py-1 rounded-lg">商談</span>
       </div>
-      <p class="text-lg font-black text-slate-800 leading-snug">
-        不明<span class="text-slate-500">さん</span>
+      <p class="text-[1.0625rem] font-bold text-slate-100 leading-snug tracking-tight">
+        不明<span class="font-medium text-slate-500">さん</span>
       </p>
       
-      <p class="text-sm text-slate-600 mt-1.5 leading-snug">個人の音声メモ・アニメ感想</p>
+      <p class="text-sm text-slate-500 mt-2.5 leading-relaxed border-t border-white/[0.06] pt-2.5">個人の音声メモ・アニメ感想</p>
       
       
     </div>
-    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-slate-300 shrink-0 mt-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+    <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-white/[0.08] bg-white/[0.03] text-slate-500 transition-colors duration-300 group-hover:border-sky-400/30 group-hover:bg-sky-500/10 group-hover:text-sky-300">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 -translate-x-px transition-transform duration-300 group-hover:translate-x-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+    </div>
   </div>
 </a>
-<a href="https://pocotaro-bot.github.io/meeting-diagrams/diagrams/20260419-不明.html" class="block ads-card border-l-4 border-l-blue-400 p-4 hover:shadow-md transition-shadow active:opacity-80" data-search="不明 音声メモ - アニメ『100m』についての感想 不明 対話型 2026/04/19">
-  <div class="flex items-start justify-between gap-2">
+<a href="https://pocotaro-bot.github.io/meeting-diagrams/diagrams/20260419-不明.html" class="group block ads-card border-l-[3px] border-l-sky-400 shadow-sky-500/5 rounded-2xl p-5 transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/20 active:translate-y-0 active:opacity-95" data-search="不明 音声メモ - アニメ『100m』についての感想 不明 対話型 2026/04/19">
+  <div class="flex items-start justify-between gap-4">
     <div class="flex-1 min-w-0">
-      <div class="flex items-center gap-2 mb-1">
-        <p class="text-xs text-slate-400">2026/04/19</p>
-        <span class="text-xs font-bold text-blue-600 bg-blue-50 border border-blue-200 px-2 py-0.5 rounded-full">商談</span>
+      <div class="flex flex-wrap items-center gap-x-2 gap-y-1 mb-2">
+        <time class="text-[11px] font-medium tabular-nums tracking-wide text-slate-500">2026/04/19</time>
+        <span class="inline-flex items-center text-[11px] font-semibold tracking-wide text-sky-200 bg-sky-500/15 border border-sky-400/25 px-2.5 py-1 rounded-lg">商談</span>
       </div>
-      <p class="text-lg font-black text-slate-800 leading-snug">
-        不明<span class="text-slate-500">さん</span>
+      <p class="text-[1.0625rem] font-bold text-slate-100 leading-snug tracking-tight">
+        不明<span class="font-medium text-slate-500">さん</span>
       </p>
       
-      <p class="text-sm text-slate-600 mt-1.5 leading-snug">音声メモ - アニメ『100M』についての感想</p>
-      <span class="flex items-center gap-1 text-sm text-slate-400 mt-1"><svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>不明</span>
+      <p class="text-sm text-slate-500 mt-2.5 leading-relaxed border-t border-white/[0.06] pt-2.5">音声メモ - アニメ『100M』についての感想</p>
+      <span class="flex items-center gap-1.5 text-xs text-slate-500 mt-2"><svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 shrink-0 text-slate-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>不明</span>
       
     </div>
-    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-slate-300 shrink-0 mt-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+    <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-white/[0.08] bg-white/[0.03] text-slate-500 transition-colors duration-300 group-hover:border-sky-400/30 group-hover:bg-sky-500/10 group-hover:text-sky-300">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 -translate-x-px transition-transform duration-300 group-hover:translate-x-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+    </div>
   </div>
 </a>
-<a href="https://pocotaro-bot.github.io/meeting-diagrams/diagrams/20260419-UNKNOWN.html" class="block ads-card border-l-4 border-l-blue-400 p-4 hover:shadow-md transition-shadow active:opacity-80" data-search="&lt;unknown&gt; プライベートな時間での雑談 不明 記者 対話型 2026/04/19">
-  <div class="flex items-start justify-between gap-2">
+<a href="https://pocotaro-bot.github.io/meeting-diagrams/diagrams/20260419-UNKNOWN.html" class="group block ads-card border-l-[3px] border-l-sky-400 shadow-sky-500/5 rounded-2xl p-5 transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/20 active:translate-y-0 active:opacity-95" data-search="&lt;unknown&gt; プライベートな時間での雑談 不明 記者 対話型 2026/04/19">
+  <div class="flex items-start justify-between gap-4">
     <div class="flex-1 min-w-0">
-      <div class="flex items-center gap-2 mb-1">
-        <p class="text-xs text-slate-400">2026/04/19</p>
-        <span class="text-xs font-bold text-blue-600 bg-blue-50 border border-blue-200 px-2 py-0.5 rounded-full">商談</span>
+      <div class="flex flex-wrap items-center gap-x-2 gap-y-1 mb-2">
+        <time class="text-[11px] font-medium tabular-nums tracking-wide text-slate-500">2026/04/19</time>
+        <span class="inline-flex items-center text-[11px] font-semibold tracking-wide text-sky-200 bg-sky-500/15 border border-sky-400/25 px-2.5 py-1 rounded-lg">商談</span>
       </div>
-      <p class="text-lg font-black text-slate-800 leading-snug">
-        &lt;UNKNOWN&gt;<span class="text-slate-500">さん</span>
+      <p class="text-[1.0625rem] font-bold text-slate-100 leading-snug tracking-tight">
+        &lt;UNKNOWN&gt;<span class="font-medium text-slate-500">さん</span>
       </p>
       
-      <p class="text-sm text-slate-600 mt-1.5 leading-snug">プライベートな時間での雑談</p>
-      <span class="flex items-center gap-1 text-sm text-slate-400 mt-1"><svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>不明</span>
-      <div class="mt-1"><span class="text-xs text-slate-400 ml-2">自社: 記者</span></div>
+      <p class="text-sm text-slate-500 mt-2.5 leading-relaxed border-t border-white/[0.06] pt-2.5">プライベートな時間での雑談</p>
+      <span class="flex items-center gap-1.5 text-xs text-slate-500 mt-2"><svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 shrink-0 text-slate-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>不明</span>
+      <div class="mt-2.5 flex flex-wrap items-baseline gap-y-1"><span class="text-[11px] text-slate-500 ml-3">自社 <span class="text-slate-400">記者</span></span></div>
     </div>
-    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-slate-300 shrink-0 mt-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+    <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-white/[0.08] bg-white/[0.03] text-slate-500 transition-colors duration-300 group-hover:border-sky-400/30 group-hover:bg-sky-500/10 group-hover:text-sky-300">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 -translate-x-px transition-transform duration-300 group-hover:translate-x-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+    </div>
   </div>
 </a>
-<a href="https://pocotaro-bot.github.io/meeting-diagrams/diagrams/20260418-UNKNOWN.html" class="block ads-card border-l-4 border-l-blue-400 p-4 hover:shadow-md transition-shadow active:opacity-80" data-search="&lt;unknown&gt; 個人の音声メモ - 日常報告 不明 対話型 2026/04/18">
-  <div class="flex items-start justify-between gap-2">
+<a href="https://pocotaro-bot.github.io/meeting-diagrams/diagrams/20260418-UNKNOWN.html" class="group block ads-card border-l-[3px] border-l-sky-400 shadow-sky-500/5 rounded-2xl p-5 transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/20 active:translate-y-0 active:opacity-95" data-search="&lt;unknown&gt; 個人の音声メモ - 日常報告 不明 対話型 2026/04/18">
+  <div class="flex items-start justify-between gap-4">
     <div class="flex-1 min-w-0">
-      <div class="flex items-center gap-2 mb-1">
-        <p class="text-xs text-slate-400">2026/04/18</p>
-        <span class="text-xs font-bold text-blue-600 bg-blue-50 border border-blue-200 px-2 py-0.5 rounded-full">商談</span>
+      <div class="flex flex-wrap items-center gap-x-2 gap-y-1 mb-2">
+        <time class="text-[11px] font-medium tabular-nums tracking-wide text-slate-500">2026/04/18</time>
+        <span class="inline-flex items-center text-[11px] font-semibold tracking-wide text-sky-200 bg-sky-500/15 border border-sky-400/25 px-2.5 py-1 rounded-lg">商談</span>
       </div>
-      <p class="text-lg font-black text-slate-800 leading-snug">
-        &lt;UNKNOWN&gt;<span class="text-slate-500">さん</span>
+      <p class="text-[1.0625rem] font-bold text-slate-100 leading-snug tracking-tight">
+        &lt;UNKNOWN&gt;<span class="font-medium text-slate-500">さん</span>
       </p>
       
-      <p class="text-sm text-slate-600 mt-1.5 leading-snug">個人の音声メモ - 日常報告</p>
-      <span class="flex items-center gap-1 text-sm text-slate-400 mt-1"><svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>不明</span>
+      <p class="text-sm text-slate-500 mt-2.5 leading-relaxed border-t border-white/[0.06] pt-2.5">個人の音声メモ - 日常報告</p>
+      <span class="flex items-center gap-1.5 text-xs text-slate-500 mt-2"><svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 shrink-0 text-slate-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>不明</span>
       
     </div>
-    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-slate-300 shrink-0 mt-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+    <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-white/[0.08] bg-white/[0.03] text-slate-500 transition-colors duration-300 group-hover:border-sky-400/30 group-hover:bg-sky-500/10 group-hover:text-sky-300">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 -translate-x-px transition-transform duration-300 group-hover:translate-x-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+    </div>
   </div>
 </a>
-<a href="https://pocotaro-bot.github.io/meeting-diagrams/diagrams/20260418-UNKNOWN.html" class="block ads-card border-l-4 border-l-blue-400 p-4 hover:shadow-md transition-shadow active:opacity-80" data-search="&lt;unknown&gt; 個人の日常の音声メモ 不明 対話型 2026/04/18">
-  <div class="flex items-start justify-between gap-2">
+<a href="https://pocotaro-bot.github.io/meeting-diagrams/diagrams/20260418-UNKNOWN.html" class="group block ads-card border-l-[3px] border-l-sky-400 shadow-sky-500/5 rounded-2xl p-5 transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/20 active:translate-y-0 active:opacity-95" data-search="&lt;unknown&gt; 個人の日常の音声メモ 不明 対話型 2026/04/18">
+  <div class="flex items-start justify-between gap-4">
     <div class="flex-1 min-w-0">
-      <div class="flex items-center gap-2 mb-1">
-        <p class="text-xs text-slate-400">2026/04/18</p>
-        <span class="text-xs font-bold text-blue-600 bg-blue-50 border border-blue-200 px-2 py-0.5 rounded-full">商談</span>
+      <div class="flex flex-wrap items-center gap-x-2 gap-y-1 mb-2">
+        <time class="text-[11px] font-medium tabular-nums tracking-wide text-slate-500">2026/04/18</time>
+        <span class="inline-flex items-center text-[11px] font-semibold tracking-wide text-sky-200 bg-sky-500/15 border border-sky-400/25 px-2.5 py-1 rounded-lg">商談</span>
       </div>
-      <p class="text-lg font-black text-slate-800 leading-snug">
-        &lt;UNKNOWN&gt;<span class="text-slate-500">さん</span>
+      <p class="text-[1.0625rem] font-bold text-slate-100 leading-snug tracking-tight">
+        &lt;UNKNOWN&gt;<span class="font-medium text-slate-500">さん</span>
       </p>
       
-      <p class="text-sm text-slate-600 mt-1.5 leading-snug">個人の日常の音声メモ</p>
-      <span class="flex items-center gap-1 text-sm text-slate-400 mt-1"><svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>不明</span>
+      <p class="text-sm text-slate-500 mt-2.5 leading-relaxed border-t border-white/[0.06] pt-2.5">個人の日常の音声メモ</p>
+      <span class="flex items-center gap-1.5 text-xs text-slate-500 mt-2"><svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 shrink-0 text-slate-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>不明</span>
       
     </div>
-    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-slate-300 shrink-0 mt-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+    <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-white/[0.08] bg-white/[0.03] text-slate-500 transition-colors duration-300 group-hover:border-sky-400/30 group-hover:bg-sky-500/10 group-hover:text-sky-300">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 -translate-x-px transition-transform duration-300 group-hover:translate-x-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+    </div>
   </div>
 </a>
-<a href="#" class="block ads-card border-l-4 border-l-blue-400 p-4 hover:shadow-md transition-shadow active:opacity-80" data-search="&lt;unknown&gt; &lt;unknown&gt; https://pocotaro-bot.github.io/meeting-diagrams/diagrams/20260416-unknown.html エンゲージメント向上を目指す人材育成評価フレームワーク 19d9587ca4e3887b プレゼン型 2026/04/16">
-  <div class="flex items-start justify-between gap-2">
+<a href="#" class="group block ads-card border-l-[3px] border-l-sky-400 shadow-sky-500/5 rounded-2xl p-5 transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/20 active:translate-y-0 active:opacity-95" data-search="&lt;unknown&gt; &lt;unknown&gt; https://pocotaro-bot.github.io/meeting-diagrams/diagrams/20260416-unknown.html エンゲージメント向上を目指す人材育成評価フレームワーク 19d9587ca4e3887b プレゼン型 2026/04/16">
+  <div class="flex items-start justify-between gap-4">
     <div class="flex-1 min-w-0">
-      <div class="flex items-center gap-2 mb-1">
-        <p class="text-xs text-slate-400">2026/04/16</p>
-        <span class="text-xs font-bold text-blue-600 bg-blue-50 border border-blue-200 px-2 py-0.5 rounded-full">商談</span>
+      <div class="flex flex-wrap items-center gap-x-2 gap-y-1 mb-2">
+        <time class="text-[11px] font-medium tabular-nums tracking-wide text-slate-500">2026/04/16</time>
+        <span class="inline-flex items-center text-[11px] font-semibold tracking-wide text-sky-200 bg-sky-500/15 border border-sky-400/25 px-2.5 py-1 rounded-lg">商談</span>
       </div>
-      <p class="text-lg font-black text-slate-800 leading-snug">
-        &lt;UNKNOWN&gt;<span class="text-slate-500">さん</span>
+      <p class="text-[1.0625rem] font-bold text-slate-100 leading-snug tracking-tight">
+        &lt;UNKNOWN&gt;<span class="font-medium text-slate-500">さん</span>
       </p>
-      <p class="text-sm font-semibold text-slate-500 mt-0.5">&lt;UNKNOWN&gt;</p>
+      <p class="text-sm font-medium text-slate-400 mt-1">&lt;UNKNOWN&gt;</p>
       
-      <span class="flex items-center gap-1 text-sm text-slate-400 mt-1"><svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>https://pocotaro-bot.github.io/meeting-diagrams/diagrams/20260416-UNKNOWN.html</span>
-      <div class="mt-1"><span class="text-xs text-slate-400">先方: エンゲージメント向上を目指す人材育成評価フレームワーク</span><span class="text-xs text-slate-400 ml-2">自社: 19d9587ca4e3887b</span></div>
+      <span class="flex items-center gap-1.5 text-xs text-slate-500 mt-2"><svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 shrink-0 text-slate-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>https://pocotaro-bot.github.io/meeting-diagrams/diagrams/20260416-UNKNOWN.html</span>
+      <div class="mt-2.5 flex flex-wrap items-baseline gap-y-1"><span class="text-[11px] text-slate-500">先方 <span class="text-slate-400">エンゲージメント向上を目指す人材育成評価フレームワーク</span></span><span class="text-[11px] text-slate-500 ml-3">自社 <span class="text-slate-400">19d9587ca4e3887b</span></span></div>
     </div>
-    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-slate-300 shrink-0 mt-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+    <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-white/[0.08] bg-white/[0.03] text-slate-500 transition-colors duration-300 group-hover:border-sky-400/30 group-hover:bg-sky-500/10 group-hover:text-sky-300">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 -translate-x-px transition-transform duration-300 group-hover:translate-x-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+    </div>
   </div>
 </a>
-<a href="#" class="block ads-card border-l-4 border-l-blue-400 p-4 hover:shadow-md transition-shadow active:opacity-80" data-search="&lt;unknown&gt; https://pocotaro-bot.github.io/meeting-diagrams/diagrams/19700101-unknown.html &lt;unknown&gt; 対話型 1970/01/01">
-  <div class="flex items-start justify-between gap-2">
+<a href="#" class="group block ads-card border-l-[3px] border-l-sky-400 shadow-sky-500/5 rounded-2xl p-5 transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/20 active:translate-y-0 active:opacity-95" data-search="&lt;unknown&gt; https://pocotaro-bot.github.io/meeting-diagrams/diagrams/19700101-unknown.html &lt;unknown&gt; 対話型 1970/01/01">
+  <div class="flex items-start justify-between gap-4">
     <div class="flex-1 min-w-0">
-      <div class="flex items-center gap-2 mb-1">
-        <p class="text-xs text-slate-400">1970/01/01</p>
-        <span class="text-xs font-bold text-blue-600 bg-blue-50 border border-blue-200 px-2 py-0.5 rounded-full">商談</span>
+      <div class="flex flex-wrap items-center gap-x-2 gap-y-1 mb-2">
+        <time class="text-[11px] font-medium tabular-nums tracking-wide text-slate-500">1970/01/01</time>
+        <span class="inline-flex items-center text-[11px] font-semibold tracking-wide text-sky-200 bg-sky-500/15 border border-sky-400/25 px-2.5 py-1 rounded-lg">商談</span>
       </div>
-      <p class="text-lg font-black text-slate-800 leading-snug">
-        &lt;UNKNOWN&gt;<span class="text-slate-500">さん</span>
+      <p class="text-[1.0625rem] font-bold text-slate-100 leading-snug tracking-tight">
+        &lt;UNKNOWN&gt;<span class="font-medium text-slate-500">さん</span>
       </p>
       
       
-      <span class="flex items-center gap-1 text-sm text-slate-400 mt-1"><svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>https://pocotaro-bot.github.io/meeting-diagrams/diagrams/19700101-UNKNOWN.html</span>
-      <div class="mt-1"><span class="text-xs text-slate-400">先方: &lt;UNKNOWN&gt;</span></div>
+      <span class="flex items-center gap-1.5 text-xs text-slate-500 mt-2"><svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 shrink-0 text-slate-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>https://pocotaro-bot.github.io/meeting-diagrams/diagrams/19700101-UNKNOWN.html</span>
+      <div class="mt-2.5 flex flex-wrap items-baseline gap-y-1"><span class="text-[11px] text-slate-500">先方 <span class="text-slate-400">&lt;UNKNOWN&gt;</span></span></div>
     </div>
-    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-slate-300 shrink-0 mt-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+    <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-white/[0.08] bg-white/[0.03] text-slate-500 transition-colors duration-300 group-hover:border-sky-400/30 group-hover:bg-sky-500/10 group-hover:text-sky-300">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 -translate-x-px transition-transform duration-300 group-hover:translate-x-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+    </div>
   </div>
 </a>
-<a href="https://pocotaro-bot.github.io/meeting-diagrams/diagrams/19700101-UNKNOWN.html" class="block ads-card border-l-4 border-l-violet-400 p-4 hover:shadow-md transition-shadow active:opacity-80" data-search="&lt;unknown&gt; &lt;unknown&gt; 不明 音声メモ 1970/01/01">
-  <div class="flex items-start justify-between gap-2">
+<a href="https://pocotaro-bot.github.io/meeting-diagrams/diagrams/19700101-UNKNOWN.html" class="group block ads-card border-l-[3px] border-l-violet-400 shadow-violet-500/5 rounded-2xl p-5 transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/20 active:translate-y-0 active:opacity-95" data-search="&lt;unknown&gt; &lt;unknown&gt; 不明 音声メモ 1970/01/01">
+  <div class="flex items-start justify-between gap-4">
     <div class="flex-1 min-w-0">
-      <div class="flex items-center gap-2 mb-1">
-        <p class="text-xs text-slate-400">1970/01/01</p>
-        <span class="text-xs font-bold text-violet-600 bg-violet-50 border border-violet-200 px-2 py-0.5 rounded-full">音声メモ</span>
+      <div class="flex flex-wrap items-center gap-x-2 gap-y-1 mb-2">
+        <time class="text-[11px] font-medium tabular-nums tracking-wide text-slate-500">1970/01/01</time>
+        <span class="inline-flex items-center text-[11px] font-semibold tracking-wide text-violet-200 bg-violet-500/15 border border-violet-400/25 px-2.5 py-1 rounded-lg">音声メモ</span>
       </div>
-      <p class="text-lg font-black text-slate-800 leading-snug">
-        &lt;UNKNOWN&gt;<span class="text-slate-500">さん</span>
+      <p class="text-[1.0625rem] font-bold text-slate-100 leading-snug tracking-tight">
+        &lt;UNKNOWN&gt;<span class="font-medium text-slate-500">さん</span>
       </p>
       
-      <p class="text-sm text-slate-600 mt-1.5 leading-snug">&lt;UNKNOWN&gt;</p>
-      <span class="flex items-center gap-1 text-sm text-slate-400 mt-1"><svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>不明</span>
+      <p class="text-sm text-slate-500 mt-2.5 leading-relaxed border-t border-white/[0.06] pt-2.5">&lt;UNKNOWN&gt;</p>
+      <span class="flex items-center gap-1.5 text-xs text-slate-500 mt-2"><svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 shrink-0 text-slate-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>不明</span>
       
     </div>
-    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-slate-300 shrink-0 mt-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+    <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-white/[0.08] bg-white/[0.03] text-slate-500 transition-colors duration-300 group-hover:border-violet-400/30 group-hover:bg-violet-500/10 group-hover:text-violet-300">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 -translate-x-px transition-transform duration-300 group-hover:translate-x-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+    </div>
   </div>
 </a>
 </main>
 
-<footer class="max-w-2xl mx-auto px-4 pt-4 text-center text-xs text-slate-300">
-  12件（商談 11・音声メモ 1） · AI-Driven School
+<footer class="max-w-xl mx-auto px-4 pt-6 text-center">
+  <p class="text-[11px] font-medium text-slate-600">12件 <span class="text-slate-700">·</span> 商談 11 <span class="text-slate-700">·</span> 音声 1</p>
+  <p class="mt-1 text-[10px] tracking-wide text-slate-700">AI-Driven School</p>
 </footer>
 
 <script>
@@ -259,10 +314,10 @@ function filterCards(q) {
   const noResult = document.getElementById('no-result');
   if (!kw || visible > 0) { if (noResult) noResult.remove(); }
   else if (!noResult) {
-    const d = document.createElement('p');
+    const d = document.createElement('div');
     d.id = 'no-result';
-    d.className = 'text-center text-slate-400 py-8';
-    d.textContent = '一致する商談図解が見つかりません';
+    d.className = 'rounded-xl border border-white/[0.06] bg-white/[0.02] py-12 text-center text-sm text-slate-500';
+    d.textContent = '一致する図解が見つかりません';
     document.getElementById('cards').appendChild(d);
   }
 }
