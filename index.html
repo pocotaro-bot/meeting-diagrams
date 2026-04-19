@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<title>図解 一覧</title>
+<title>商談図解 一覧</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <style>
   body { background:#f8fafc; color:#1e293b; font-family:'Hiragino Kana Gothic ProN','Hiragino Sans','Yu Gothic','Meiryo',sans-serif; }
@@ -15,10 +15,7 @@
 
 <header class="sticky top-0 z-10 bg-white/90 backdrop-blur border-b border-slate-200">
   <div class="max-w-2xl mx-auto px-4 py-3">
-    <div class="flex items-center gap-3 mb-2">
-      <span class="text-xs font-bold text-blue-600 bg-blue-50 border border-blue-200 px-2 py-0.5 rounded-full">商談 5件</span>
-      <span class="text-xs font-bold text-violet-600 bg-violet-50 border border-violet-200 px-2 py-0.5 rounded-full">音声メモ 1件</span>
-    </div>
+    <p class="text-xs text-blue-500 font-bold mb-1">商談図解</p>
     <input id="search" type="search" placeholder="名前・会社・ワードで検索…"
       class="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-base bg-slate-50 focus:outline-none focus:ring-2 focus:ring-blue-300"
       oninput="filterCards(this.value)">
@@ -30,10 +27,7 @@
 <a href="図解を開く" class="block ads-card p-4 hover:shadow-md transition-shadow active:opacity-80" data-search="自分自身  県民ショーの食品について 不明">
   <div class="flex items-start justify-between gap-2">
     <div class="flex-1 min-w-0">
-      <div class="flex items-center gap-2 mb-0.5">
-        <p class="text-xs text-slate-400">2026/04/19</p>
-        <span class="text-xs font-bold text-blue-600 bg-blue-50 border border-blue-200 px-2 py-0.5 rounded-full">商談</span>
-      </div>
+      <p class="text-xs text-slate-400 mb-0.5">2026/04/19</p>
       <p class="text-base font-black text-slate-800 leading-snug">
         自分自身さん
       </p>
@@ -47,10 +41,7 @@
 <a href="図解を開く" class="block ads-card p-4 hover:shadow-md transition-shadow active:opacity-80" data-search="&lt;unknown&gt;  個人の音声メモ - 日常報告 不明">
   <div class="flex items-start justify-between gap-2">
     <div class="flex-1 min-w-0">
-      <div class="flex items-center gap-2 mb-0.5">
-        <p class="text-xs text-slate-400">2026/04/18</p>
-        <span class="text-xs font-bold text-blue-600 bg-blue-50 border border-blue-200 px-2 py-0.5 rounded-full">商談</span>
-      </div>
+      <p class="text-xs text-slate-400 mb-0.5">2026/04/18</p>
       <p class="text-base font-black text-slate-800 leading-snug">
         &lt;UNKNOWN&gt;さん
       </p>
@@ -64,10 +55,7 @@
 <a href="図解を開く" class="block ads-card p-4 hover:shadow-md transition-shadow active:opacity-80" data-search="&lt;unknown&gt;  個人の日常の音声メモ 不明">
   <div class="flex items-start justify-between gap-2">
     <div class="flex-1 min-w-0">
-      <div class="flex items-center gap-2 mb-0.5">
-        <p class="text-xs text-slate-400">2026/04/18</p>
-        <span class="text-xs font-bold text-blue-600 bg-blue-50 border border-blue-200 px-2 py-0.5 rounded-full">商談</span>
-      </div>
+      <p class="text-xs text-slate-400 mb-0.5">2026/04/18</p>
       <p class="text-base font-black text-slate-800 leading-snug">
         &lt;UNKNOWN&gt;さん
       </p>
@@ -81,10 +69,7 @@
 <a href="#" class="block ads-card p-4 hover:shadow-md transition-shadow active:opacity-80" data-search="&lt;unknown&gt; &lt;unknown&gt;  https://pocotaro-bot.github.io/meeting-diagrams/diagrams/20260416-unknown.html">
   <div class="flex items-start justify-between gap-2">
     <div class="flex-1 min-w-0">
-      <div class="flex items-center gap-2 mb-0.5">
-        <p class="text-xs text-slate-400">2026/04/16</p>
-        <span class="text-xs font-bold text-blue-600 bg-blue-50 border border-blue-200 px-2 py-0.5 rounded-full">商談</span>
-      </div>
+      <p class="text-xs text-slate-400 mb-0.5">2026/04/16</p>
       <p class="text-base font-black text-slate-800 leading-snug">
         &lt;UNKNOWN&gt;さん<span class="text-slate-400 text-sm ml-1">（&lt;UNKNOWN&gt;）</span>
       </p>
@@ -98,10 +83,7 @@
 <a href="#" class="block ads-card p-4 hover:shadow-md transition-shadow active:opacity-80" data-search="&lt;unknown&gt;   https://pocotaro-bot.github.io/meeting-diagrams/diagrams/19700101-unknown.html">
   <div class="flex items-start justify-between gap-2">
     <div class="flex-1 min-w-0">
-      <div class="flex items-center gap-2 mb-0.5">
-        <p class="text-xs text-slate-400">1970/01/01</p>
-        <span class="text-xs font-bold text-blue-600 bg-blue-50 border border-blue-200 px-2 py-0.5 rounded-full">商談</span>
-      </div>
+      <p class="text-xs text-slate-400 mb-0.5">1970/01/01</p>
       <p class="text-base font-black text-slate-800 leading-snug">
         &lt;UNKNOWN&gt;さん
       </p>
@@ -115,10 +97,7 @@
 <a href="図解を開く" class="block ads-card p-4 hover:shadow-md transition-shadow active:opacity-80" data-search="&lt;unknown&gt;  &lt;unknown&gt; 不明">
   <div class="flex items-start justify-between gap-2">
     <div class="flex-1 min-w-0">
-      <div class="flex items-center gap-2 mb-0.5">
-        <p class="text-xs text-slate-400">1970/01/01</p>
-        <span class="text-xs font-bold text-violet-600 bg-violet-50 border border-violet-200 px-2 py-0.5 rounded-full">音声メモ</span>
-      </div>
+      <p class="text-xs text-slate-400 mb-0.5">1970/01/01</p>
       <p class="text-base font-black text-slate-800 leading-snug">
         &lt;UNKNOWN&gt;さん
       </p>
@@ -132,7 +111,7 @@
 </main>
 
 <footer class="max-w-2xl mx-auto px-4 pt-4 text-center text-xs text-slate-300">
-  6件（商談 5・音声メモ 1） · AI-Driven School
+  6件の商談図解 · AI-Driven School
 </footer>
 
 <script>
