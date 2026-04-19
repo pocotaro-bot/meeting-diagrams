@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<title>商談メモ: 不明さんとの対話型</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<style>
+  body { background: #f8fafc; color: #1e293b; font-family: 'Hiragino Kana Gothic ProN','Hiragino Sans','Yu Gothic','Meiryo',sans-serif; -webkit-tap-highlight-color: transparent; }
+  .ads-card { background: #fff; border: 1px solid #e2e8f0; border-radius: 1rem; }
+  @media print { .no-print { display: none !important; } }
+</style>
+</head>
+<body class="min-h-screen pb-16" style="padding-bottom:env(safe-area-inset-bottom,16px)">
+
+<!-- ヘッダー -->
+<header class="sticky top-0 z-10 bg-white/90 backdrop-blur border-b border-slate-200">
+  <div class="max-w-2xl mx-auto px-4 py-3 flex items-center justify-between">
+    <span class="text-base font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-full">商談メモ</span>
+    <button onclick="window.print()" class="no-print flex items-center gap-1.5 text-sm text-slate-400 hover:text-blue-600 transition-colors">
+      <i data-lucide="printer" class="w-4 h-4"></i> PDF
+    </button>
+  </div>
+</header>
+
+<main class="max-w-2xl mx-auto px-4 py-8 space-y-8">
+
+  <!-- ヒーロー -->
+  <div class="ads-card p-6">
+    <p class="text-xs text-slate-400 mb-1">これはデモ用サンプルです</p>
+    <h1 class="text-2xl sm:text-3xl font-black text-slate-900 leading-tight mb-2">
+      不明さんとの対話型
+    </h1>
+    <p class="text-base text-slate-500 mb-4">個人の音声メモ・アニメ感想</p>
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-base">
+      <div>
+        <p class="text-slate-400 flex items-center gap-1 mb-0.5"><i data-lucide="calendar" class="w-3.5 h-3.5"></i> 日時</p>
+        <p class="font-semibold text-slate-700">2026年4月19日</p>
+      </div>
+      <div>
+        <p class="text-slate-400 flex items-center gap-1 mb-0.5"><i data-lucide="user" class="w-3.5 h-3.5"></i> 相手</p>
+        <p class="font-semibold text-slate-700">不明</p>
+        
+        
+      </div>
+      
+      
+    </div>
+  </div>
+
+  <!-- 相手を知る -->
+  <section>
+    <h2 class="text-lg font-black text-slate-700 mb-3 flex items-center gap-2">
+      <i data-lucide="user-search" class="w-5 h-5 text-blue-500"></i> 相手を知る
+    </h2>
+    <div class="grid sm:grid-cols-3 gap-3">
+      <div class="ads-card border-amber-200 bg-amber-50 p-4">
+    <p class="text-base font-bold text-amber-600 uppercase tracking-wide mb-1">課題</p>
+    <p class="text-base font-black text-amber-700 leading-snug mb-2">アニメ視聴の時間管理</p>
+    <p class="text-sm text-slate-600 leading-relaxed">「100M」というアニメを視聴中で、大会展開に予想がつかない状況が続いているとのこと</p>
+  </div>
+      <div class="ads-card border-blue-200 bg-blue-50 p-4">
+    <p class="text-base font-bold text-blue-600 uppercase tracking-wide mb-1">価値観</p>
+    <p class="text-base font-black text-blue-700 leading-snug mb-2">エンターテインメント鑑賞の価値</p>
+    <p class="text-sm text-slate-600 leading-relaxed">新作アニメの展開を楽しみにしており、不確実な展開を歓迎する姿勢を持っているとのこと</p>
+  </div>
+      <div class="ads-card border-green-200 bg-green-50 p-4">
+    <p class="text-base font-bold text-green-600 uppercase tracking-wide mb-1">期待</p>
+    <p class="text-base font-black text-green-700 leading-snug mb-2">今後のストーリー展開への期待</p>
+    <p class="text-sm text-slate-600 leading-relaxed">陸上競技アニメ「100M」の今後の展開がどのようになるか、楽しみにしているという話が出た</p>
+  </div>
+    </div>
+  </section>
+
+  <!-- キーポイント -->
+  <section>
+    <h2 class="text-lg font-black text-slate-700 mb-3 flex items-center gap-2">
+      <i data-lucide="star" class="w-5 h-5 text-amber-500"></i> キーポイント
+    </h2>
+    <div class="space-y-3">
+      <div class="ads-card p-5">
+    <div class="flex items-start gap-3">
+      <span class="shrink-0 w-7 h-7 rounded-full bg-amber-500 text-white text-sm font-black flex items-center justify-center">1</span>
+      <div class="flex-1 min-w-0">
+        <p class="text-lg font-black text-slate-800 leading-snug mb-2">アニメ「100M」の視聴状況</p>
+        <p class="text-base text-slate-600 leading-relaxed mb-2">陸上を題材にしたアニメ「100M」を視聴中で、現在大会場面が放送されているとのこと</p>
+        <blockquote class="border-l-4 border-amber-300 pl-3 text-base text-amber-700 italic leading-snug">&ldquo;100Mという陸上のアニメです&rdquo;</blockquote>
+        <p class="text-base font-bold text-blue-600 mt-2">陸上のアニメ</p>
+      </div>
+    </div>
+  </div><div class="ads-card p-5">
+    <div class="flex items-start gap-3">
+      <span class="shrink-0 w-7 h-7 rounded-full bg-amber-500 text-white text-sm font-black flex items-center justify-center">2</span>
+      <div class="flex-1 min-w-0">
+        <p class="text-lg font-black text-slate-800 leading-snug mb-2">予測不可能なストーリー展開</p>
+        <p class="text-base text-slate-600 leading-relaxed mb-2">アニメの展開が予想しづらく、今後どのような展開になるか全く読めない状況だという話が出た</p>
+        <blockquote class="border-l-4 border-amber-300 pl-3 text-base text-amber-700 italic leading-snug">&ldquo;どんな展開になるのか、今後全然予想がつきません&rdquo;</blockquote>
+        <p class="text-base font-bold text-blue-600 mt-2">予想がつかない</p>
+      </div>
+    </div>
+  </div><div class="ads-card p-5">
+    <div class="flex items-start gap-3">
+      <span class="shrink-0 w-7 h-7 rounded-full bg-amber-500 text-white text-sm font-black flex items-center justify-center">3</span>
+      <div class="flex-1 min-w-0">
+        <p class="text-lg font-black text-slate-800 leading-snug mb-2">視聴への高い関心度</p>
+        <p class="text-base text-slate-600 leading-relaxed mb-2">アニメの今後の展開を楽しみにしており、強い期待感を持っているとのこと</p>
+        <blockquote class="border-l-4 border-amber-300 pl-3 text-base text-amber-700 italic leading-snug">&ldquo;楽しみです&rdquo;</blockquote>
+        <p class="text-base font-bold text-blue-600 mt-2">楽しみです</p>
+      </div>
+    </div>
+  </div>
+    </div>
+  </section>
+
+  <!-- 次回の話題ネタ -->
+  
+  <section>
+    <h2 class="text-lg font-black text-slate-700 mb-3 flex items-center gap-2">
+      <i data-lucide="message-circle" class="w-5 h-5 text-purple-500"></i> 次回また話したいこと
+    </h2>
+    <div class="grid sm:grid-cols-2 gap-3">
+      <div class="ads-card border-purple-200 bg-purple-50 p-4">
+    <p class="text-base font-bold text-purple-500 uppercase tracking-wide mb-2 flex items-center gap-1.5">
+      <i data-lucide="star" class="w-4 h-4"></i> 話題ネタ1
+    </p>
+    <p class="text-base font-black text-purple-800 leading-snug mb-1">アニメ「100M」の視聴進行状況</p>
+    <p class="text-sm text-slate-600 leading-relaxed">陸上競技アニメの視聴を継続中で、大会展開に対する関心が高い。次回もこのアニメについての感想・予想を話題にできる可能性がある</p>
+  </div><div class="ads-card border-purple-200 bg-purple-50 p-4">
+    <p class="text-base font-bold text-purple-500 uppercase tracking-wide mb-2 flex items-center gap-1.5">
+      <i data-lucide="heart" class="w-4 h-4"></i> 話題ネタ2
+    </p>
+    <p class="text-base font-black text-purple-800 leading-snug mb-1">不確定要素を含むストーリーへの反応</p>
+    <p class="text-sm text-slate-600 leading-relaxed">予測できない展開を楽しむ姿勢が見られたため、サスペンス性のある作品や予想外の展開を好む傾向について今後話題にできる可能性がある</p>
+  </div>
+    </div>
+  </section>
+
+  <!-- ネクストアクション -->
+  
+  <section>
+    <h2 class="text-lg font-black text-slate-700 mb-3 flex items-center gap-2">
+      <i data-lucide="check-square" class="w-5 h-5 text-green-500"></i> ネクストアクション
+    </h2>
+    <div class="space-y-2">
+      <div class="ads-card p-4 flex items-start gap-3">
+    <i data-lucide="arrow-right-circle" class="w-5 h-5 text-green-500 shrink-0 mt-0.5"></i>
+    <div class="flex-1 min-w-0">
+      <div class="flex items-center gap-2 mb-0.5 flex-wrap">
+        <p class="text-lg font-black text-slate-800">アニメ「100M」の続き視聴</p>
+        <span class="text-sm font-bold px-2 py-0.5 rounded-full border bg-amber-50 border-amber-200 text-amber-700">来週中</span>
+      </div>
+      <p class="text-sm text-slate-500 leading-relaxed">陸上競技アニメ「100M」の続きの放送を視聴して、ストーリー展開を確認する</p>
+    </div>
+  </div>
+    </div>
+  </section>
+
+  <!-- キーワード -->
+  
+
+  <!-- 自己評価 -->
+  
+  <section>
+    <h2 class="text-lg font-black text-slate-700 mb-3 flex items-center gap-2">
+      <i data-lucide="bar-chart-2" class="w-5 h-5 text-rose-500"></i> 自己評価
+    </h2>
+    <div class="space-y-3">
+      <div class="ads-card border-rose-100 bg-rose-50 p-5">
+    <div class="flex items-start gap-3">
+      <i data-lucide="alert-circle" class="w-5 h-5 text-rose-400 shrink-0 mt-0.5"></i>
+      <div class="flex-1 min-w-0">
+        <p class="text-base font-black text-slate-800 mb-1">言葉の繰り返しが多い</p>
+        <p class="text-base text-slate-600 leading-relaxed mb-3">「100M」「アニメ」といった単語を何度も繰り返し、「これは」という前置きも複数回出現している。同じ文字起こしで『100Mという陸上のアニメです』『100Mというアニメ』『これは100Mというアニメ』という説明が重複している</p>
+        <div class="bg-white border border-rose-100 rounded-xl p-3">
+          <p class="text-sm font-bold text-rose-500 mb-1">改善案</p>
+          <p class="text-base text-slate-700">初回の説明後は代名詞や短い参照表現を活用して、より簡潔で洗練された表現を心がける</p>
+        </div>
+      </div>
+    </div>
+  </div><div class="ads-card border-rose-100 bg-rose-50 p-5">
+    <div class="flex items-start gap-3">
+      <i data-lucide="alert-circle" class="w-5 h-5 text-rose-400 shrink-0 mt-0.5"></i>
+      <div class="flex-1 min-w-0">
+        <p class="text-base font-black text-slate-800 mb-1">話題としての広がりが限定的</p>
+        <p class="text-base text-slate-600 leading-relaxed mb-3">アニメの視聴感想に留まっており、相手との対話的な展開や関連する背景情報（なぜこのアニメを選んだのか、陸上競技への関心など）が述べられていない</p>
+        <div class="bg-white border border-rose-100 rounded-xl p-3">
+          <p class="text-sm font-bold text-rose-500 mb-1">改善案</p>
+          <p class="text-base text-slate-700">次回は、アニメを選んだ理由や陸上競技そのものへの興味など、より多角的な情報を交えて話題を展開させることで、商談や関係構築につながる情報提供が可能になる</p>
+        </div>
+      </div>
+    </div>
+  </div><div class="ads-card border-rose-100 bg-rose-50 p-5">
+    <div class="flex items-start gap-3">
+      <i data-lucide="alert-circle" class="w-5 h-5 text-rose-400 shrink-0 mt-0.5"></i>
+      <div class="flex-1 min-w-0">
+        <p class="text-base font-black text-slate-800 mb-1">相手への質問や提案がない</p>
+        <p class="text-base text-slate-600 leading-relaxed mb-3">一方的な感想述べに終わっており、相手の意見を求めたり、共有する体験を促したりという相互作用がない</p>
+        <div class="bg-white border border-rose-100 rounded-xl p-3">
+          <p class="text-sm font-bold text-rose-500 mb-1">改善案</p>
+          <p class="text-base text-slate-700">相手の意見を尋ねる質問を含める、または今後の視聴について共通の期待を形成するなど、対話的なコミュニケーションを心がける</p>
+        </div>
+      </div>
+    </div>
+  </div>
+    </div>
+    
+    <div class="ads-card p-5 mt-3">
+      <div class="flex items-center gap-2 mb-3">
+        <i data-lucide="check" class="w-4 h-4 text-green-500 shrink-0"></i>
+        <p class="text-lg font-bold text-slate-700">できていたこと</p>
+      </div>
+      <ul class="space-y-3 text-base text-slate-500">
+        <li class="flex items-start gap-2"><span class="text-green-500 font-bold shrink-0 mt-0.5">•</span><span>自分の感情を素直に表現できている（楽しみという気持ちが伝わる）</span></li><li class="flex items-start gap-2"><span class="text-green-500 font-bold shrink-0 mt-0.5">•</span><span>視聴作品について詳しく説明しようとしている（アニメのジャンルや現在の状況を明確に述べている）</span></li><li class="flex items-start gap-2"><span class="text-green-500 font-bold shrink-0 mt-0.5">•</span><span>個人の思いを率直に述べている</span></li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<footer class="max-w-2xl mx-auto px-4 pt-6 pb-10 border-t border-slate-200/60">
+  <p class="text-base text-slate-400 text-center">AI-Driven School の図解ツールで自動生成</p>
+</footer>
+
+<!-- 編集ボタン（右下 FAB） -->
+
+<a href="https://script.google.com/macros/s/AKfycbyvk0c4seawQU-EnPLsky84_RknUcgWu4hcG-HcHRzlrIeX-glk0qgcgOD2jcOt0dzG-w/exec?slug=20260419-不明" class="no-print fixed bottom-6 right-6 z-50 flex items-center gap-2 bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white font-bold text-base px-5 py-3 rounded-full shadow-lg transition-colors" style="bottom:calc(1.5rem + env(safe-area-inset-bottom,0px))">
+  <i data-lucide="pencil" class="w-4 h-4"></i> 編集
+</a>
+
+<script id="meeting-data" type="application/json">{"meeting":{"date":"2026年4月19日","person_name":"不明","headline":"個人の音声メモ・アニメ感想","scene_type":"対話型"},"know_them":{"issue":{"title":"アニメ視聴の時間管理","detail":"「100M」というアニメを視聴中で、大会展開に予想がつかない状況が続いているとのこと"},"values":{"title":"エンターテインメント鑑賞の価値","detail":"新作アニメの展開を楽しみにしており、不確実な展開を歓迎する姿勢を持っているとのこと"},"expectation":{"title":"今後のストーリー展開への期待","detail":"陸上競技アニメ「100M」の今後の展開がどのようになるか、楽しみにしているという話が出た"}},"key_points":[{"title":"アニメ「100M」の視聴状況","detail":"陸上を題材にしたアニメ「100M」を視聴中で、現在大会場面が放送されているとのこと","highlight":"陸上のアニメ","quote":"100Mという陸上のアニメです"},{"title":"予測不可能なストーリー展開","detail":"アニメの展開が予想しづらく、今後どのような展開になるか全く読めない状況だという話が出た","highlight":"予想がつかない","quote":"どんな展開になるのか、今後全然予想がつきません"},{"title":"視聴への高い関心度","detail":"アニメの今後の展開を楽しみにしており、強い期待感を持っているとのこと","highlight":"楽しみです","quote":"楽しみです"}],"next_topics":[{"label":"話題ネタ1","title":"アニメ「100M」の視聴進行状況","detail":"陸上競技アニメの視聴を継続中で、大会展開に対する関心が高い。次回もこのアニメについての感想・予想を話題にできる可能性がある","icon":"star"},{"label":"話題ネタ2","title":"不確定要素を含むストーリーへの反応","detail":"予測できない展開を楽しむ姿勢が見られたため、サスペンス性のある作品や予想外の展開を好む傾向について今後話題にできる可能性がある","icon":"heart"}],"next_actions":[{"title":"アニメ「100M」の続き視聴","deadline":"来週中","detail":"陸上競技アニメ「100M」の続きの放送を視聴して、ストーリー展開を確認する"}],"self_evaluation":{"good_points":["自分の感情を素直に表現できている（楽しみという気持ちが伝わる）","視聴作品について詳しく説明しようとしている（アニメのジャンルや現在の状況を明確に述べている）","個人の思いを率直に述べている"],"improvements":[{"title":"言葉の繰り返しが多い","detail":"「100M」「アニメ」といった単語を何度も繰り返し、「これは」という前置きも複数回出現している。同じ文字起こしで『100Mという陸上のアニメです』『100Mというアニメ』『これは100Mというアニメ』という説明が重複している","suggestion":"初回の説明後は代名詞や短い参照表現を活用して、より簡潔で洗練された表現を心がける"},{"title":"話題としての広がりが限定的","detail":"アニメの視聴感想に留まっており、相手との対話的な展開や関連する背景情報（なぜこのアニメを選んだのか、陸上競技への関心など）が述べられていない","suggestion":"次回は、アニメを選んだ理由や陸上競技そのものへの興味など、より多角的な情報を交えて話題を展開させることで、商談や関係構築につながる情報提供が可能になる"},{"title":"相手への質問や提案がない","detail":"一方的な感想述べに終わっており、相手の意見を求めたり、共有する体験を促したりという相互作用がない","suggestion":"相手の意見を尋ねる質問を含める、または今後の視聴について共通の期待を形成するなど、対話的なコミュニケーションを心がける"}]}}</script>
+<script>lucide.createIcons();</script>
+</body>
+</html>
