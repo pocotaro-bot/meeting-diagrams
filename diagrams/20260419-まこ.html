@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<title>商談メモ: まこさんとの対話型</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<style>
+  body { background: #f8fafc; color: #1e293b; font-family: 'Hiragino Kana Gothic ProN','Hiragino Sans','Yu Gothic','Meiryo',sans-serif; -webkit-tap-highlight-color: transparent; }
+  .ads-card { background: #fff; border: 1px solid #e2e8f0; border-radius: 1rem; }
+  @media print { .no-print { display: none !important; } }
+</style>
+</head>
+<body class="min-h-screen pb-16" style="padding-bottom:env(safe-area-inset-bottom,16px)">
+
+<!-- ヘッダー -->
+<header class="sticky top-0 z-10 bg-white/90 backdrop-blur border-b border-slate-200">
+  <div class="max-w-2xl mx-auto px-4 py-3 flex items-center justify-between">
+    <span class="text-base font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-full">商談メモ</span>
+    <button onclick="window.print()" class="no-print flex items-center gap-1.5 text-sm text-slate-400 hover:text-blue-600 transition-colors">
+      <i data-lucide="printer" class="w-4 h-4"></i> PDF
+    </button>
+  </div>
+</header>
+
+<main class="max-w-2xl mx-auto px-4 py-8 space-y-8">
+
+  <!-- ヒーロー -->
+  <div class="ads-card p-6">
+    <p class="text-xs text-slate-400 mb-1">これはデモ用サンプルです</p>
+    <h1 class="text-2xl sm:text-3xl font-black text-slate-900 leading-tight mb-2">
+      まこさんとの対話型
+    </h1>
+    <p class="text-base text-slate-500 mb-4">AI学習における課題整理と改善方針の確認</p>
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-base">
+      <div>
+        <p class="text-slate-400 flex items-center gap-1 mb-0.5"><i data-lucide="calendar" class="w-3.5 h-3.5"></i> 日時</p>
+        <p class="font-semibold text-slate-700">2026年4月19日</p>
+      </div>
+      <div>
+        <p class="text-slate-400 flex items-center gap-1 mb-0.5"><i data-lucide="user" class="w-3.5 h-3.5"></i> 相手</p>
+        <p class="font-semibold text-slate-700">まこ</p>
+        
+        
+      </div>
+      <div><p class="text-slate-400 flex items-center gap-1 mb-0.5"><i data-lucide="map-pin" class="w-3.5 h-3.5"></i> 場所</p><p class="font-semibold text-slate-700">不明</p></div>
+      
+    </div>
+  </div>
+
+  <!-- 相手を知る -->
+  <section>
+    <h2 class="text-lg font-black text-slate-700 mb-3 flex items-center gap-2">
+      <i data-lucide="user-search" class="w-5 h-5 text-blue-500"></i> 相手を知る
+    </h2>
+    <div class="grid sm:grid-cols-3 gap-3">
+      <div class="ads-card border-amber-200 bg-amber-50 p-4">
+    <p class="text-base font-bold text-amber-600 uppercase tracking-wide mb-1">課題</p>
+    <p class="text-base font-black text-amber-700 leading-snug mb-2">細かい作業に没頭して全体像を見失いかけている</p>
+    <p class="text-sm text-slate-600 leading-relaxed">AI学習を進める中で、細かい作業ばかりに取り組んでおり、プロジェクト全体の方向性を見失いかけているという懸念があるとのこと。また、講義でまこさんが言及した「機能を最小限にする」というアプローチが後回しになっているという話が出た。</p>
+  </div>
+      <div class="ads-card border-blue-200 bg-blue-50 p-4">
+    <p class="text-base font-bold text-blue-600 uppercase tracking-wide mb-1">価値観</p>
+    <p class="text-base font-black text-blue-700 leading-snug mb-2">細かい作業への適性と全体最適化の実現</p>
+    <p class="text-sm text-slate-600 leading-relaxed">細かい作業は得意で好きであるとのことだが、同時にそれを全体像の中で活かしながら、機能最小限の原則を守ることが大切だという価値観が感じられる。</p>
+  </div>
+      <div class="ads-card border-green-200 bg-green-50 p-4">
+    <p class="text-base font-bold text-green-600 uppercase tracking-wide mb-1">期待</p>
+    <p class="text-base font-black text-green-700 leading-snug mb-2">全体を見失わずに作業を進めることと機能設計の改善</p>
+    <p class="text-sm text-slate-600 leading-relaxed">今後は、細かい作業をしながらも常に全体像を意識することと、機能を最小限にするというアプローチを作業に組み込むことが必要だという考え方が示されているとのこと。</p>
+  </div>
+    </div>
+  </section>
+
+  <!-- キーポイント -->
+  <section>
+    <h2 class="text-lg font-black text-slate-700 mb-3 flex items-center gap-2">
+      <i data-lucide="star" class="w-5 h-5 text-amber-500"></i> キーポイント
+    </h2>
+    <div class="space-y-3">
+      <div class="ads-card p-5">
+    <div class="flex items-start gap-3">
+      <span class="shrink-0 w-7 h-7 rounded-full bg-amber-500 text-white text-sm font-black flex items-center justify-center">1</span>
+      <div class="flex-1 min-w-0">
+        <p class="text-lg font-black text-slate-800 leading-snug mb-2">細かい作業に偏重している現状認識</p>
+        <p class="text-base text-slate-600 leading-relaxed mb-2">AI学習プロジェクトにおいて、細かい作業の実施に集中している結果、プロジェクト全体の方向性や目的を見失いかけているという自己認識があるとのこと。</p>
+        <blockquote class="border-l-4 border-amber-300 pl-3 text-base text-amber-700 italic leading-snug">&ldquo;細かい作業ばかりやっていて、全体を見失いそうになるところが少し不安に思っております&rdquo;</blockquote>
+        <p class="text-base font-bold text-blue-600 mt-2">全体を見失いそうになるところが少し不安</p>
+      </div>
+    </div>
+  </div><div class="ads-card p-5">
+    <div class="flex items-start gap-3">
+      <span class="shrink-0 w-7 h-7 rounded-full bg-amber-500 text-white text-sm font-black flex items-center justify-center">2</span>
+      <div class="flex-1 min-w-0">
+        <p class="text-lg font-black text-slate-800 leading-snug mb-2">機能最小限の原則が後回しになっている</p>
+        <p class="text-base text-slate-600 leading-relaxed mb-2">講義でまこさんが言及した「機能を最小限にする」というアプローチが、現在の作業フローの中で十分に反映されていないという話が出ている。</p>
+        <blockquote class="border-l-4 border-amber-300 pl-3 text-base text-amber-700 italic leading-snug">&ldquo;機能最小限にするというところがどうしても置き去りになってるような気がしております&rdquo;</blockquote>
+        <p class="text-base font-bold text-blue-600 mt-2">機能最小限にするというところが置き去りになっている</p>
+      </div>
+    </div>
+  </div><div class="ads-card p-5">
+    <div class="flex items-start gap-3">
+      <span class="shrink-0 w-7 h-7 rounded-full bg-amber-500 text-white text-sm font-black flex items-center justify-center">3</span>
+      <div class="flex-1 min-w-0">
+        <p class="text-lg font-black text-slate-800 leading-snug mb-2">細かい作業は得意分野である</p>
+        <p class="text-base text-slate-600 leading-relaxed mb-2">細かい作業に対しては適性があり、その作業自体は苦ではないとのことだが、それを全体の中で適切に位置づける必要があるという話が出た。</p>
+        <blockquote class="border-l-4 border-amber-300 pl-3 text-base text-amber-700 italic leading-snug">&ldquo;細かい作業は好きなのですが&rdquo;</blockquote>
+        <p class="text-base font-bold text-blue-600 mt-2">細かい作業は好き</p>
+      </div>
+    </div>
+  </div>
+    </div>
+  </section>
+
+  <!-- 次回の話題ネタ -->
+  
+  <section>
+    <h2 class="text-lg font-black text-slate-700 mb-3 flex items-center gap-2">
+      <i data-lucide="message-circle" class="w-5 h-5 text-purple-500"></i> 次回また話したいこと
+    </h2>
+    <div class="grid sm:grid-cols-2 gap-3">
+      <div class="ads-card border-purple-200 bg-purple-50 p-4">
+    <p class="text-base font-bold text-purple-500 uppercase tracking-wide mb-2 flex items-center gap-1.5">
+      <i data-lucide="star" class="w-4 h-4"></i> 話題ネタ1
+    </p>
+    <p class="text-base font-black text-purple-800 leading-snug mb-1">全体像を見ながら作業を進める方法論</p>
+    <p class="text-sm text-slate-600 leading-relaxed">細かい作業と全体最適化を両立させるための具体的な方法論やプロセス設計について、次回以降さらに詳しく相談することで、より実践的な改善が期待できる。</p>
+  </div><div class="ads-card border-purple-200 bg-purple-50 p-4">
+    <p class="text-base font-bold text-purple-500 uppercase tracking-wide mb-2 flex items-center gap-1.5">
+      <i data-lucide="lightbulb" class="w-4 h-4"></i> 話題ネタ2
+    </p>
+    <p class="text-base font-black text-purple-800 leading-snug mb-1">機能最小限設計の実践的な組み込み方</p>
+    <p class="text-sm text-slate-600 leading-relaxed">まこさんから学んだ「機能を最小限にする」という原則を、現在の作業フローにどのように組み込み、実践していくかについて、次回詳しく相談する価値がある。</p>
+  </div>
+    </div>
+  </section>
+
+  <!-- ネクストアクション -->
+  
+  <section>
+    <h2 class="text-lg font-black text-slate-700 mb-3 flex items-center gap-2">
+      <i data-lucide="check-square" class="w-5 h-5 text-green-500"></i> ネクストアクション
+    </h2>
+    <div class="space-y-2">
+      <div class="ads-card p-4 flex items-start gap-3">
+    <i data-lucide="arrow-right-circle" class="w-5 h-5 text-green-500 shrink-0 mt-0.5"></i>
+    <div class="flex-1 min-w-0">
+      <div class="flex items-center gap-2 mb-0.5 flex-wrap">
+        <p class="text-lg font-black text-slate-800">全体像を見るためのチェックリストやプロセスの作成</p>
+        <span class="text-sm font-bold px-2 py-0.5 rounded-full border bg-amber-50 border-amber-200 text-amber-700">今週中</span>
+      </div>
+      <p class="text-sm text-slate-500 leading-relaxed">細かい作業に進む前に、プロジェクト全体の目標と現在地を確認するためのチェックリストを作成し、定期的に全体像を確認できるプロセスを組み込む。</p>
+    </div>
+  </div><div class="ads-card p-4 flex items-start gap-3">
+    <i data-lucide="arrow-right-circle" class="w-5 h-5 text-green-500 shrink-0 mt-0.5"></i>
+    <div class="flex-1 min-w-0">
+      <div class="flex items-center gap-2 mb-0.5 flex-wrap">
+        <p class="text-lg font-black text-slate-800">機能最小限の原則を作業計画に反映</p>
+        <span class="text-sm font-bold px-2 py-0.5 rounded-full border bg-amber-50 border-amber-200 text-amber-700">来週中</span>
+      </div>
+      <p class="text-sm text-slate-500 leading-relaxed">次のプロジェクトステップで、まこさんから学んだ機能最小限の設計方針を明確に組み込み、その検証を行う。</p>
+    </div>
+  </div><div class="ads-card p-4 flex items-start gap-3">
+    <i data-lucide="arrow-right-circle" class="w-5 h-5 text-green-500 shrink-0 mt-0.5"></i>
+    <div class="flex-1 min-w-0">
+      <div class="flex items-center gap-2 mb-0.5 flex-wrap">
+        <p class="text-lg font-black text-slate-800">まこさんとの具体的なアドバイス取得</p>
+        <span class="text-sm font-bold px-2 py-0.5 rounded-full border bg-blue-50 border-blue-200 text-blue-700">2週間以内</span>
+      </div>
+      <p class="text-sm text-slate-500 leading-relaxed">全体像を見失わないための具体的な方法論や、機能最小限設計の実装方法について、まこさんからさらに詳しいアドバイスを受ける。</p>
+    </div>
+  </div>
+    </div>
+  </section>
+
+  <!-- キーワード -->
+  
+
+  <!-- 自己評価 -->
+  
+  <section>
+    <h2 class="text-lg font-black text-slate-700 mb-3 flex items-center gap-2">
+      <i data-lucide="bar-chart-2" class="w-5 h-5 text-rose-500"></i> 自己評価
+    </h2>
+    <div class="space-y-3">
+      <div class="ads-card border-rose-100 bg-rose-50 p-5">
+    <div class="flex items-start gap-3">
+      <i data-lucide="alert-circle" class="w-5 h-5 text-rose-400 shrink-0 mt-0.5"></i>
+      <div class="flex-1 min-w-0">
+        <p class="text-base font-black text-slate-800 mb-1">全体像を見るための仕組みの欠落</p>
+        <p class="text-base text-slate-600 leading-relaxed mb-3">「全体を見失いそうになる」「置き去りになってる」という表現から、日々の作業の中に全体チェックの機会が組み込まれていないことが推察される。具体的な改善策なく問題認識に留まっている。</p>
+        <div class="bg-white border border-rose-100 rounded-xl p-3">
+          <p class="text-sm font-bold text-rose-500 mb-1">改善案</p>
+          <p class="text-base text-slate-700">毎日あるいは毎週、プロジェクト全体の目標と現在地を確認するためのリビューセッションを自分で設定し、細かい作業の前に必ず全体像を確認するルーチンを作る。</p>
+        </div>
+      </div>
+    </div>
+  </div><div class="ads-card border-rose-100 bg-rose-50 p-5">
+    <div class="flex items-start gap-3">
+      <i data-lucide="alert-circle" class="w-5 h-5 text-rose-400 shrink-0 mt-0.5"></i>
+      <div class="flex-1 min-w-0">
+        <p class="text-base font-black text-slate-800 mb-1">機能最小限の原則を実装できていない</p>
+        <p class="text-base text-slate-600 leading-relaxed mb-3">講義で「機能最小限にする」というアプローチを学んでいながら「置き去りになってる」と述べており、学んだ内容を実際の作業に反映させるプロセスが構築できていないことが明らかである。</p>
+        <div class="bg-white border border-rose-100 rounded-xl p-3">
+          <p class="text-sm font-bold text-rose-500 mb-1">改善案</p>
+          <p class="text-base text-slate-700">機能設計の段階で、まこさんの指導を受けながら「最小限」の定義を明確にし、各タスクで機能スコープをチェックするテンプレートを作成する。</p>
+        </div>
+      </div>
+    </div>
+  </div><div class="ads-card border-rose-100 bg-rose-50 p-5">
+    <div class="flex items-start gap-3">
+      <i data-lucide="alert-circle" class="w-5 h-5 text-rose-400 shrink-0 mt-0.5"></i>
+      <div class="flex-1 min-w-0">
+        <p class="text-base font-black text-slate-800 mb-1">曖昧な表現で課題を述べている傾向</p>
+        <p class="text-base text-slate-600 leading-relaxed mb-3">「少し不安」「ような気がしております」「気をつけないといけない」など、推測や感情的な表現が多く、具体的に何が、どの程度、いつから問題なのかが明確でない。音声メモの段階ではあるが、自分の課題認識を曖昧なままにしている。</p>
+        <div class="bg-white border border-rose-100 rounded-xl p-3">
+          <p class="text-sm font-bold text-rose-500 mb-1">改善案</p>
+          <p class="text-base text-slate-700">課題を言語化する際に、「いつから」「具体的には何が」「どのような影響があったか」という3つの要素を必ず含めるようにする。また、改善策も「～のようにする」ではなく「～を実施する」と具体的に述べることで、実行可能性を高める。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+    </div>
+    
+    <div class="ads-card p-5 mt-3">
+      <div class="flex items-center gap-2 mb-3">
+        <i data-lucide="check" class="w-4 h-4 text-green-500 shrink-0"></i>
+        <p class="text-lg font-bold text-slate-700">できていたこと</p>
+      </div>
+      <ul class="space-y-3 text-base text-slate-500">
+        <li class="flex items-start gap-2"><span class="text-green-500 font-bold shrink-0 mt-0.5">•</span><span>自分の課題を客観的に認識し、音声メモで整理しようとする姿勢がある</span></li><li class="flex items-start gap-2"><span class="text-green-500 font-bold shrink-0 mt-0.5">•</span><span>細かい作業に対する適性を持ち、その自覚がある</span></li><li class="flex items-start gap-2"><span class="text-green-500 font-bold shrink-0 mt-0.5">•</span><span>講義の内容を受けて、改善すべき点を自覚し、対策を考えようとしている</span></li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<footer class="max-w-2xl mx-auto px-4 pt-6 pb-10 border-t border-slate-200/60">
+  <p class="text-base text-slate-400 text-center">AI-Driven School の図解ツールで自動生成</p>
+</footer>
+
+<!-- 編集ボタン（右下 FAB） -->
+
+<a href="https://script.google.com/macros/library/d/1h_NTbmhR_6wI4PaWitqlrPGyu6kEI4wqRcQHQ5PWMVz4TYq1pZl8R1_1/2?slug=20260419-まこ" class="no-print fixed bottom-6 right-6 z-50 flex items-center gap-2 bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white font-bold text-base px-5 py-3 rounded-full shadow-lg transition-colors" style="bottom:calc(1.5rem + env(safe-area-inset-bottom,0px))">
+  <i data-lucide="pencil" class="w-4 h-4"></i> 編集
+</a>
+
+<script id="meeting-data" type="application/json">{"meeting":{"date":"2026年4月19日","person_name":"まこ","headline":"AI学習における課題整理と改善方針の確認","scene_type":"対話型","company":"","role":"","location":"不明","attendees_self":"","attendees_other":""},"know_them":{"issue":{"title":"細かい作業に没頭して全体像を見失いかけている","detail":"AI学習を進める中で、細かい作業ばかりに取り組んでおり、プロジェクト全体の方向性を見失いかけているという懸念があるとのこと。また、講義でまこさんが言及した「機能を最小限にする」というアプローチが後回しになっているという話が出た。"},"values":{"title":"細かい作業への適性と全体最適化の実現","detail":"細かい作業は得意で好きであるとのことだが、同時にそれを全体像の中で活かしながら、機能最小限の原則を守ることが大切だという価値観が感じられる。"},"expectation":{"title":"全体を見失わずに作業を進めることと機能設計の改善","detail":"今後は、細かい作業をしながらも常に全体像を意識することと、機能を最小限にするというアプローチを作業に組み込むことが必要だという考え方が示されているとのこと。"}},"key_points":[{"title":"細かい作業に偏重している現状認識","detail":"AI学習プロジェクトにおいて、細かい作業の実施に集中している結果、プロジェクト全体の方向性や目的を見失いかけているという自己認識があるとのこと。","highlight":"全体を見失いそうになるところが少し不安","quote":"細かい作業ばかりやっていて、全体を見失いそうになるところが少し不安に思っております"},{"title":"機能最小限の原則が後回しになっている","detail":"講義でまこさんが言及した「機能を最小限にする」というアプローチが、現在の作業フローの中で十分に反映されていないという話が出ている。","highlight":"機能最小限にするというところが置き去りになっている","quote":"機能最小限にするというところがどうしても置き去りになってるような気がしております"},{"title":"細かい作業は得意分野である","detail":"細かい作業に対しては適性があり、その作業自体は苦ではないとのことだが、それを全体の中で適切に位置づける必要があるという話が出た。","highlight":"細かい作業は好き","quote":"細かい作業は好きなのですが"}],"next_topics":[{"label":"話題ネタ1","title":"全体像を見ながら作業を進める方法論","detail":"細かい作業と全体最適化を両立させるための具体的な方法論やプロセス設計について、次回以降さらに詳しく相談することで、より実践的な改善が期待できる。","icon":"star"},{"label":"話題ネタ2","title":"機能最小限設計の実践的な組み込み方","detail":"まこさんから学んだ「機能を最小限にする」という原則を、現在の作業フローにどのように組み込み、実践していくかについて、次回詳しく相談する価値がある。","icon":"lightbulb"}],"next_actions":[{"title":"全体像を見るためのチェックリストやプロセスの作成","deadline":"今週中","detail":"細かい作業に進む前に、プロジェクト全体の目標と現在地を確認するためのチェックリストを作成し、定期的に全体像を確認できるプロセスを組み込む。"},{"title":"機能最小限の原則を作業計画に反映","deadline":"来週中","detail":"次のプロジェクトステップで、まこさんから学んだ機能最小限の設計方針を明確に組み込み、その検証を行う。"},{"title":"まこさんとの具体的なアドバイス取得","deadline":"2週間以内","detail":"全体像を見失わないための具体的な方法論や、機能最小限設計の実装方法について、まこさんからさらに詳しいアドバイスを受ける。"}],"self_evaluation":{"good_points":["自分の課題を客観的に認識し、音声メモで整理しようとする姿勢がある","細かい作業に対する適性を持ち、その自覚がある","講義の内容を受けて、改善すべき点を自覚し、対策を考えようとしている"],"improvements":[{"title":"全体像を見るための仕組みの欠落","detail":"「全体を見失いそうになる」「置き去りになってる」という表現から、日々の作業の中に全体チェックの機会が組み込まれていないことが推察される。具体的な改善策なく問題認識に留まっている。","suggestion":"毎日あるいは毎週、プロジェクト全体の目標と現在地を確認するためのリビューセッションを自分で設定し、細かい作業の前に必ず全体像を確認するルーチンを作る。"},{"title":"機能最小限の原則を実装できていない","detail":"講義で「機能最小限にする」というアプローチを学んでいながら「置き去りになってる」と述べており、学んだ内容を実際の作業に反映させるプロセスが構築できていないことが明らかである。","suggestion":"機能設計の段階で、まこさんの指導を受けながら「最小限」の定義を明確にし、各タスクで機能スコープをチェックするテンプレートを作成する。"},{"title":"曖昧な表現で課題を述べている傾向","detail":"「少し不安」「ような気がしております」「気をつけないといけない」など、推測や感情的な表現が多く、具体的に何が、どの程度、いつから問題なのかが明確でない。音声メモの段階ではあるが、自分の課題認識を曖昧なままにしている。","suggestion":"課題を言語化する際に、「いつから」「具体的には何が」「どのような影響があったか」という3つの要素を必ず含めるようにする。また、改善策も「～のようにする」ではなく「～を実施する」と具体的に述べることで、実行可能性を高める。"}]}}</script>
+<script>lucide.createIcons();</script>
+</body>
+</html>
