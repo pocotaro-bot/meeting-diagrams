@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<title>商談メモ: &lt;UNKNOWN&gt;さんとの対話型</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<style>
+  body { background: #f8fafc; color: #1e293b; font-family: 'Hiragino Kana Gothic ProN','Hiragino Sans','Yu Gothic','Meiryo',sans-serif; -webkit-tap-highlight-color: transparent; }
+  .ads-card { background: #fff; border: 1px solid #e2e8f0; border-radius: 1rem; }
+  @media print { .no-print { display: none !important; } }
+</style>
+</head>
+<body class="min-h-screen pb-16" style="padding-bottom:env(safe-area-inset-bottom,16px)">
+
+<!-- ヘッダー -->
+<header class="sticky top-0 z-10 bg-white/90 backdrop-blur border-b border-slate-200">
+  <div class="max-w-2xl mx-auto px-4 py-3 flex items-center justify-between">
+    <span class="text-base font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-full">商談メモ</span>
+    <button onclick="window.print()" class="no-print flex items-center gap-1.5 text-sm text-slate-400 hover:text-blue-600 transition-colors">
+      <i data-lucide="printer" class="w-4 h-4"></i> PDF
+    </button>
+  </div>
+</header>
+
+<main class="max-w-2xl mx-auto px-4 py-8 space-y-8">
+
+  <!-- ヒーロー -->
+  <div class="ads-card p-6">
+    <p class="text-xs text-slate-400 mb-1">これはデモ用サンプルです</p>
+    <h1 class="text-2xl sm:text-3xl font-black text-slate-900 leading-tight mb-2">
+      &lt;UNKNOWN&gt;さんとの対話型
+    </h1>
+    <p class="text-base text-slate-500 mb-4">定期的な確認ミーティング</p>
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-base">
+      <div>
+        <p class="text-slate-400 flex items-center gap-1 mb-0.5"><i data-lucide="calendar" class="w-3.5 h-3.5"></i> 日時</p>
+        <p class="font-semibold text-slate-700">2026年4月8日</p>
+      </div>
+      <div>
+        <p class="text-slate-400 flex items-center gap-1 mb-0.5"><i data-lucide="user" class="w-3.5 h-3.5"></i> 相手</p>
+        <p class="font-semibold text-slate-700">&lt;UNKNOWN&gt;</p>
+        <p class="text-slate-500 text-sm">&lt;UNKNOWN&gt;</p>
+        <p class="text-slate-500 text-sm">&lt;UNKNOWN&gt;</p>
+      </div>
+      <div><p class="text-slate-400 flex items-center gap-1 mb-0.5"><i data-lucide="map-pin" class="w-3.5 h-3.5"></i> 場所</p><p class="font-semibold text-slate-700">&lt;UNKNOWN&gt;</p></div>
+      
+    </div>
+  </div>
+
+  <!-- 相手を知る -->
+  <section>
+    <h2 class="text-lg font-black text-slate-700 mb-3 flex items-center gap-2">
+      <i data-lucide="user-search" class="w-5 h-5 text-blue-500"></i> 相手を知る
+    </h2>
+    <div class="grid sm:grid-cols-3 gap-3">
+      <div class="ads-card border-amber-200 bg-amber-50 p-4">
+    <p class="text-base font-bold text-amber-600 uppercase tracking-wide mb-1">課題</p>
+    <p class="text-base font-black text-amber-700 leading-snug mb-2">明確な課題の抽出が困難</p>
+    <p class="text-sm text-slate-600 leading-relaxed">文字起こしの大部分が相槌のみで、具体的な課題や問題点の言及がほぼ認められない</p>
+  </div>
+      <div class="ads-card border-blue-200 bg-blue-50 p-4">
+    <p class="text-base font-bold text-blue-600 uppercase tracking-wide mb-1">価値観</p>
+    <p class="text-base font-black text-blue-700 leading-snug mb-2">相互確認の姿勢</p>
+    <p class="text-sm text-slate-600 leading-relaxed">双方が相槌を繰り返すことで、コミュニケーション自体を継続しようとする意思が見られるという話が出た</p>
+  </div>
+      <div class="ads-card border-green-200 bg-green-50 p-4">
+    <p class="text-base font-bold text-green-600 uppercase tracking-wide mb-1">期待</p>
+    <p class="text-base font-black text-green-700 leading-snug mb-2">継続的な対話の構築</p>
+    <p class="text-sm text-slate-600 leading-relaxed">相手との関係維持を重視し、定期的な確認を行おうとする姿勢があるとのこと</p>
+  </div>
+    </div>
+  </section>
+
+  <!-- キーポイント -->
+  <section>
+    <h2 class="text-lg font-black text-slate-700 mb-3 flex items-center gap-2">
+      <i data-lucide="star" class="w-5 h-5 text-amber-500"></i> キーポイント
+    </h2>
+    <div class="space-y-3">
+      <div class="ads-card p-5">
+    <div class="flex items-start gap-3">
+      <span class="shrink-0 w-7 h-7 rounded-full bg-amber-500 text-white text-sm font-black flex items-center justify-center">1</span>
+      <div class="flex-1 min-w-0">
+        <p class="text-lg font-black text-slate-800 leading-snug mb-2">番外編の説明再解説</p>
+        <p class="text-base text-slate-600 leading-relaxed mb-2">番外編を挟んで、もう一度改めて説明を行ったとのこと</p>
+        <blockquote class="border-l-4 border-amber-300 pl-3 text-base text-amber-700 italic leading-snug">&ldquo;番外編を挟んで、もう一度お伝えしたところでございます&rdquo;</blockquote>
+        <p class="text-base font-bold text-blue-600 mt-2">再度お伝えした</p>
+      </div>
+    </div>
+  </div><div class="ads-card p-5">
+    <div class="flex items-start gap-3">
+      <span class="shrink-0 w-7 h-7 rounded-full bg-amber-500 text-white text-sm font-black flex items-center justify-center">2</span>
+      <div class="flex-1 min-w-0">
+        <p class="text-lg font-black text-slate-800 leading-snug mb-2">相互確認の繰り返し</p>
+        <p class="text-base text-slate-600 leading-relaxed mb-2">会話の大部分が相槌で構成されており、お互いの了解を確認し続けているという話が出た</p>
+        
+        <p class="text-base font-bold text-blue-600 mt-2">理解を深める試み</p>
+      </div>
+    </div>
+  </div><div class="ads-card p-5">
+    <div class="flex items-start gap-3">
+      <span class="shrink-0 w-7 h-7 rounded-full bg-amber-500 text-white text-sm font-black flex items-center justify-center">3</span>
+      <div class="flex-1 min-w-0">
+        <p class="text-lg font-black text-slate-800 leading-snug mb-2">関係性の維持</p>
+        <p class="text-base text-slate-600 leading-relaxed mb-2">双方が積極的に相槌を入れることで、対話の継続と関係構築を図っているとのこと</p>
+        
+        <p class="text-base font-bold text-blue-600 mt-2">信頼関係の形成</p>
+      </div>
+    </div>
+  </div>
+    </div>
+  </section>
+
+  <!-- 次回の話題ネタ -->
+  
+  <section>
+    <h2 class="text-lg font-black text-slate-700 mb-3 flex items-center gap-2">
+      <i data-lucide="message-circle" class="w-5 h-5 text-purple-500"></i> 次回また話したいこと
+    </h2>
+    <div class="grid sm:grid-cols-2 gap-3">
+      <div class="ads-card border-purple-200 bg-purple-50 p-4">
+    <p class="text-base font-bold text-purple-500 uppercase tracking-wide mb-2 flex items-center gap-1.5">
+      <i data-lucide="star" class="w-4 h-4"></i> 話題ネタ1
+    </p>
+    <p class="text-base font-black text-purple-800 leading-snug mb-1">番外編の具体的な内容</p>
+    <p class="text-sm text-slate-600 leading-relaxed">番外編について相手がどのような反応を示すか、次回はより詳しい説明を用いて理解度を深める</p>
+  </div><div class="ads-card border-purple-200 bg-purple-50 p-4">
+    <p class="text-base font-bold text-purple-500 uppercase tracking-wide mb-2 flex items-center gap-1.5">
+      <i data-lucide="lightbulb" class="w-4 h-4"></i> 話題ネタ2
+    </p>
+    <p class="text-base font-black text-purple-800 leading-snug mb-1">説明方法の改善</p>
+    <p class="text-sm text-slate-600 leading-relaxed">相手が数多くの相槌を打つ様子から、より分かりやすい説明方法の構築について次回は協議する必要があるとのこと</p>
+  </div>
+    </div>
+  </section>
+
+  <!-- ネクストアクション -->
+  
+  <section>
+    <h2 class="text-lg font-black text-slate-700 mb-3 flex items-center gap-2">
+      <i data-lucide="check-square" class="w-5 h-5 text-green-500"></i> ネクストアクション
+    </h2>
+    <div class="space-y-2">
+      <div class="ads-card p-4 flex items-start gap-3">
+    <i data-lucide="arrow-right-circle" class="w-5 h-5 text-green-500 shrink-0 mt-0.5"></i>
+    <div class="flex-1 min-w-0">
+      <div class="flex items-center gap-2 mb-0.5 flex-wrap">
+        <p class="text-lg font-black text-slate-800">番外編の詳細資料の準備</p>
+        <span class="text-sm font-bold px-2 py-0.5 rounded-full border bg-amber-50 border-amber-200 text-amber-700">来週中</span>
+      </div>
+      <p class="text-sm text-slate-500 leading-relaxed">次回のミーティングに向けて、番外編についてより具体的な資料を作成する</p>
+    </div>
+  </div><div class="ads-card p-4 flex items-start gap-3">
+    <i data-lucide="arrow-right-circle" class="w-5 h-5 text-green-500 shrink-0 mt-0.5"></i>
+    <div class="flex-1 min-w-0">
+      <div class="flex items-center gap-2 mb-0.5 flex-wrap">
+        <p class="text-lg font-black text-slate-800">相手のニーズ確認</p>
+        <span class="text-sm font-bold px-2 py-0.5 rounded-full border bg-amber-50 border-amber-200 text-amber-700">来週中</span>
+      </div>
+      <p class="text-sm text-slate-500 leading-relaxed">相手が具体的に何を必要としているのか、より詳しく聞き取る機会を設ける</p>
+    </div>
+  </div>
+    </div>
+  </section>
+
+  <!-- キーワード -->
+  
+
+  <!-- 自己評価 -->
+  
+  <section>
+    <h2 class="text-lg font-black text-slate-700 mb-3 flex items-center gap-2">
+      <i data-lucide="bar-chart-2" class="w-5 h-5 text-rose-500"></i> 自己評価
+    </h2>
+    <div class="space-y-3">
+      <div class="ads-card border-rose-100 bg-rose-50 p-5">
+    <div class="flex items-start gap-3">
+      <i data-lucide="alert-circle" class="w-5 h-5 text-rose-400 shrink-0 mt-0.5"></i>
+      <div class="flex-1 min-w-0">
+        <p class="text-base font-black text-slate-800 mb-1">発言内容の具体性の欠如</p>
+        <p class="text-base text-slate-600 leading-relaxed mb-3">ほぼ全て相槌のみで、自分から具体的な提案や質問を発していない。「ええ」「はい」「なるほどね」のような応答のみとなっており、会話を主導する働きかけが見られない</p>
+        <div class="bg-white border border-rose-100 rounded-xl p-3">
+          <p class="text-sm font-bold text-rose-500 mb-1">改善案</p>
+          <p class="text-base text-slate-700">次回は相手の発言に対して、具体的な質問や意見を述べることで、より実のある対話を心がける</p>
+        </div>
+      </div>
+    </div>
+  </div><div class="ads-card border-rose-100 bg-rose-50 p-5">
+    <div class="flex items-start gap-3">
+      <i data-lucide="alert-circle" class="w-5 h-5 text-rose-400 shrink-0 mt-0.5"></i>
+      <div class="flex-1 min-w-0">
+        <p class="text-base font-black text-slate-800 mb-1">聞き手に徹しすぎている</p>
+        <p class="text-base text-slate-600 leading-relaxed mb-3">「はい」の繰り返しが約700回以上と圧倒的に多く、相手の話を聞くだけの受動的な姿勢に終始している。番外編の説明を一度行った後は、相手からの反応を待つだけで、さらなる提案や代替案を提示していない</p>
+        <div class="bg-white border border-rose-100 rounded-xl p-3">
+          <p class="text-sm font-bold text-rose-500 mb-1">改善案</p>
+          <p class="text-base text-slate-700">相手の相槌が多い場合は、相手が理解できているのか確認し、不足している部分を自らが補完するといった主体的なコミュニケーションを取ること</p>
+        </div>
+      </div>
+    </div>
+  </div><div class="ads-card border-rose-100 bg-rose-50 p-5">
+    <div class="flex items-start gap-3">
+      <i data-lucide="alert-circle" class="w-5 h-5 text-rose-400 shrink-0 mt-0.5"></i>
+      <div class="flex-1 min-w-0">
+        <p class="text-base font-black text-slate-800 mb-1">会話の目的設定が不明確</p>
+        <p class="text-base text-slate-600 leading-relaxed mb-3">本ミーティングの目的や目標が明確に設定されていないまま、相槌を重ねる形式的な対話になっている。会議の到達点がどこなのか、何を決定するのかが伝わってこない</p>
+        <div class="bg-white border border-rose-100 rounded-xl p-3">
+          <p class="text-sm font-bold text-rose-500 mb-1">改善案</p>
+          <p class="text-base text-slate-700">次回からは事前にミーティングの目的を明確にし、その目的に向かって会話を進めるという構造化されたコミュニケーションを心がける</p>
+        </div>
+      </div>
+    </div>
+  </div>
+    </div>
+    
+    <div class="ads-card p-5 mt-3">
+      <div class="flex items-center gap-2 mb-3">
+        <i data-lucide="check" class="w-4 h-4 text-green-500 shrink-0"></i>
+        <p class="text-lg font-bold text-slate-700">できていたこと</p>
+      </div>
+      <ul class="space-y-3 text-base text-slate-500">
+        <li class="flex items-start gap-2"><span class="text-green-500 font-bold shrink-0 mt-0.5">•</span><span>相手の相槌に丁寧に応答し、会話を継続しようとする姿勢が見られた</span></li><li class="flex items-start gap-2"><span class="text-green-500 font-bold shrink-0 mt-0.5">•</span><span>番外編について説明を重ねるなど、相手の理解を促そうとする努力が認められた</span></li><li class="flex items-start gap-2"><span class="text-green-500 font-bold shrink-0 mt-0.5">•</span><span>敬語を適切に使用し、ビジネス会話として成立させようとしていた</span></li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<footer class="max-w-2xl mx-auto px-4 pt-6 pb-10 border-t border-slate-200/60">
+  <p class="text-base text-slate-400 text-center">AI-Driven School の図解ツールで自動生成</p>
+</footer>
+
+<!-- 編集ボタン（右下 FAB） -->
+
+<a href="https://script.google.com/macros/s/AKfycbyvk0c4seawQU-EnPLsky84_RknUcgWu4hcG-HcHRzlrIeX-glk0qgcgOD2jcOt0dzG-w/exec?slug=20260420-UNKNOWN" class="no-print fixed bottom-6 right-6 z-50 flex items-center gap-2 bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white font-bold text-base px-5 py-3 rounded-full shadow-lg transition-colors" style="bottom:calc(1.5rem + env(safe-area-inset-bottom,0px))">
+  <i data-lucide="pencil" class="w-4 h-4"></i> 編集
+</a>
+
+<script id="meeting-data" type="application/json">{"meeting":{"date":"2026年4月8日","person_name":"<UNKNOWN>","headline":"定期的な確認ミーティング","scene_type":"対話型","company":"<UNKNOWN>","role":"<UNKNOWN>","location":"<UNKNOWN>","attendees_self":"","attendees_other":""},"know_them":{"issue":{"title":"明確な課題の抽出が困難","detail":"文字起こしの大部分が相槌のみで、具体的な課題や問題点の言及がほぼ認められない"},"values":{"title":"相互確認の姿勢","detail":"双方が相槌を繰り返すことで、コミュニケーション自体を継続しようとする意思が見られるという話が出た"},"expectation":{"title":"継続的な対話の構築","detail":"相手との関係維持を重視し、定期的な確認を行おうとする姿勢があるとのこと"}},"key_points":[{"title":"番外編の説明再解説","detail":"番外編を挟んで、もう一度改めて説明を行ったとのこと","highlight":"再度お伝えした","quote":"番外編を挟んで、もう一度お伝えしたところでございます"},{"title":"相互確認の繰り返し","detail":"会話の大部分が相槌で構成されており、お互いの了解を確認し続けているという話が出た","highlight":"理解を深める試み","quote":""},{"title":"関係性の維持","detail":"双方が積極的に相槌を入れることで、対話の継続と関係構築を図っているとのこと","highlight":"信頼関係の形成","quote":""}],"next_topics":[{"label":"話題ネタ1","title":"番外編の具体的な内容","detail":"番外編について相手がどのような反応を示すか、次回はより詳しい説明を用いて理解度を深める","icon":"star"},{"label":"話題ネタ2","title":"説明方法の改善","detail":"相手が数多くの相槌を打つ様子から、より分かりやすい説明方法の構築について次回は協議する必要があるとのこと","icon":"lightbulb"}],"next_actions":[{"title":"番外編の詳細資料の準備","detail":"次回のミーティングに向けて、番外編についてより具体的な資料を作成する","deadline":"来週中"},{"title":"相手のニーズ確認","detail":"相手が具体的に何を必要としているのか、より詳しく聞き取る機会を設ける","deadline":"来週中"}],"self_evaluation":{"good_points":["相手の相槌に丁寧に応答し、会話を継続しようとする姿勢が見られた","番外編について説明を重ねるなど、相手の理解を促そうとする努力が認められた","敬語を適切に使用し、ビジネス会話として成立させようとしていた"],"improvements":[{"title":"発言内容の具体性の欠如","detail":"ほぼ全て相槌のみで、自分から具体的な提案や質問を発していない。「ええ」「はい」「なるほどね」のような応答のみとなっており、会話を主導する働きかけが見られない","suggestion":"次回は相手の発言に対して、具体的な質問や意見を述べることで、より実のある対話を心がける"},{"title":"聞き手に徹しすぎている","detail":"「はい」の繰り返しが約700回以上と圧倒的に多く、相手の話を聞くだけの受動的な姿勢に終始している。番外編の説明を一度行った後は、相手からの反応を待つだけで、さらなる提案や代替案を提示していない","suggestion":"相手の相槌が多い場合は、相手が理解できているのか確認し、不足している部分を自らが補完するといった主体的なコミュニケーションを取ること"},{"title":"会話の目的設定が不明確","detail":"本ミーティングの目的や目標が明確に設定されていないまま、相槌を重ねる形式的な対話になっている。会議の到達点がどこなのか、何を決定するのかが伝わってこない","suggestion":"次回からは事前にミーティングの目的を明確にし、その目的に向かって会話を進めるという構造化されたコミュニケーションを心がける"}]}}</script>
+<script>lucide.createIcons();</script>
+</body>
+</html>
