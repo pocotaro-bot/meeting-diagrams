@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<title>商談メモ: &lt;UNKNOWN&gt;さんとの対話型</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<style>
+  body { background: #f8fafc; color: #1e293b; font-family: 'Hiragino Kana Gothic ProN','Hiragino Sans','Yu Gothic','Meiryo',sans-serif; -webkit-tap-highlight-color: transparent; }
+  .ads-card { background: #fff; border: 1px solid #e2e8f0; border-radius: 1rem; }
+  @media print { .no-print { display: none !important; } }
+</style>
+</head>
+<body class="min-h-screen pb-16" style="padding-bottom:env(safe-area-inset-bottom,16px)">
+
+<!-- ヘッダー -->
+<header class="sticky top-0 z-10 bg-white/90 backdrop-blur border-b border-slate-200">
+  <div class="max-w-2xl mx-auto px-4 py-3 flex items-center justify-between">
+    <span class="text-base font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-full">商談メモ</span>
+    <button onclick="window.print()" class="no-print flex items-center gap-1.5 text-sm text-slate-400 hover:text-blue-600 transition-colors">
+      <i data-lucide="printer" class="w-4 h-4"></i> PDF
+    </button>
+  </div>
+</header>
+
+<main class="max-w-2xl mx-auto px-4 py-8 space-y-8">
+
+  <!-- ヒーロー -->
+  <div class="ads-card p-6">
+    <p class="text-xs text-slate-400 mb-1">これはデモ用サンプルです</p>
+    <h1 class="text-2xl sm:text-3xl font-black text-slate-900 leading-tight mb-2">
+      &lt;UNKNOWN&gt;さんとの対話型
+    </h1>
+    <p class="text-base text-slate-500 mb-4">音楽祭イベント企画の打ち合わせ</p>
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-base">
+      <div>
+        <p class="text-slate-400 flex items-center gap-1 mb-0.5"><i data-lucide="calendar" class="w-3.5 h-3.5"></i> 日時</p>
+        <p class="font-semibold text-slate-700">2026年4月24日</p>
+      </div>
+      <div>
+        <p class="text-slate-400 flex items-center gap-1 mb-0.5"><i data-lucide="user" class="w-3.5 h-3.5"></i> 相手</p>
+        <p class="font-semibold text-slate-700">&lt;UNKNOWN&gt;</p>
+        <p class="text-slate-500 text-sm">&lt;UNKNOWN&gt;</p>
+        <p class="text-slate-500 text-sm">館長</p>
+      </div>
+      <div><p class="text-slate-400 flex items-center gap-1 mb-0.5"><i data-lucide="map-pin" class="w-3.5 h-3.5"></i> 場所</p><p class="font-semibold text-slate-700">不明</p></div>
+      <div><p class="text-slate-400 flex items-center gap-1 mb-0.5"><i data-lucide="users" class="w-3.5 h-3.5"></i> 同席者</p><p class="text-slate-700 text-sm">先方: 竹内、寺田、児玉太一郎</p><p class="text-slate-700 text-sm">自社: &lt;UNKNOWN&gt;</p></div>
+    </div>
+  </div>
+
+  <!-- 相手を知る -->
+  <section>
+    <h2 class="text-lg font-black text-slate-700 mb-3 flex items-center gap-2">
+      <i data-lucide="user-search" class="w-5 h-5 text-blue-500"></i> 相手を知る
+    </h2>
+    <div class="grid sm:grid-cols-3 gap-3">
+      <div class="ads-card border-amber-200 bg-amber-50 p-4">
+    <p class="text-base font-bold text-amber-600 uppercase tracking-wide mb-1">課題</p>
+    <p class="text-base font-black text-amber-700 leading-snug mb-2">チケット販売が低迷している状況</p>
+    <p class="text-sm text-slate-600 leading-relaxed">オーケストラ公演の集客が全国的に困難な状況にあり、2番と4番の公演が苦戦しているとのこと。演奏会部分の売上が半分程度の進捗状況にあるという話が出た。</p>
+  </div>
+      <div class="ads-card border-blue-200 bg-blue-50 p-4">
+    <p class="text-base font-bold text-blue-600 uppercase tracking-wide mb-1">価値観</p>
+    <p class="text-base font-black text-blue-700 leading-snug mb-2">文化事業への貢献意識</p>
+    <p class="text-sm text-slate-600 leading-relaxed">単なる利益目的ではなく、県民の皆さんに文化を楽しんでいただくこと、文化の拡大という使命を持って協力しているという姿勢を示している。</p>
+  </div>
+      <div class="ads-card border-green-200 bg-green-50 p-4">
+    <p class="text-base font-bold text-green-600 uppercase tracking-wide mb-1">期待</p>
+    <p class="text-base font-black text-green-700 leading-snug mb-2">営業力と集客サポートの強化</p>
+    <p class="text-sm text-slate-600 leading-relaxed">CMの料費増加や番組での告知強化、チケットプレゼント企画の実施により、イベントの集客を支援してほしいという期待が示されている。</p>
+  </div>
+    </div>
+  </section>
+
+  <!-- キーポイント -->
+  <section>
+    <h2 class="text-lg font-black text-slate-700 mb-3 flex items-center gap-2">
+      <i data-lucide="star" class="w-5 h-5 text-amber-500"></i> キーポイント
+    </h2>
+    <div class="space-y-3">
+      <div class="ads-card p-5">
+    <div class="flex items-start gap-3">
+      <span class="shrink-0 w-7 h-7 rounded-full bg-amber-500 text-white text-sm font-black flex items-center justify-center">1</span>
+      <div class="flex-1 min-w-0">
+        <p class="text-lg font-black text-slate-800 leading-snug mb-2">プレトーク・アナウンサー派遣の決定</p>
+        <p class="text-base text-slate-600 leading-relaxed mb-2">報道制作の方とアナウンサーの派遣について調整が済み、問題がないことが確認された。決定後は館長と竹内、寺田、児玉太一郎あたりに連絡するという話が出た。</p>
+        <blockquote class="border-l-4 border-amber-300 pl-3 text-base text-amber-700 italic leading-snug">&ldquo;アナウンサー誰か、派遣をさせて頂くという風なことになります&rdquo;</blockquote>
+        <p class="text-base font-bold text-blue-600 mt-2">報道制作部とアナウンサー派遣について合意</p>
+      </div>
+    </div>
+  </div><div class="ads-card p-5">
+    <div class="flex items-start gap-3">
+      <span class="shrink-0 w-7 h-7 rounded-full bg-amber-500 text-white text-sm font-black flex items-center justify-center">2</span>
+      <div class="flex-1 min-w-0">
+        <p class="text-lg font-black text-slate-800 leading-snug mb-2">収録日は5月8日に決定</p>
+        <p class="text-base text-slate-600 leading-relaxed mb-2">5月1日と30日の提案があったが、5月の予定がすでに埋まっているため、5月8日での対応が可能となったとのこと。細かい時間については担当者から連絡する予定。</p>
+        <blockquote class="border-l-4 border-amber-300 pl-3 text-base text-amber-700 italic leading-snug">&ldquo;5月の8日だったら対応可能という風なとこなんですよね&rdquo;</blockquote>
+        <p class="text-base font-bold text-blue-600 mt-2">複数の候補日から調整した結果</p>
+      </div>
+    </div>
+  </div><div class="ads-card p-5">
+    <div class="flex items-start gap-3">
+      <span class="shrink-0 w-7 h-7 rounded-full bg-amber-500 text-white text-sm font-black flex items-center justify-center">3</span>
+      <div class="flex-1 min-w-0">
+        <p class="text-lg font-black text-slate-800 leading-snug mb-2">振り返りトークと講演の企画</p>
+        <p class="text-base text-slate-600 leading-relaxed mb-2">去年並みの構成で、パネル枚数は大体3枚程度を想定しているとのこと。講演リスト内で参考候補があれば、依頼のこと以外でも調整可能という話が出た。</p>
+        <blockquote class="border-l-4 border-amber-300 pl-3 text-base text-amber-700 italic leading-snug">&ldquo;振り返りトークって本当10分ぐらいしかないんですけど、どうだったかっていうのと、最後の見どころみたいなやつ&rdquo;</blockquote>
+        <p class="text-base font-bold text-blue-600 mt-2">約10分の振り返りトークで過去の振り返りと見どころを紹介</p>
+      </div>
+    </div>
+  </div><div class="ads-card p-5">
+    <div class="flex items-start gap-3">
+      <span class="shrink-0 w-7 h-7 rounded-full bg-amber-500 text-white text-sm font-black flex items-center justify-center">4</span>
+      <div class="flex-1 min-w-0">
+        <p class="text-lg font-black text-slate-800 leading-snug mb-2">チケットプレゼント企画の検討</p>
+        <p class="text-base text-slate-600 leading-relaxed mb-2">前の席が空いている状況を踏まえ、チケットプレゼント企画で活用することを検討中。10組程度のペアでの配布を想定しているとのこと。MusicRaiseとMKのダブルネームでの営業出稿を求められている。</p>
+        <blockquote class="border-l-4 border-amber-300 pl-3 text-base text-amber-700 italic leading-snug">&ldquo;前の方の20席ですけど、ダブルネームでの講演させて頂くというところ&rdquo;</blockquote>
+        <p class="text-base font-bold text-blue-600 mt-2">前方の座席を活用したプレゼント施策</p>
+      </div>
+    </div>
+  </div><div class="ads-card p-5">
+    <div class="flex items-start gap-3">
+      <span class="shrink-0 w-7 h-7 rounded-full bg-amber-500 text-white text-sm font-black flex items-center justify-center">5</span>
+      <div class="flex-1 min-w-0">
+        <p class="text-lg font-black text-slate-800 leading-snug mb-2">バイオリニスト選定の柔軟性</p>
+        <p class="text-base text-slate-600 leading-relaxed mb-2">三浦君は実績があるが、高木綾子さんは子育て中で親しみやすさがあるという評価との話が出た。演奏会と別イベントの重なりを考慮すると、三浦君の出演が妥当だという判断になるとのこと。</p>
+        <blockquote class="border-l-4 border-amber-300 pl-3 text-base text-amber-700 italic leading-snug">&ldquo;高木綾子さんっていうのはなかなか女性で子育て、子供が4人ぐらいいるんですけど&rdquo;</blockquote>
+        <p class="text-base font-bold text-blue-600 mt-2">三浦君と高木綾子さんの選択肢がある</p>
+      </div>
+    </div>
+  </div><div class="ads-card p-5">
+    <div class="flex items-start gap-3">
+      <span class="shrink-0 w-7 h-7 rounded-full bg-amber-500 text-white text-sm font-black flex items-center justify-center">6</span>
+      <div class="flex-1 min-w-0">
+        <p class="text-lg font-black text-slate-800 leading-snug mb-2">社長交代と運営体制の変化</p>
+        <p class="text-base text-slate-600 leading-relaxed mb-2">前社長の寺村さんは週2回来社しており、6月までの経過措置となるとのこと。新社長による繊細な経営判断が必要になり、スピードを落とすアプローチに変わったという話が出た。</p>
+        <blockquote class="border-l-4 border-amber-300 pl-3 text-base text-amber-700 italic leading-snug">&ldquo;女性というかですね、やっぱ繊細な部分がありますから、本当にやるぞみたいな感じで進んでたものが、ちょっとこう本当に一旦スピード落としてっていう風な形&rdquo;</blockquote>
+        <p class="text-base font-bold text-blue-600 mt-2">女性社長への交代で経営スタイルが変わった</p>
+      </div>
+    </div>
+  </div><div class="ads-card p-5">
+    <div class="flex items-start gap-3">
+      <span class="shrink-0 w-7 h-7 rounded-full bg-amber-500 text-white text-sm font-black flex items-center justify-center">7</span>
+      <div class="flex-1 min-w-0">
+        <p class="text-lg font-black text-slate-800 leading-snug mb-2">大学出身者ネットワークの話題</p>
+        <p class="text-base text-slate-600 leading-relaxed mb-2">相手も自分も南高出身で、学年や甲子園出場時期など校史について会話が弾んだとのこと。中友亮太さんがMRTにいることや、松尾さんが南高の先輩であることが確認された。</p>
+        <blockquote class="border-l-4 border-amber-300 pl-3 text-base text-amber-700 italic leading-snug">&ldquo;南高ってあんまりこううちの会社いなくてですね&rdquo;</blockquote>
+        <p class="text-base font-bold text-blue-600 mt-2">南高出身者の人脈について</p>
+      </div>
+    </div>
+  </div>
+    </div>
+  </section>
+
+  <!-- 次回の話題ネタ -->
+  
+  <section>
+    <h2 class="text-lg font-black text-slate-700 mb-3 flex items-center gap-2">
+      <i data-lucide="message-circle" class="w-5 h-5 text-purple-500"></i> 次回また話したいこと
+    </h2>
+    <div class="grid sm:grid-cols-2 gap-3">
+      <div class="ads-card border-purple-200 bg-purple-50 p-4">
+    <p class="text-base font-bold text-purple-500 uppercase tracking-wide mb-2 flex items-center gap-1.5">
+      <i data-lucide="trending-up" class="w-4 h-4"></i> 話題ネタ1
+    </p>
+    <p class="text-base font-black text-purple-800 leading-snug mb-1">オーケストラ公演の集客戦略</p>
+    <p class="text-sm text-slate-600 leading-relaxed">相手が全国的なオーケストラ公演の不振について熱く語り、有名な指揮者やソリストの重要性を強調していた。佐渡さんや日本フィル、三浦君のコンサートが売れている理由など、次回はこの集客差の詳細について深掘りできる。</p>
+  </div><div class="ads-card border-purple-200 bg-purple-50 p-4">
+    <p class="text-base font-bold text-purple-500 uppercase tracking-wide mb-2 flex items-center gap-1.5">
+      <i data-lucide="users" class="w-4 h-4"></i> 話題ネタ2
+    </p>
+    <p class="text-base font-black text-purple-800 leading-snug mb-1">新体制での経営方針の確認</p>
+    <p class="text-sm text-slate-600 leading-relaxed">相手が新しい女性社長の経営スタイルの変化や、寺村さんの過渡期体制について関心を持って説明していた。6月の区切りに向けた組織変更や予算配分などの経営課題について、次回は更に詳しく聞く好機がある。</p>
+  </div>
+    </div>
+  </section>
+
+  <!-- ネクストアクション -->
+  
+  <section>
+    <h2 class="text-lg font-black text-slate-700 mb-3 flex items-center gap-2">
+      <i data-lucide="check-square" class="w-5 h-5 text-green-500"></i> ネクストアクション
+    </h2>
+    <div class="space-y-2">
+      <div class="ads-card p-4 flex items-start gap-3">
+    <i data-lucide="arrow-right-circle" class="w-5 h-5 text-green-500 shrink-0 mt-0.5"></i>
+    <div class="flex-1 min-w-0">
+      <div class="flex items-center gap-2 mb-0.5 flex-wrap">
+        <p class="text-lg font-black text-slate-800">チケットプレゼント企画の枠確保確認</p>
+        <span class="text-sm font-bold px-2 py-0.5 rounded-full border bg-amber-50 border-amber-200 text-amber-700">今週中</span>
+      </div>
+      <p class="text-sm text-slate-500 leading-relaxed">前方20席程度をプレゼント用に確保できるかを内部で検討し、相手に改めて連絡する。取れない場合は早急に報告する予定。</p>
+    </div>
+  </div><div class="ads-card p-4 flex items-start gap-3">
+    <i data-lucide="arrow-right-circle" class="w-5 h-5 text-green-500 shrink-0 mt-0.5"></i>
+    <div class="flex-1 min-w-0">
+      <div class="flex items-center gap-2 mb-0.5 flex-wrap">
+        <p class="text-lg font-black text-slate-800">収録日5月8日の詳細時間の確認</p>
+        <span class="text-sm font-bold px-2 py-0.5 rounded-full border bg-amber-50 border-amber-200 text-amber-700">来週中</span>
+      </div>
+      <p class="text-sm text-slate-500 leading-relaxed">担当者から相手に対して、5月8日の収録に関する詳細な時間帯や出演者の確認連絡をする。</p>
+    </div>
+  </div><div class="ads-card p-4 flex items-start gap-3">
+    <i data-lucide="arrow-right-circle" class="w-5 h-5 text-green-500 shrink-0 mt-0.5"></i>
+    <div class="flex-1 min-w-0">
+      <div class="flex items-center gap-2 mb-0.5 flex-wrap">
+        <p class="text-lg font-black text-slate-800">バイオリニスト選定の最終決定</p>
+        <span class="text-sm font-bold px-2 py-0.5 rounded-full border bg-amber-50 border-amber-200 text-amber-700">来週中</span>
+      </div>
+      <p class="text-sm text-slate-500 leading-relaxed">三浦君と高木綾子さんの選択肢について、番組サイドと相談して視聴者層や企画との親和性を考慮し、最終決定する。</p>
+    </div>
+  </div><div class="ads-card p-4 flex items-start gap-3">
+    <i data-lucide="arrow-right-circle" class="w-5 h-5 text-green-500 shrink-0 mt-0.5"></i>
+    <div class="flex-1 min-w-0">
+      <div class="flex items-center gap-2 mb-0.5 flex-wrap">
+        <p class="text-lg font-black text-slate-800">CM放映枠とチケットプレゼント告知の手配</p>
+        <span class="text-sm font-bold px-2 py-0.5 rounded-full border bg-blue-50 border-blue-200 text-blue-700">2週間以内</span>
+      </div>
+      <p class="text-sm text-slate-500 leading-relaxed">各番組への指示に基づき、CMの料費増加対応と告知の強化を進める。MusicRaiseとMKのダブルネーム企画での営業出稿も調整する。</p>
+    </div>
+  </div><div class="ads-card p-4 flex items-start gap-3">
+    <i data-lucide="arrow-right-circle" class="w-5 h-5 text-green-500 shrink-0 mt-0.5"></i>
+    <div class="flex-1 min-w-0">
+      <div class="flex items-center gap-2 mb-0.5 flex-wrap">
+        <p class="text-lg font-black text-slate-800">文化事業のスポンサー選定進捗の報告</p>
+        <span class="text-sm font-bold px-2 py-0.5 rounded-full border bg-slate-100 border-slate-200 text-slate-600">来月まで</span>
+      </div>
+      <p class="text-sm text-slate-500 leading-relaxed">鹿賀さんの文化事業に関する次年度スポンサー選定を進め、相手に決定内容を報告する予定。</p>
+    </div>
+  </div>
+    </div>
+  </section>
+
+  <!-- キーワード -->
+  
+
+  <!-- 自己評価 -->
+  
+  <section>
+    <h2 class="text-lg font-black text-slate-700 mb-3 flex items-center gap-2">
+      <i data-lucide="bar-chart-2" class="w-5 h-5 text-rose-500"></i> 自己評価
+    </h2>
+    <div class="space-y-3">
+      <div class="ads-card border-rose-100 bg-rose-50 p-5">
+    <div class="flex items-start gap-3">
+      <i data-lucide="alert-circle" class="w-5 h-5 text-rose-400 shrink-0 mt-0.5"></i>
+      <div class="flex-1 min-w-0">
+        <p class="text-base font-black text-slate-800 mb-1">発言の冗長性が目立つ</p>
+        <p class="text-base text-slate-600 leading-relaxed mb-3">「はい」や「そうですね」を過度に繰り返し、同じ内容を何度も言い直している箇所が散見される。例えば、チケットプレゼント枠の説明で複数回にわたって類似の説明をしており、相手も確認を求め直している場面がある。</p>
+        <div class="bg-white border border-rose-100 rounded-xl p-3">
+          <p class="text-sm font-bold text-rose-500 mb-1">改善案</p>
+          <p class="text-base text-slate-700">結論を先に述べ、その後で必要に応じて理由や条件を補足する構成に変える。「承知いたしました。この件は枠確保の可否を確認してご連絡します」とシンプルに述べた後、詳細が必要な場合に補足する方が効果的。</p>
+        </div>
+      </div>
+    </div>
+  </div><div class="ads-card border-rose-100 bg-rose-50 p-5">
+    <div class="flex items-start gap-3">
+      <i data-lucide="alert-circle" class="w-5 h-5 text-rose-400 shrink-0 mt-0.5"></i>
+      <div class="flex-1 min-w-0">
+        <p class="text-base font-black text-slate-800 mb-1">相手の提案への即答と保留の区別が不明確</p>
+        <p class="text-base text-slate-600 leading-relaxed mb-3">チケットプレゼント企画の規模や実施方法について、「検討します」と「対応します」のニュアンスが曖昧になっている。相手は最終的な決定内容を期待しているが、こちらは検討事項として扱っている。</p>
+        <div class="bg-white border border-rose-100 rounded-xl p-3">
+          <p class="text-sm font-bold text-rose-500 mb-1">改善案</p>
+          <p class="text-base text-slate-700">その場で決定できない事項については、明確に「この部分は確認が必要なため、△日までにお返事します」と期限を切った保留にする。また決定事項は「◯◯については確定いたしました」と明確に伝える区別を徹底する。</p>
+        </div>
+      </div>
+    </div>
+  </div><div class="ads-card border-rose-100 bg-rose-50 p-5">
+    <div class="flex items-start gap-3">
+      <i data-lucide="alert-circle" class="w-5 h-5 text-rose-400 shrink-0 mt-0.5"></i>
+      <div class="flex-1 min-w-0">
+        <p class="text-base font-black text-slate-800 mb-1">社内都合の説明が長く、相手への配慮が弱まっている</p>
+        <p class="text-base text-slate-600 leading-relaxed mb-3">CM料費や番組枠の制約について、こちらの事情を詳しく説明する部分が長く、相手の集客要望に応える姿勢より制約の説明が優先されているように聞こえる箇所がある。</p>
+        <div class="bg-white border border-rose-100 rounded-xl p-3">
+          <p class="text-sm font-bold text-rose-500 mb-1">改善案</p>
+          <p class="text-base text-slate-700">相手のニーズ（集客数向上）を起点に、「集客を応援するため、以下の対応が可能です：①告知強化、②チケットプレゼント（枠確保の上で）」と相手中心で構成し直す。その後に「枠の確保状況を確認中です」と制約を説明する順序に改める。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+    </div>
+    
+    <div class="ads-card p-5 mt-3">
+      <div class="flex items-center gap-2 mb-3">
+        <i data-lucide="check" class="w-4 h-4 text-green-500 shrink-0"></i>
+        <p class="text-lg font-bold text-slate-700">できていたこと</p>
+      </div>
+      <ul class="space-y-3 text-base text-slate-500">
+        <li class="flex items-start gap-2"><span class="text-green-500 font-bold shrink-0 mt-0.5">•</span><span>相手の意見や懸念に対して丁寧に耳を傾け、貢献姿勢を前向きに伝えている</span></li><li class="flex items-start gap-2"><span class="text-green-500 font-bold shrink-0 mt-0.5">•</span><span>複数の課題（チケット販売、出演者選定、日程調整）を整理しながら、その場で対応可能な部分と今後の対応が必要な部分を適切に分け返答している</span></li><li class="flex items-start gap-2"><span class="text-green-500 font-bold shrink-0 mt-0.5">•</span><span>社内の制約条件（予算、枠の制限）を正直に説明しながら、それでも応援したいという意思をバランスよく表現している</span></li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<footer class="max-w-2xl mx-auto px-4 pt-6 pb-10 border-t border-slate-200/60">
+  <p class="text-base text-slate-400 text-center">AI-Driven School の図解ツールで自動生成</p>
+</footer>
+
+<!-- 編集ボタン（右下 FAB） -->
+
+<a href="https://script.google.com/macros/s/AKfycbyvk0c4seawQU-EnPLsky84_RknUcgWu4hcG-HcHRzlrIeX-glk0qgcgOD2jcOt0dzG-w/exec?slug=20260424-UNKNOWN" class="no-print fixed bottom-6 right-6 z-50 flex items-center gap-2 bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white font-bold text-base px-5 py-3 rounded-full shadow-lg transition-colors" style="bottom:calc(1.5rem + env(safe-area-inset-bottom,0px))">
+  <i data-lucide="pencil" class="w-4 h-4"></i> 編集
+</a>
+
+<script id="meeting-data" type="application/json">{"meeting":{"date":"2026年4月24日","person_name":"<UNKNOWN>","company":"<UNKNOWN>","role":"館長","headline":"音楽祭イベント企画の打ち合わせ","scene_type":"対話型","attendees_self":"<UNKNOWN>","attendees_other":"竹内、寺田、児玉太一郎","location":"不明"},"know_them":{"issue":{"title":"チケット販売が低迷している状況","detail":"オーケストラ公演の集客が全国的に困難な状況にあり、2番と4番の公演が苦戦しているとのこと。演奏会部分の売上が半分程度の進捗状況にあるという話が出た。"},"values":{"title":"文化事業への貢献意識","detail":"単なる利益目的ではなく、県民の皆さんに文化を楽しんでいただくこと、文化の拡大という使命を持って協力しているという姿勢を示している。"},"expectation":{"title":"営業力と集客サポートの強化","detail":"CMの料費増加や番組での告知強化、チケットプレゼント企画の実施により、イベントの集客を支援してほしいという期待が示されている。"}},"key_points":[{"title":"プレトーク・アナウンサー派遣の決定","highlight":"報道制作部とアナウンサー派遣について合意","detail":"報道制作の方とアナウンサーの派遣について調整が済み、問題がないことが確認された。決定後は館長と竹内、寺田、児玉太一郎あたりに連絡するという話が出た。","quote":"アナウンサー誰か、派遣をさせて頂くという風なことになります"},{"title":"収録日は5月8日に決定","highlight":"複数の候補日から調整した結果","detail":"5月1日と30日の提案があったが、5月の予定がすでに埋まっているため、5月8日での対応が可能となったとのこと。細かい時間については担当者から連絡する予定。","quote":"5月の8日だったら対応可能という風なとこなんですよね"},{"title":"振り返りトークと講演の企画","highlight":"約10分の振り返りトークで過去の振り返りと見どころを紹介","detail":"去年並みの構成で、パネル枚数は大体3枚程度を想定しているとのこと。講演リスト内で参考候補があれば、依頼のこと以外でも調整可能という話が出た。","quote":"振り返りトークって本当10分ぐらいしかないんですけど、どうだったかっていうのと、最後の見どころみたいなやつ"},{"title":"チケットプレゼント企画の検討","highlight":"前方の座席を活用したプレゼント施策","detail":"前の席が空いている状況を踏まえ、チケットプレゼント企画で活用することを検討中。10組程度のペアでの配布を想定しているとのこと。MusicRaiseとMKのダブルネームでの営業出稿を求められている。","quote":"前の方の20席ですけど、ダブルネームでの講演させて頂くというところ"},{"title":"バイオリニスト選定の柔軟性","highlight":"三浦君と高木綾子さんの選択肢がある","detail":"三浦君は実績があるが、高木綾子さんは子育て中で親しみやすさがあるという評価との話が出た。演奏会と別イベントの重なりを考慮すると、三浦君の出演が妥当だという判断になるとのこと。","quote":"高木綾子さんっていうのはなかなか女性で子育て、子供が4人ぐらいいるんですけど"},{"title":"社長交代と運営体制の変化","highlight":"女性社長への交代で経営スタイルが変わった","detail":"前社長の寺村さんは週2回来社しており、6月までの経過措置となるとのこと。新社長による繊細な経営判断が必要になり、スピードを落とすアプローチに変わったという話が出た。","quote":"女性というかですね、やっぱ繊細な部分がありますから、本当にやるぞみたいな感じで進んでたものが、ちょっとこう本当に一旦スピード落としてっていう風な形"},{"title":"大学出身者ネットワークの話題","highlight":"南高出身者の人脈について","detail":"相手も自分も南高出身で、学年や甲子園出場時期など校史について会話が弾んだとのこと。中友亮太さんがMRTにいることや、松尾さんが南高の先輩であることが確認された。","quote":"南高ってあんまりこううちの会社いなくてですね"}],"next_topics":[{"label":"話題ネタ1","title":"オーケストラ公演の集客戦略","icon":"trending-up","detail":"相手が全国的なオーケストラ公演の不振について熱く語り、有名な指揮者やソリストの重要性を強調していた。佐渡さんや日本フィル、三浦君のコンサートが売れている理由など、次回はこの集客差の詳細について深掘りできる。"},{"label":"話題ネタ2","title":"新体制での経営方針の確認","icon":"users","detail":"相手が新しい女性社長の経営スタイルの変化や、寺村さんの過渡期体制について関心を持って説明していた。6月の区切りに向けた組織変更や予算配分などの経営課題について、次回は更に詳しく聞く好機がある。"}],"next_actions":[{"title":"チケットプレゼント企画の枠確保確認","deadline":"今週中","detail":"前方20席程度をプレゼント用に確保できるかを内部で検討し、相手に改めて連絡する。取れない場合は早急に報告する予定。"},{"title":"収録日5月8日の詳細時間の確認","deadline":"来週中","detail":"担当者から相手に対して、5月8日の収録に関する詳細な時間帯や出演者の確認連絡をする。"},{"title":"バイオリニスト選定の最終決定","deadline":"来週中","detail":"三浦君と高木綾子さんの選択肢について、番組サイドと相談して視聴者層や企画との親和性を考慮し、最終決定する。"},{"title":"CM放映枠とチケットプレゼント告知の手配","deadline":"2週間以内","detail":"各番組への指示に基づき、CMの料費増加対応と告知の強化を進める。MusicRaiseとMKのダブルネーム企画での営業出稿も調整する。"},{"title":"文化事業のスポンサー選定進捗の報告","deadline":"来月まで","detail":"鹿賀さんの文化事業に関する次年度スポンサー選定を進め、相手に決定内容を報告する予定。"}],"self_evaluation":{"good_points":["相手の意見や懸念に対して丁寧に耳を傾け、貢献姿勢を前向きに伝えている","複数の課題（チケット販売、出演者選定、日程調整）を整理しながら、その場で対応可能な部分と今後の対応が必要な部分を適切に分け返答している","社内の制約条件（予算、枠の制限）を正直に説明しながら、それでも応援したいという意思をバランスよく表現している"],"improvements":[{"title":"発言の冗長性が目立つ","detail":"「はい」や「そうですね」を過度に繰り返し、同じ内容を何度も言い直している箇所が散見される。例えば、チケットプレゼント枠の説明で複数回にわたって類似の説明をしており、相手も確認を求め直している場面がある。","suggestion":"結論を先に述べ、その後で必要に応じて理由や条件を補足する構成に変える。「承知いたしました。この件は枠確保の可否を確認してご連絡します」とシンプルに述べた後、詳細が必要な場合に補足する方が効果的。"},{"title":"相手の提案への即答と保留の区別が不明確","detail":"チケットプレゼント企画の規模や実施方法について、「検討します」と「対応します」のニュアンスが曖昧になっている。相手は最終的な決定内容を期待しているが、こちらは検討事項として扱っている。","suggestion":"その場で決定できない事項については、明確に「この部分は確認が必要なため、△日までにお返事します」と期限を切った保留にする。また決定事項は「◯◯については確定いたしました」と明確に伝える区別を徹底する。"},{"title":"社内都合の説明が長く、相手への配慮が弱まっている","detail":"CM料費や番組枠の制約について、こちらの事情を詳しく説明する部分が長く、相手の集客要望に応える姿勢より制約の説明が優先されているように聞こえる箇所がある。","suggestion":"相手のニーズ（集客数向上）を起点に、「集客を応援するため、以下の対応が可能です：①告知強化、②チケットプレゼント（枠確保の上で）」と相手中心で構成し直す。その後に「枠の確保状況を確認中です」と制約を説明する順序に改める。"}]}}</script>
+<script>lucide.createIcons();</script>
+</body>
+</html>
