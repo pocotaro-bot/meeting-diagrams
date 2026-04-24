@@ -35,8 +35,8 @@
       </div>
     </div>
     <div class="text-right">
-      <div class="text-xs font-bold text-white">第16週</div>
-      <div class="text-xs text-slate-400">4/13（月）〜 4/17（金）</div>
+      <div class="text-xs font-bold text-white">第17週</div>
+      <div class="text-xs text-slate-400">4/20（月）〜 4/24（金）</div>
     </div>
   </div>
 </header>
@@ -51,13 +51,13 @@
           <svg class="w-full h-full -rotate-90" viewBox="0 0 100 100">
             <circle cx="50" cy="50" r="42" fill="none" stroke="#1e293b" stroke-width="10"/>
             <circle cx="50" cy="50" r="42" fill="none" stroke="url(#scoreGrad)" stroke-width="10" stroke-linecap="round"
-              stroke-dasharray="55 264"/>
+              stroke-dasharray="156 264"/>
             <defs><linearGradient id="scoreGrad" x1="0%" y1="0%" x2="100%" y2="0%">
               <stop offset="0%" stop-color="#8b5cf6"/><stop offset="100%" stop-color="#3b82f6"/>
             </linearGradient></defs>
           </svg>
           <div class="absolute inset-0 flex flex-col items-center justify-center">
-            <span class="text-3xl font-black text-white">21</span>
+            <span class="text-3xl font-black text-white">59</span>
             <span class="text-xs text-slate-400">週間平均</span>
           </div>
         </div>
@@ -65,17 +65,17 @@
       </div>
       <div class="flex-1 min-w-0">
         <div class="flex flex-wrap items-center gap-2 mb-1.5">
-          <span class="text-sm font-bold text-violet-300 bg-violet-500/15 border border-violet-500/30 px-2.5 py-0.5 rounded-full">Cランク</span>
+          <span class="text-sm font-bold text-violet-300 bg-violet-500/15 border border-violet-500/30 px-2.5 py-0.5 rounded-full">B+ランク</span>
         </div>
-        <p class="text-slate-400 text-base leading-relaxed mb-3">前週比で大幅低下。一方的な説明に偏り、双方向対話が欠落。相手との信頼構築が急務。</p>
+        <p class="text-slate-400 text-base leading-relaxed mb-3">聴取能力は優秀だが、開かれた質問と深い共感が課題。相手主導の受動的ラポール形成から脱却が必要。</p>
         <div class="grid grid-cols-2 gap-2 text-base">
           <div class="bg-slate-800/60 border border-slate-700/60 rounded-xl px-3 py-2">
             <div class="text-slate-400 mb-0.5">セッション数</div>
-            <div class="font-black text-white">1件</div>
+            <div class="font-black text-white">2件</div>
           </div>
           <div class="bg-slate-800/60 border border-slate-700/60 rounded-xl px-3 py-2">
             <div class="text-slate-400 mb-0.5">総面談時間</div>
-            <div class="font-black text-white">0h 52m</div>
+            <div class="font-black text-white">1h 44m</div>
           </div>
         </div>
       </div>
@@ -110,17 +110,17 @@
   // DATA
   // ============================================================
   const ITEMS = [
-    { id: 'listening', emoji: '👂', name: 'リスニング・レシオ', sub: '聴取比率', weekScores: [3], prevAvg: 5, comment: '改善の余地があります。週を通じた意識的な取り組みが必要です。', good: '改善傾向が続いています。', improve: '現状の傾聴比率を維持しつつ、さらに質の高い聴き方を意識しましょう。' },
-    { id: 'open', emoji: '💭', name: 'オープン・クエスチョン', sub: '開かれた質問の数', weekScores: [2], prevAvg: 5, comment: '改善の余地があります。週を通じた意識的な取り組みが必要です。', good: '改善傾向が続いています。', improve: '5W1H質問を意識的に増やし、オープン質問比率 70% 以上を目指しましょう。' },
-    { id: 'backch', emoji: '💬', name: 'バックチャネリング', sub: '相槌の質と頻度', weekScores: [1], prevAvg: 5, comment: '改善の余地があります。週を通じた意識的な取り組みが必要です。', good: '改善傾向が続いています。', improve: '相槌の多様性を意識し、「なるほど」以外の感情的な言葉も取り入れましょう。' },
-    { id: 'mirror', emoji: '🪞', name: 'ミラーリング', sub: '言葉・態度の反映', weekScores: [2], prevAvg: 5, comment: '改善の余地があります。週を通じた意識的な取り組みが必要です。', good: '改善傾向が続いています。', improve: '相手の感情語をそのまま繰り返し、質問に変える練習をしましょう。' },
-    { id: 'selfdis', emoji: '⏱', name: '自己開示のタイミング', sub: '共感的な自己開示', weekScores: [1], prevAvg: 5, comment: '改善の余地があります。週を通じた意識的な取り組みが必要です。', good: '改善傾向が続いています。', improve: '相手が話し終えてから自己開示する習慣を継続しましょう。' },
-    { id: 'empathy', emoji: '❤', name: '感情への共感度', sub: '感情の認識と共鳴', weekScores: [2], prevAvg: 5, comment: '改善の余地があります。週を通じた意識的な取り組みが必要です。', good: '改善傾向が続いています。', improve: 'この高水準を維持してください。' },
-    { id: 'personal', emoji: '🌱', name: 'パーソナル情報の収穫', sub: '個人情報の引き出し', weekScores: [0], prevAvg: 5, comment: '改善の余地があります。週を通じた意識的な取り組みが必要です。', good: '改善傾向が続いています。', improve: '「最近ハマっていることは？」などオープン質問から深掘りしましょう。' },
-    { id: 'safety', emoji: '🛡', name: '心理的安全性の提供', sub: '安心感の醸成', weekScores: [4], prevAvg: 5, comment: '改善の余地があります。週を通じた意識的な取り組みが必要です。', good: '改善傾向が続いています。', improve: '週後半の安全性向上を週初から出せると全体の質が上がります。' }
+    { id: 'listening', emoji: '👂', name: 'リスニング・レシオ', sub: '聴取比率', weekScores: [9,6], prevAvg: 1.8, comment: '平均的な水準を維持しています。', good: '高水準を維持できています。', improve: '現状の傾聴比率を維持しつつ、さらに質の高い聴き方を意識しましょう。' },
+    { id: 'open', emoji: '💭', name: 'オープン・クエスチョン', sub: '開かれた質問の数', weekScores: [1,5], prevAvg: 0.6, comment: '改善の余地があります。週を通じた意識的な取り組みが必要です。', good: '改善傾向が続いています。', improve: '5W1H質問を意識的に増やし、オープン質問比率 70% 以上を目指しましょう。' },
+    { id: 'backch', emoji: '💬', name: 'バックチャネリング', sub: '相槌の質と頻度', weekScores: [8,8], prevAvg: 0.3, comment: '安定して高いスコアを維持しています。', good: '高水準を維持できています。', improve: '相槌の多様性を意識し、「なるほど」以外の感情的な言葉も取り入れましょう。' },
+    { id: 'mirror', emoji: '🪞', name: 'ミラーリング', sub: '言葉・態度の反映', weekScores: [2,6], prevAvg: 1, comment: '改善の余地があります。週を通じた意識的な取り組みが必要です。', good: '改善傾向が続いています。', improve: '相手の感情語をそのまま繰り返し、質問に変える練習をしましょう。' },
+    { id: 'selfdis', emoji: '⏱', name: '自己開示のタイミング', sub: '共感的な自己開示', weekScores: [1,7], prevAvg: 2.7, comment: '改善の余地があります。週を通じた意識的な取り組みが必要です。', good: '改善傾向が続いています。', improve: '相手が話し終えてから自己開示する習慣を継続しましょう。' },
+    { id: 'empathy', emoji: '❤', name: '感情への共感度', sub: '感情の認識と共鳴', weekScores: [1,7], prevAvg: 1.2, comment: '改善の余地があります。週を通じた意識的な取り組みが必要です。', good: '改善傾向が続いています。', improve: 'この高水準を維持してください。' },
+    { id: 'personal', emoji: '🌱', name: 'パーソナル情報の収穫', sub: '個人情報の引き出し', weekScores: [0,8], prevAvg: 2.4, comment: '改善の余地があります。週を通じた意識的な取り組みが必要です。', good: '改善傾向が続いています。', improve: '「最近ハマっていることは？」などオープン質問から深掘りしましょう。' },
+    { id: 'safety', emoji: '🛡', name: '心理的安全性の提供', sub: '安心感の醸成', weekScores: [3,7], prevAvg: 3.4, comment: '改善の余地があります。週を通じた意識的な取り組みが必要です。', good: '改善傾向が続いています。', improve: '週後半の安全性向上を週初から出せると全体の質が上がります。' }
   ];
 
-  const FOCUS_ITEMS = [{ itemId: 'listening', focus: '傾聴スキルの強化。相手の意見を積極的に引き出す姿勢の構築' }, { itemId: 'open', focus: '開放的な質問手法の導入。Yes/No質問から拡大質問への転換' }, { itemId: 'empathy', focus: '共感表現の強化。相手の立場・感情への理解を示すコミュニケーション' }];
+  const FOCUS_ITEMS = [{ itemId: 'open', focus: '開かれた質問スキルの向上。相手の考えや感情を引き出す主体的な質問設計が必須。' }, { itemId: 'empathy', focus: '共感表現の深化。相手の背景や感情に寄り添う具体的なコメントと相づちの工夫。' }, { itemId: 'mirror', focus: 'ミラーリング技法の強化。相手の発言内容や感情を言い換えて反映させる意識的な活用。' }];
 
   function avg(arr) { return Math.round(arr.reduce((a,b)=>a+b,0)/arr.length*10)/10; }
 
@@ -148,7 +148,7 @@
   // INIT
   // ============================================================
   function init() {
-    const totalScore = 21;
+    const totalScore = 59;
     const target = getT(totalScore / 10);
     document.getElementById('heroFace').innerHTML = faceSvg(totalScore / 10, target.faceStroke);
     renderItemGrid();
