@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<title>商談メモ: &lt;UNKNOWN&gt;さんとの対話型</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<style>
+  body { background: #f8fafc; color: #1e293b; font-family: 'Hiragino Kana Gothic ProN','Hiragino Sans','Yu Gothic','Meiryo',sans-serif; -webkit-tap-highlight-color: transparent; }
+  .ads-card { background: #fff; border: 1px solid #e2e8f0; border-radius: 1rem; }
+  @media print { .no-print { display: none !important; } }
+</style>
+</head>
+<body class="min-h-screen pb-16" style="padding-bottom:env(safe-area-inset-bottom,16px)">
+
+<!-- ヘッダー -->
+<header class="sticky top-0 z-10 bg-white/90 backdrop-blur border-b border-slate-200">
+  <div class="max-w-2xl mx-auto px-4 py-3 flex items-center justify-between">
+    <span class="text-base font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-full">商談メモ</span>
+    <button onclick="window.print()" class="no-print flex items-center gap-1.5 text-sm text-slate-400 hover:text-blue-600 transition-colors">
+      <i data-lucide="printer" class="w-4 h-4"></i> PDF
+    </button>
+  </div>
+</header>
+
+<main class="max-w-2xl mx-auto px-4 py-8 space-y-8">
+
+  
+  <!-- 要約・概要 -->
+  <section>
+    <h2 class="text-lg font-black text-slate-700 mb-3 flex items-center gap-2">
+      <i data-lucide="file-text" class="w-5 h-5 text-slate-500"></i> 要約・概要
+    </h2>
+    <div class="ads-card p-6">
+      <p class="text-base text-slate-700 leading-relaxed whitespace-pre-line">今回の会議では、配信されるべき音声メモが実際には受け手に届いていないという技術的な課題について議論が交わされたとのこと。具体的には、前回の音声メモも同様の問題が発生していたという指摘があり、単なる一時的なトラブルではなく継続的な問題である可能性が高いことが確認された。
+
+課題の原因究明については、書段図解による記録の方がより適切かもしれないという意見が出された一方で、音声図解の配信側に問題が存在する可能性があるという指摘もあったとのこと。ログに関連した情報をしっかりと確認し、この配信ログの欠落問題をなんとか解決したいという強い意思が示されたとのことであり、次のステップとしては原因究明とログ解析が重要になるという認識で一致した。</p>
+    </div>
+  </section>
+
+  <!-- ヒーロー -->
+  <div class="ads-card p-6">
+    <p class="text-xs text-slate-400 mb-1">これはデモ用サンプルです</p>
+    <h1 class="text-2xl sm:text-3xl font-black text-slate-900 leading-tight mb-2">
+      &lt;UNKNOWN&gt;さんとの対話型
+    </h1>
+    <p class="text-base text-slate-500 mb-4">配信ログの欠落問題に関する技術課題の協議</p>
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-base">
+      <div>
+        <p class="text-slate-400 flex items-center gap-1 mb-0.5"><i data-lucide="calendar" class="w-3.5 h-3.5"></i> 日時</p>
+        <p class="font-semibold text-slate-700">2026年4月26日</p>
+      </div>
+      <div>
+        <p class="text-slate-400 flex items-center gap-1 mb-0.5"><i data-lucide="user" class="w-3.5 h-3.5"></i> 相手</p>
+        <p class="font-semibold text-slate-700">&lt;UNKNOWN&gt;</p>
+        
+        
+      </div>
+      
+      
+    </div>
+  </div>
+
+  <!-- 相手を知る -->
+  <section>
+    <h2 class="text-lg font-black text-slate-700 mb-3 flex items-center gap-2">
+      <i data-lucide="user-search" class="w-5 h-5 text-blue-500"></i> 相手を知る
+    </h2>
+    <div class="grid sm:grid-cols-3 gap-3">
+      <div class="ads-card border-amber-200 bg-amber-50 p-4">
+    <p class="text-base font-bold text-amber-600 uppercase tracking-wide mb-1">課題</p>
+    <p class="text-base font-black text-amber-700 leading-snug mb-2">音声メモ配信システムの欠落</p>
+    <p class="text-sm text-slate-600 leading-relaxed">配信されるべき音声メモが受け手に届いていない状況が継続的に発生しており、前回も同様の問題が発生していた可能性があるとのこと</p>
+  </div>
+      <div class="ads-card border-blue-200 bg-blue-50 p-4">
+    <p class="text-base font-bold text-blue-600 uppercase tracking-wide mb-1">価値観</p>
+    <p class="text-base font-black text-blue-700 leading-snug mb-2">技術的問題の根本解決</p>
+    <p class="text-sm text-slate-600 leading-relaxed">ログを確認して配信システムの原因を究明し、確実な情報配信を実現することを重視しているという話が出た</p>
+  </div>
+      <div class="ads-card border-green-200 bg-green-50 p-4">
+    <p class="text-base font-bold text-green-600 uppercase tracking-wide mb-1">期待</p>
+    <p class="text-base font-black text-green-700 leading-snug mb-2">配信ログの完全性確保</p>
+    <p class="text-sm text-slate-600 leading-relaxed">書段図解または音声図解のいずれかの方式で、確実にメッセージが配信・到達できるシステムの構築を望んでいるとのこと</p>
+  </div>
+    </div>
+  </section>
+
+  <!-- キーポイント -->
+  <section>
+    <h2 class="text-lg font-black text-slate-700 mb-3 flex items-center gap-2">
+      <i data-lucide="star" class="w-5 h-5 text-amber-500"></i> キーポイント
+    </h2>
+    <div class="space-y-3">
+      <div class="ads-card p-5">
+    <div class="flex items-start gap-3">
+      <span class="shrink-0 w-7 h-7 rounded-full bg-amber-500 text-white text-sm font-black flex items-center justify-center">1</span>
+      <div class="flex-1 min-w-0">
+        <p class="text-lg font-black text-slate-800 leading-snug mb-2">配信ログの欠落問題</p>
+        <p class="text-base text-slate-600 leading-relaxed mb-2">音声メモが受け手に到達していないという問題が発生しており、その原因が明確でない状況が続いているとのこと</p>
+        <blockquote class="border-l-4 border-amber-300 pl-3 text-base text-amber-700 italic leading-snug">&ldquo;届き ました やつ が まだ 、 えー 、 届い て い ない と いう 状況 が 今 発生 し て おり ます&rdquo;</blockquote>
+        <p class="text-base font-bold text-blue-600 mt-2">配信されたメモが届いていない</p>
+      </div>
+    </div>
+  </div><div class="ads-card p-5">
+    <div class="flex items-start gap-3">
+      <span class="shrink-0 w-7 h-7 rounded-full bg-amber-500 text-white text-sm font-black flex items-center justify-center">2</span>
+      <div class="flex-1 min-w-0">
+        <p class="text-lg font-black text-slate-800 leading-snug mb-2">継続的なシステム問題</p>
+        <p class="text-base text-slate-600 leading-relaxed mb-2">過去の音声メモも同様に届かなかった可能性があるとの指摘があり、一時的なトラブルではなく継続的な課題である可能性が高いという話が出た</p>
+        <blockquote class="border-l-4 border-amber-300 pl-3 text-base text-amber-700 italic leading-snug">&ldquo;前 も この 音声 メモ は 届か なかっ た よう な 気 が し て おり ます&rdquo;</blockquote>
+        <p class="text-base font-bold text-blue-600 mt-2">前回も同様の問題が発生</p>
+      </div>
+    </div>
+  </div><div class="ads-card p-5">
+    <div class="flex items-start gap-3">
+      <span class="shrink-0 w-7 h-7 rounded-full bg-amber-500 text-white text-sm font-black flex items-center justify-center">3</span>
+      <div class="flex-1 min-w-0">
+        <p class="text-lg font-black text-slate-800 leading-snug mb-2">配信方式の検討</p>
+        <p class="text-base text-slate-600 leading-relaxed mb-2">現在の音声図解ではなく書段図解の方が適切である可能性があるという提案がされているとのこと</p>
+        <blockquote class="border-l-4 border-amber-300 pl-3 text-base text-amber-700 italic leading-snug">&ldquo;図解 の 方 、 書段 図解 の 方 が いい か も しれ ませ ん が&rdquo;</blockquote>
+        <p class="text-base font-bold text-blue-600 mt-2">書段図解の採用を検討中</p>
+      </div>
+    </div>
+  </div><div class="ads-card p-5">
+    <div class="flex items-start gap-3">
+      <span class="shrink-0 w-7 h-7 rounded-full bg-amber-500 text-white text-sm font-black flex items-center justify-center">4</span>
+      <div class="flex-1 min-w-0">
+        <p class="text-lg font-black text-slate-800 leading-snug mb-2">問題解決への取り組み</p>
+        <p class="text-base text-slate-600 leading-relaxed mb-2">音声図解側に問題があると考えられるため、ログを詳しく確認して原因を解決したいという強い意思が示されているとのこと</p>
+        <blockquote class="border-l-4 border-amber-300 pl-3 text-base text-amber-700 italic leading-snug">&ldquo;ログ に 関し て 、 え 、 に 関し て は なん と か 解決 し たい な と いう 風 に 思っ て いる&rdquo;</blockquote>
+        <p class="text-base font-bold text-blue-600 mt-2">ログ解析による原因究明</p>
+      </div>
+    </div>
+  </div><div class="ads-card p-5">
+    <div class="flex items-start gap-3">
+      <span class="shrink-0 w-7 h-7 rounded-full bg-amber-500 text-white text-sm font-black flex items-center justify-center">5</span>
+      <div class="flex-1 min-w-0">
+        <p class="text-lg font-black text-slate-800 leading-snug mb-2">システムの信頼性確保</p>
+        <p class="text-base text-slate-600 leading-relaxed mb-2"></p>
+        
+        <p class="text-base font-bold text-blue-600 mt-2">確実な情報配信の実現が必須</p>
+      </div>
+    </div>
+  </div>
+    </div>
+  </section>
+
+  <!-- 次回の話題ネタ -->
+  
+  <section>
+    <h2 class="text-lg font-black text-slate-700 mb-3 flex items-center gap-2">
+      <i data-lucide="message-circle" class="w-5 h-5 text-purple-500"></i> 次回また話したいこと
+    </h2>
+    <div class="grid sm:grid-cols-2 gap-3">
+      <div class="ads-card border-purple-200 bg-purple-50 p-4">
+    <p class="text-base font-bold text-purple-500 uppercase tracking-wide mb-2 flex items-center gap-1.5">
+      <i data-lucide="search" class="w-4 h-4"></i> 話題ネタ1
+    </p>
+    <p class="text-base font-black text-purple-800 leading-snug mb-1">配信ログの詳細分析</p>
+    <p class="text-sm text-slate-600 leading-relaxed">音声メモが未配信となるメカニズムの詳細な調査と、ログデータに基づいた根本的な原因の特定について、次回の会議でさらに深掘りする</p>
+  </div><div class="ads-card border-purple-200 bg-purple-50 p-4">
+    <p class="text-base font-bold text-purple-500 uppercase tracking-wide mb-2 flex items-center gap-1.5">
+      <i data-lucide="refresh-cw" class="w-4 h-4"></i> 話題ネタ2
+    </p>
+    <p class="text-base font-black text-purple-800 leading-snug mb-1">書段図解への切り替え検討</p>
+    <p class="text-sm text-slate-600 leading-relaxed">現在の音声図解システムの問題を踏まえ、書段図解への切り替え可能性を含めたシステム改善案について、技術チームとの協議を進める</p>
+  </div>
+    </div>
+  </section>
+
+  <!-- ネクストアクション -->
+  
+  <section>
+    <h2 class="text-lg font-black text-slate-700 mb-3 flex items-center gap-2">
+      <i data-lucide="check-square" class="w-5 h-5 text-green-500"></i> ネクストアクション
+    </h2>
+    <div class="space-y-2">
+      <div class="ads-card p-4 flex items-start gap-3">
+    <i data-lucide="arrow-right-circle" class="w-5 h-5 text-green-500 shrink-0 mt-0.5"></i>
+    <div class="flex-1 min-w-0">
+      <div class="flex items-center gap-2 mb-0.5 flex-wrap">
+        <p class="text-lg font-black text-slate-800">配信ログの確認と分析</p>
+        <span class="text-sm font-bold px-2 py-0.5 rounded-full border bg-amber-50 border-amber-200 text-amber-700">今週中</span>
+      </div>
+      <p class="text-sm text-slate-500 leading-relaxed">未配信メモのログをすべて確認し、パターンや共通点を分析する</p>
+    </div>
+  </div><div class="ads-card p-4 flex items-start gap-3">
+    <i data-lucide="arrow-right-circle" class="w-5 h-5 text-green-500 shrink-0 mt-0.5"></i>
+    <div class="flex-1 min-w-0">
+      <div class="flex items-center gap-2 mb-0.5 flex-wrap">
+        <p class="text-lg font-black text-slate-800">過去の配信履歴の検証</p>
+        <span class="text-sm font-bold px-2 py-0.5 rounded-full border bg-amber-50 border-amber-200 text-amber-700">来週中</span>
+      </div>
+      <p class="text-sm text-slate-500 leading-relaxed">前回の音声メモも含め、過去の配信状況を遡って確認し、問題が発生していた時期を特定する</p>
+    </div>
+  </div><div class="ads-card p-4 flex items-start gap-3">
+    <i data-lucide="arrow-right-circle" class="w-5 h-5 text-green-500 shrink-0 mt-0.5"></i>
+    <div class="flex-1 min-w-0">
+      <div class="flex items-center gap-2 mb-0.5 flex-wrap">
+        <p class="text-lg font-black text-slate-800">配信方式の改善案検討</p>
+        <span class="text-sm font-bold px-2 py-0.5 rounded-full border bg-blue-50 border-blue-200 text-blue-700">2週間以内</span>
+      </div>
+      <p class="text-sm text-slate-500 leading-relaxed">書段図解への切り替え案を含め、音声図解システムの改善方法について検討資料を準備する</p>
+    </div>
+  </div>
+    </div>
+  </section>
+
+  <!-- キーワード -->
+  
+  <section>
+    <h2 class="text-base font-bold text-slate-500 mb-2 flex items-center gap-2">
+      <i data-lucide="tag" class="w-4 h-4"></i> あとで調べるキーワード
+    </h2>
+    <div class="flex flex-wrap gap-2">
+      <span class="text-base font-medium bg-slate-100 text-slate-600 border border-slate-200 px-3 py-1.5 rounded-full">配信ログ</span><span class="text-base font-medium bg-slate-100 text-slate-600 border border-slate-200 px-3 py-1.5 rounded-full">音声メモ</span><span class="text-base font-medium bg-slate-100 text-slate-600 border border-slate-200 px-3 py-1.5 rounded-full">システム障害</span><span class="text-base font-medium bg-slate-100 text-slate-600 border border-slate-200 px-3 py-1.5 rounded-full">原因究明</span><span class="text-base font-medium bg-slate-100 text-slate-600 border border-slate-200 px-3 py-1.5 rounded-full">書段図解</span><span class="text-base font-medium bg-slate-100 text-slate-600 border border-slate-200 px-3 py-1.5 rounded-full">音声図解</span><span class="text-base font-medium bg-slate-100 text-slate-600 border border-slate-200 px-3 py-1.5 rounded-full">ログ解析</span><span class="text-base font-medium bg-slate-100 text-slate-600 border border-slate-200 px-3 py-1.5 rounded-full">信頼性</span><span class="text-base font-medium bg-slate-100 text-slate-600 border border-slate-200 px-3 py-1.5 rounded-full">配信問題</span><span class="text-base font-medium bg-slate-100 text-slate-600 border border-slate-200 px-3 py-1.5 rounded-full">改善</span>
+    </div>
+  </section>
+
+  <!-- 自己評価 -->
+  
+  <section>
+    <h2 class="text-lg font-black text-slate-700 mb-3 flex items-center gap-2">
+      <i data-lucide="bar-chart-2" class="w-5 h-5 text-rose-500"></i> 自己評価
+    </h2>
+    <div class="space-y-3">
+      <div class="ads-card border-rose-100 bg-rose-50 p-5">
+    <div class="flex items-start gap-3">
+      <i data-lucide="alert-circle" class="w-5 h-5 text-rose-400 shrink-0 mt-0.5"></i>
+      <div class="flex-1 min-w-0">
+        <p class="text-base font-black text-slate-800 mb-1">発言の構造化が不足</p>
+        <p class="text-base text-slate-600 leading-relaxed mb-3">「えー」「え」などの言い淀みが多く、また複数の話題が順序立てられないまま述べられており、聞き手が要点を掴みにくい状況が見られるとのこと。「〜なぜなら、〜であるため」という因果関係をより明確にする必要がある</p>
+        <div class="bg-white border border-rose-100 rounded-xl p-3">
+          <p class="text-sm font-bold text-rose-500 mb-1">改善案</p>
+          <p class="text-base text-slate-700">事前に話す内容を整理し、①問題の現状、②その影響、③原因の仮説、④今後の対応という4段階で構造化して話す練習をする</p>
+        </div>
+      </div>
+    </div>
+  </div><div class="ads-card border-rose-100 bg-rose-50 p-5">
+    <div class="flex items-start gap-3">
+      <i data-lucide="alert-circle" class="w-5 h-5 text-rose-400 shrink-0 mt-0.5"></i>
+      <div class="flex-1 min-w-0">
+        <p class="text-base font-black text-slate-800 mb-1">相手の同意確認がない</p>
+        <p class="text-base text-slate-600 leading-relaxed mb-3">提案した解決策（書段図解への切り替えなど）について、相手の意見や合意を求める質問がないまま一方的に話を進めているという傾向が見られるとのこと</p>
+        <div class="bg-white border border-rose-100 rounded-xl p-3">
+          <p class="text-sm font-bold text-rose-500 mb-1">改善案</p>
+          <p class="text-base text-slate-700">「書段図解に切り替えることについて、どのようにお考えですか」「このアプローチで進めてよろしいでしょうか」というように、相手の意見を引き出す質問を意図的に挿入する</p>
+        </div>
+      </div>
+    </div>
+  </div><div class="ads-card border-rose-100 bg-rose-50 p-5">
+    <div class="flex items-start gap-3">
+      <i data-lucide="alert-circle" class="w-5 h-5 text-rose-400 shrink-0 mt-0.5"></i>
+      <div class="flex-1 min-w-0">
+        <p class="text-base font-black text-slate-800 mb-1">具体的な数字や期限が不明確</p>
+        <p class="text-base text-slate-600 leading-relaxed mb-3">「なんとか解決したい」という定性的な表現にとどまっており、いつまでに、どの程度の精度で解決するのかといった具体的な目標設定がされていないとのこと</p>
+        <div class="bg-white border border-rose-100 rounded-xl p-3">
+          <p class="text-sm font-bold text-rose-500 mb-1">改善案</p>
+          <p class="text-base text-slate-700">「本日から1週間以内に原因を特定し、2週間以内に改善案を実装する」というように、具体的な期限と成功指標を示して話すことで、相手の理解と信頼を高める</p>
+        </div>
+      </div>
+    </div>
+  </div>
+    </div>
+    
+    <div class="ads-card p-5 mt-3">
+      <div class="flex items-center gap-2 mb-3">
+        <i data-lucide="check" class="w-4 h-4 text-green-500 shrink-0"></i>
+        <p class="text-lg font-bold text-slate-700">できていたこと</p>
+      </div>
+      <ul class="space-y-3 text-base text-slate-500">
+        <li class="flex items-start gap-2"><span class="text-green-500 font-bold shrink-0 mt-0.5">•</span><span>問題の継続性に気づき、単なる一時的なトラブルではないことを認識している</span></li><li class="flex items-start gap-2"><span class="text-green-500 font-bold shrink-0 mt-0.5">•</span><span>ログに基づいた根本原因の究明という正しいアプローチを取ろうとしている</span></li><li class="flex items-start gap-2"><span class="text-green-500 font-bold shrink-0 mt-0.5">•</span><span>配信方式の代替案（書段図解）も含めて、複数の解決策を検討しようとしている</span></li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<footer class="max-w-2xl mx-auto px-4 pt-6 pb-10 border-t border-slate-200/60">
+  <p class="text-base text-slate-400 text-center">AI-Driven School の図解ツールで自動生成</p>
+</footer>
+
+<!-- 編集ボタン（右下 FAB） -->
+
+<a href="https://script.google.com/macros/s/AKfycbyvk0c4seawQU-EnPLsky84_RknUcgWu4hcG-HcHRzlrIeX-glk0qgcgOD2jcOt0dzG-w/exec?slug=20260426-UNKNOWN" class="no-print fixed bottom-6 right-6 z-50 flex items-center gap-2 bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white font-bold text-base px-5 py-3 rounded-full shadow-lg transition-colors" style="bottom:calc(1.5rem + env(safe-area-inset-bottom,0px))">
+  <i data-lucide="pencil" class="w-4 h-4"></i> 編集
+</a>
+
+<script id="meeting-data" type="application/json">{"meeting":{"date":"2026年4月26日","person_name":"<UNKNOWN>","headline":"配信ログの欠落問題に関する技術課題の協議","summary_overview":"今回の会議では、配信されるべき音声メモが実際には受け手に届いていないという技術的な課題について議論が交わされたとのこと。具体的には、前回の音声メモも同様の問題が発生していたという指摘があり、単なる一時的なトラブルではなく継続的な問題である可能性が高いことが確認された。\n\n課題の原因究明については、書段図解による記録の方がより適切かもしれないという意見が出された一方で、音声図解の配信側に問題が存在する可能性があるという指摘もあったとのこと。ログに関連した情報をしっかりと確認し、この配信ログの欠落問題をなんとか解決したいという強い意思が示されたとのことであり、次のステップとしては原因究明とログ解析が重要になるという認識で一致した。","scene_type":"対話型"},"know_them":{"issue":{"title":"音声メモ配信システムの欠落","detail":"配信されるべき音声メモが受け手に届いていない状況が継続的に発生しており、前回も同様の問題が発生していた可能性があるとのこと"},"values":{"title":"技術的問題の根本解決","detail":"ログを確認して配信システムの原因を究明し、確実な情報配信を実現することを重視しているという話が出た"},"expectation":{"title":"配信ログの完全性確保","detail":"書段図解または音声図解のいずれかの方式で、確実にメッセージが配信・到達できるシステムの構築を望んでいるとのこと"}},"key_points":[{"title":"配信ログの欠落問題","highlight":"配信されたメモが届いていない","detail":"音声メモが受け手に到達していないという問題が発生しており、その原因が明確でない状況が続いているとのこと","quote":"届き ました やつ が まだ 、 えー 、 届い て い ない と いう 状況 が 今 発生 し て おり ます"},{"title":"継続的なシステム問題","highlight":"前回も同様の問題が発生","detail":"過去の音声メモも同様に届かなかった可能性があるとの指摘があり、一時的なトラブルではなく継続的な課題である可能性が高いという話が出た","quote":"前 も この 音声 メモ は 届か なかっ た よう な 気 が し て おり ます"},{"title":"配信方式の検討","highlight":"書段図解の採用を検討中","detail":"現在の音声図解ではなく書段図解の方が適切である可能性があるという提案がされているとのこと","quote":"図解 の 方 、 書段 図解 の 方 が いい か も しれ ませ ん が"},{"title":"問題解決への取り組み","highlight":"ログ解析による原因究明","detail":"音声図解側に問題があると考えられるため、ログを詳しく確認して原因を解決したいという強い意思が示されているとのこと","quote":"ログ に 関し て 、 え 、 に 関し て は なん と か 解決 し たい な と いう 風 に 思っ て いる"},{"title":"システムの信頼性確保","highlight":"確実な情報配信の実現が必須","detail":""}],"next_topics":[{"label":"話題ネタ1","title":"配信ログの詳細分析","detail":"音声メモが未配信となるメカニズムの詳細な調査と、ログデータに基づいた根本的な原因の特定について、次回の会議でさらに深掘りする","icon":"search"},{"label":"話題ネタ2","title":"書段図解への切り替え検討","detail":"現在の音声図解システムの問題を踏まえ、書段図解への切り替え可能性を含めたシステム改善案について、技術チームとの協議を進める","icon":"refresh-cw"}],"next_actions":[{"title":"配信ログの確認と分析","detail":"未配信メモのログをすべて確認し、パターンや共通点を分析する","deadline":"今週中"},{"title":"過去の配信履歴の検証","detail":"前回の音声メモも含め、過去の配信状況を遡って確認し、問題が発生していた時期を特定する","deadline":"来週中"},{"title":"配信方式の改善案検討","detail":"書段図解への切り替え案を含め、音声図解システムの改善方法について検討資料を準備する","deadline":"2週間以内"}],"self_evaluation":{"good_points":["問題の継続性に気づき、単なる一時的なトラブルではないことを認識している","ログに基づいた根本原因の究明という正しいアプローチを取ろうとしている","配信方式の代替案（書段図解）も含めて、複数の解決策を検討しようとしている"],"improvements":[{"title":"発言の構造化が不足","detail":"「えー」「え」などの言い淀みが多く、また複数の話題が順序立てられないまま述べられており、聞き手が要点を掴みにくい状況が見られるとのこと。「〜なぜなら、〜であるため」という因果関係をより明確にする必要がある","suggestion":"事前に話す内容を整理し、①問題の現状、②その影響、③原因の仮説、④今後の対応という4段階で構造化して話す練習をする"},{"title":"相手の同意確認がない","detail":"提案した解決策（書段図解への切り替えなど）について、相手の意見や合意を求める質問がないまま一方的に話を進めているという傾向が見られるとのこと","suggestion":"「書段図解に切り替えることについて、どのようにお考えですか」「このアプローチで進めてよろしいでしょうか」というように、相手の意見を引き出す質問を意図的に挿入する"},{"title":"具体的な数字や期限が不明確","detail":"「なんとか解決したい」という定性的な表現にとどまっており、いつまでに、どの程度の精度で解決するのかといった具体的な目標設定がされていないとのこと","suggestion":"「本日から1週間以内に原因を特定し、2週間以内に改善案を実装する」というように、具体的な期限と成功指標を示して話すことで、相手の理解と信頼を高める"}]},"keywords":["配信ログ","音声メモ","システム障害","原因究明","書段図解","音声図解","ログ解析","信頼性","配信問題","改善"]}</script>
+<script>lucide.createIcons();</script>
+</body>
+</html>
