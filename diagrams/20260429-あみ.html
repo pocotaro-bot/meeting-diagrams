@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<title>商談メモ: あみさんとの対話型</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<style>
+  body { background: #f8fafc; color: #1e293b; font-family: 'Hiragino Kana Gothic ProN','Hiragino Sans','Yu Gothic','Meiryo',sans-serif; -webkit-tap-highlight-color: transparent; }
+  .ads-card { background: #fff; border: 1px solid #e2e8f0; border-radius: 1rem; }
+  @media print { .no-print { display: none !important; } }
+</style>
+</head>
+<body class="min-h-screen pb-16" style="padding-bottom:env(safe-area-inset-bottom,16px)">
+
+<!-- ヘッダー -->
+<header class="sticky top-0 z-10 bg-white/90 backdrop-blur border-b border-slate-200">
+  <div class="max-w-2xl mx-auto px-4 py-3 flex items-center justify-between">
+    <span class="text-base font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-full">商談メモ</span>
+    <button onclick="window.print()" class="no-print flex items-center gap-1.5 text-sm text-slate-400 hover:text-blue-600 transition-colors">
+      <i data-lucide="printer" class="w-4 h-4"></i> PDF
+    </button>
+  </div>
+</header>
+
+<main class="max-w-2xl mx-auto px-4 py-8 space-y-8">
+
+  
+  <!-- 要約・概要 -->
+  <section>
+    <h2 class="text-lg font-black text-slate-700 mb-3 flex items-center gap-2">
+      <i data-lucide="file-text" class="w-5 h-5 text-slate-500"></i> 要約・概要
+    </h2>
+    <div class="ads-card p-6">
+      <p class="text-base text-slate-700 leading-relaxed whitespace-pre-line">子どもの片付けに関する悩みが共有された。パジャマを片付けないという習慣について、何度言っても改善されないことへの葛藤が述べられたとのこと。また、食器の片付けについても同様の課題があるという話が出た。
+
+現在のアプローチが機能していないことから、異なるアプローチの可能性を模索されている様子が伝わってきた。子どもを困る状態に持っていくことが効果的なのか、それとも繰り返し粘り強く伝え続けることが大切なのか、最適な対応方法が模索中とのこと。結論には至っていない状態での、日々の葛藤が続いているということであった。</p>
+    </div>
+  </section>
+
+  <!-- ヒーロー -->
+  <div class="ads-card p-6">
+    <p class="text-xs text-slate-400 mb-1">これはデモ用サンプルです</p>
+    <h1 class="text-2xl sm:text-3xl font-black text-slate-900 leading-tight mb-2">
+      あみさんとの対話型
+    </h1>
+    <p class="text-base text-slate-500 mb-4">子どもの片付けの習慣化について悩みを共有</p>
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-base">
+      <div>
+        <p class="text-slate-400 flex items-center gap-1 mb-0.5"><i data-lucide="calendar" class="w-3.5 h-3.5"></i> 日時</p>
+        <p class="font-semibold text-slate-700">2026年4月29日</p>
+      </div>
+      <div>
+        <p class="text-slate-400 flex items-center gap-1 mb-0.5"><i data-lucide="user" class="w-3.5 h-3.5"></i> 相手</p>
+        <p class="font-semibold text-slate-700">あみ</p>
+        
+        
+      </div>
+      
+      
+    </div>
+  </div>
+
+  <!-- 相手を知る -->
+  <section>
+    <h2 class="text-lg font-black text-slate-700 mb-3 flex items-center gap-2">
+      <i data-lucide="user-search" class="w-5 h-5 text-blue-500"></i> 相手を知る
+    </h2>
+    <div class="grid sm:grid-cols-3 gap-3">
+      <div class="ads-card border-amber-200 bg-amber-50 p-4">
+    <p class="text-base font-bold text-amber-600 uppercase tracking-wide mb-1">課題</p>
+    <p class="text-base font-black text-amber-700 leading-snug mb-2">子どもの片付け習慣が定着しない</p>
+    <p class="text-sm text-slate-600 leading-relaxed">パジャマ、食器など複数のものが片付けられず、何度指摘しても改善されない状況が続いている。</p>
+  </div>
+      <div class="ads-card border-blue-200 bg-blue-50 p-4">
+    <p class="text-base font-bold text-blue-600 uppercase tracking-wide mb-1">価値観</p>
+    <p class="text-base font-black text-blue-700 leading-snug mb-2">変化と改善への願い</p>
+    <p class="text-sm text-slate-600 leading-relaxed">現在の状況を何とか変えたいという強い想いがあり、改善方法を模索し続けている姿勢が見られる。</p>
+  </div>
+      <div class="ads-card border-green-200 bg-green-50 p-4">
+    <p class="text-base font-bold text-green-600 uppercase tracking-wide mb-1">期待</p>
+    <p class="text-base font-black text-green-700 leading-snug mb-2">効果的な対応方法の発見</p>
+    <p class="text-sm text-slate-600 leading-relaxed">子どもに片付けの習慣を身につけさせるための最適なアプローチを見つけたいという期待がある。</p>
+  </div>
+    </div>
+  </section>
+
+  <!-- キーポイント -->
+  <section>
+    <h2 class="text-lg font-black text-slate-700 mb-3 flex items-center gap-2">
+      <i data-lucide="star" class="w-5 h-5 text-amber-500"></i> キーポイント
+    </h2>
+    <div class="space-y-3">
+      <div class="ads-card p-5">
+    <div class="flex items-start gap-3">
+      <span class="shrink-0 w-7 h-7 rounded-full bg-amber-500 text-white text-sm font-black flex items-center justify-center">1</span>
+      <div class="flex-1 min-w-0">
+        <p class="text-lg font-black text-slate-800 leading-snug mb-2">パジャマの片付けが進まない</p>
+        <p class="text-base text-slate-600 leading-relaxed mb-2">何度言っても改善されず、この状況が「奇異である」と感じられているとのこと。</p>
+        <blockquote class="border-l-4 border-amber-300 pl-3 text-base text-amber-700 italic leading-snug">&ldquo;あみはなぜパジャマを片付けないんだろう&rdquo;</blockquote>
+        <p class="text-base font-bold text-blue-600 mt-2">何度言っても変わらない</p>
+      </div>
+    </div>
+  </div><div class="ads-card p-5">
+    <div class="flex items-start gap-3">
+      <span class="shrink-0 w-7 h-7 rounded-full bg-amber-500 text-white text-sm font-black flex items-center justify-center">2</span>
+      <div class="flex-1 min-w-0">
+        <p class="text-lg font-black text-slate-800 leading-snug mb-2">食器の片付けも課題</p>
+        <p class="text-base text-slate-600 leading-relaxed mb-2">パジャマと同様に、食器についても片付けが習慣化していないという話が出た。</p>
+        <blockquote class="border-l-4 border-amber-300 pl-3 text-base text-amber-700 italic leading-snug">&ldquo;食器も片付けない。これもまた一つの悩みである&rdquo;</blockquote>
+        <p class="text-base font-bold text-blue-600 mt-2">複数の片付けが課題</p>
+      </div>
+    </div>
+  </div><div class="ads-card p-5">
+    <div class="flex items-start gap-3">
+      <span class="shrink-0 w-7 h-7 rounded-full bg-amber-500 text-white text-sm font-black flex items-center justify-center">3</span>
+      <div class="flex-1 min-w-0">
+        <p class="text-lg font-black text-slate-800 leading-snug mb-2">アプローチ方法を模索中</p>
+        <p class="text-base text-slate-600 leading-relaxed mb-2">困る状態に持っていくべきか、それとも繰り返し言い続けるべきか、最適な手段が明確になっていない状況とのこと。</p>
+        <blockquote class="border-l-4 border-amber-300 pl-3 text-base text-amber-700 italic leading-snug">&ldquo;困る状態に持っていくというのが良いのだろうか。それともひどく言い続けるということが大切なんだろうか&rdquo;</blockquote>
+        <p class="text-base font-bold text-blue-600 mt-2">困る状態か粘り強い指導か</p>
+      </div>
+    </div>
+  </div><div class="ads-card p-5">
+    <div class="flex items-start gap-3">
+      <span class="shrink-0 w-7 h-7 rounded-full bg-amber-500 text-white text-sm font-black flex items-center justify-center">4</span>
+      <div class="flex-1 min-w-0">
+        <p class="text-lg font-black text-slate-800 leading-snug mb-2">子どもの行動変化に関する葛藤</p>
+        <p class="text-base text-slate-600 leading-relaxed mb-2">変えること自体が間違いなのではないか、という根本的な疑問も感じられているとのこと。</p>
+        <blockquote class="border-l-4 border-amber-300 pl-3 text-base text-amber-700 italic leading-snug">&ldquo;変えること自体が間違いなのか&rdquo;</blockquote>
+        <p class="text-base font-bold text-blue-600 mt-2">変えることの正当性を問う</p>
+      </div>
+    </div>
+  </div>
+    </div>
+  </section>
+
+  <!-- 次回の話題ネタ -->
+  
+  <section>
+    <h2 class="text-lg font-black text-slate-700 mb-3 flex items-center gap-2">
+      <i data-lucide="message-circle" class="w-5 h-5 text-purple-500"></i> 次回また話したいこと
+    </h2>
+    <div class="grid sm:grid-cols-2 gap-3">
+      <div class="ads-card border-purple-200 bg-purple-50 p-4">
+    <p class="text-base font-bold text-purple-500 uppercase tracking-wide mb-2 flex items-center gap-1.5">
+      <i data-lucide="star" class="w-4 h-4"></i> 話題ネタ1
+    </p>
+    <p class="text-base font-black text-purple-800 leading-snug mb-1">子どもの片付け習慣の作り方</p>
+    <p class="text-sm text-slate-600 leading-relaxed">パジャマや食器など複数の物の片付けが進まない状況について、心理学的アプローチや具体的な仕組み作りなどの解決策を探る話題として活用できます。</p>
+  </div><div class="ads-card border-purple-200 bg-purple-50 p-4">
+    <p class="text-base font-bold text-purple-500 uppercase tracking-wide mb-2 flex items-center gap-1.5">
+      <i data-lucide="heart" class="w-4 h-4"></i> 話題ネタ2
+    </p>
+    <p class="text-base font-black text-purple-800 leading-snug mb-1">躾けと本人の主体性のバランス</p>
+    <p class="text-sm text-slate-600 leading-relaxed">繰り返し言い続けることと困る状態に持っていくこと、どちらが効果的か、親の働きかけと子どもの自発性についての深い思考が伝わる話題です。</p>
+  </div>
+    </div>
+  </section>
+
+  <!-- ネクストアクション -->
+  
+  <section>
+    <h2 class="text-lg font-black text-slate-700 mb-3 flex items-center gap-2">
+      <i data-lucide="check-square" class="w-5 h-5 text-green-500"></i> ネクストアクション
+    </h2>
+    <div class="space-y-2">
+      <div class="ads-card p-4 flex items-start gap-3">
+    <i data-lucide="arrow-right-circle" class="w-5 h-5 text-green-500 shrink-0 mt-0.5"></i>
+    <div class="flex-1 min-w-0">
+      <div class="flex items-center gap-2 mb-0.5 flex-wrap">
+        <p class="text-lg font-black text-slate-800">片付けの新しいアプローチを試行</p>
+        <span class="text-sm font-bold px-2 py-0.5 rounded-full border bg-amber-50 border-amber-200 text-amber-700">今週中</span>
+      </div>
+      
+    </div>
+  </div><div class="ads-card p-4 flex items-start gap-3">
+    <i data-lucide="arrow-right-circle" class="w-5 h-5 text-green-500 shrink-0 mt-0.5"></i>
+    <div class="flex-1 min-w-0">
+      <div class="flex items-center gap-2 mb-0.5 flex-wrap">
+        <p class="text-lg font-black text-slate-800">改善効果の実際の結果を観察</p>
+        <span class="text-sm font-bold px-2 py-0.5 rounded-full border bg-amber-50 border-amber-200 text-amber-700">来週中</span>
+      </div>
+      
+    </div>
+  </div>
+    </div>
+  </section>
+
+  <!-- キーワード -->
+  
+  <section>
+    <h2 class="text-base font-bold text-slate-500 mb-2 flex items-center gap-2">
+      <i data-lucide="tag" class="w-4 h-4"></i> あとで調べるキーワード
+    </h2>
+    <div class="flex flex-wrap gap-2">
+      <span class="text-base font-medium bg-slate-100 text-slate-600 border border-slate-200 px-3 py-1.5 rounded-full">子どもの躾け</span><span class="text-base font-medium bg-slate-100 text-slate-600 border border-slate-200 px-3 py-1.5 rounded-full">片付け習慣</span><span class="text-base font-medium bg-slate-100 text-slate-600 border border-slate-200 px-3 py-1.5 rounded-full">パジャマ</span><span class="text-base font-medium bg-slate-100 text-slate-600 border border-slate-200 px-3 py-1.5 rounded-full">食器</span><span class="text-base font-medium bg-slate-100 text-slate-600 border border-slate-200 px-3 py-1.5 rounded-full">アプローチ</span><span class="text-base font-medium bg-slate-100 text-slate-600 border border-slate-200 px-3 py-1.5 rounded-full">親子関係</span><span class="text-base font-medium bg-slate-100 text-slate-600 border border-slate-200 px-3 py-1.5 rounded-full">行動改善</span><span class="text-base font-medium bg-slate-100 text-slate-600 border border-slate-200 px-3 py-1.5 rounded-full">習慣化</span><span class="text-base font-medium bg-slate-100 text-slate-600 border border-slate-200 px-3 py-1.5 rounded-full">子育ての葛藤</span>
+    </div>
+  </section>
+
+  <!-- 自己評価 -->
+  
+  <section>
+    <h2 class="text-lg font-black text-slate-700 mb-3 flex items-center gap-2">
+      <i data-lucide="bar-chart-2" class="w-5 h-5 text-rose-500"></i> 自己評価
+    </h2>
+    <div class="space-y-3">
+      <div class="ads-card border-rose-100 bg-rose-50 p-5">
+    <div class="flex items-start gap-3">
+      <i data-lucide="alert-circle" class="w-5 h-5 text-rose-400 shrink-0 mt-0.5"></i>
+      <div class="flex-1 min-w-0">
+        <p class="text-base font-black text-slate-800 mb-1">一人で考え込みすぎている傾向</p>
+        <p class="text-base text-slate-600 leading-relaxed mb-3">「どうしよう。という日々である」という終わり方から、答えが見つからないまま堂々巡りしている状況が伝わる。</p>
+        <div class="bg-white border border-rose-100 rounded-xl p-3">
+          <p class="text-sm font-bold text-rose-500 mb-1">改善案</p>
+          <p class="text-base text-slate-700">具体的な事例や専門家の意見などを取り入れ、別の視点からの検討を進める</p>
+        </div>
+      </div>
+    </div>
+  </div><div class="ads-card border-rose-100 bg-rose-50 p-5">
+    <div class="flex items-start gap-3">
+      <i data-lucide="alert-circle" class="w-5 h-5 text-rose-400 shrink-0 mt-0.5"></i>
+      <div class="flex-1 min-w-0">
+        <p class="text-base font-black text-slate-800 mb-1">対応策の検証が不十分</p>
+        <p class="text-base text-slate-600 leading-relaxed mb-3">「困る状態に持っていく」「言い続ける」という２つのアプローチを挙げながらも、それぞれの効果検証や試行がされていない様子。</p>
+        <div class="bg-white border border-rose-100 rounded-xl p-3">
+          <p class="text-sm font-bold text-rose-500 mb-1">改善案</p>
+          <p class="text-base text-slate-700">どちらか一つを試験的に実施し、実際の効果を丁寧に観察・記録することが重要</p>
+        </div>
+      </div>
+    </div>
+  </div><div class="ads-card border-rose-100 bg-rose-50 p-5">
+    <div class="flex items-start gap-3">
+      <i data-lucide="alert-circle" class="w-5 h-5 text-rose-400 shrink-0 mt-0.5"></i>
+      <div class="flex-1 min-w-0">
+        <p class="text-base font-black text-slate-800 mb-1">現在の手法の効果測定が曖昧</p>
+        <p class="text-base text-slate-600 leading-relaxed mb-3">「何度言ってもダメ」という判断をしているが、どの程度の期間で、どのような工夫をした上での評価なのか明確ではない。</p>
+        <div class="bg-white border border-rose-100 rounded-xl p-3">
+          <p class="text-sm font-bold text-rose-500 mb-1">改善案</p>
+          <p class="text-base text-slate-700">期間、回数、伝え方の工夫など、より具体的な条件を設定して評価し直す</p>
+        </div>
+      </div>
+    </div>
+  </div>
+    </div>
+    
+    <div class="ads-card p-5 mt-3">
+      <div class="flex items-center gap-2 mb-3">
+        <i data-lucide="check" class="w-4 h-4 text-green-500 shrink-0"></i>
+        <p class="text-lg font-bold text-slate-700">できていたこと</p>
+      </div>
+      <ul class="space-y-3 text-base text-slate-500">
+        <li class="flex items-start gap-2"><span class="text-green-500 font-bold shrink-0 mt-0.5">•</span><span>問題の根本を問い直す思考力が示されている</span></li><li class="flex items-start gap-2"><span class="text-green-500 font-bold shrink-0 mt-0.5">•</span><span>複数の対応策を自ら模索する前向きな姿勢</span></li><li class="flex items-start gap-2"><span class="text-green-500 font-bold shrink-0 mt-0.5">•</span><span>葛藤を言語化して整理しようとしている</span></li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<footer class="max-w-2xl mx-auto px-4 pt-6 pb-10 border-t border-slate-200/60">
+  <p class="text-base text-slate-400 text-center">AI-Driven School の図解ツールで自動生成</p>
+</footer>
+
+<!-- 編集ボタン（右下 FAB） -->
+
+<a href="https://script.google.com/macros/s/AKfycbyvk0c4seawQU-EnPLsky84_RknUcgWu4hcG-HcHRzlrIeX-glk0qgcgOD2jcOt0dzG-w/exec?slug=20260429-あみ" class="no-print fixed bottom-6 right-6 z-50 flex items-center gap-2 bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white font-bold text-base px-5 py-3 rounded-full shadow-lg transition-colors" style="bottom:calc(1.5rem + env(safe-area-inset-bottom,0px))">
+  <i data-lucide="pencil" class="w-4 h-4"></i> 編集
+</a>
+
+<script id="meeting-data" type="application/json">{"meeting":{"date":"2026年4月29日","person_name":"あみ","headline":"子どもの片付けの習慣化について悩みを共有","summary_overview":"子どもの片付けに関する悩みが共有された。パジャマを片付けないという習慣について、何度言っても改善されないことへの葛藤が述べられたとのこと。また、食器の片付けについても同様の課題があるという話が出た。\n\n現在のアプローチが機能していないことから、異なるアプローチの可能性を模索されている様子が伝わってきた。子どもを困る状態に持っていくことが効果的なのか、それとも繰り返し粘り強く伝え続けることが大切なのか、最適な対応方法が模索中とのこと。結論には至っていない状態での、日々の葛藤が続いているということであった。","scene_type":"対話型"},"know_them":{"issue":{"title":"子どもの片付け習慣が定着しない","detail":"パジャマ、食器など複数のものが片付けられず、何度指摘しても改善されない状況が続いている。"},"values":{"title":"変化と改善への願い","detail":"現在の状況を何とか変えたいという強い想いがあり、改善方法を模索し続けている姿勢が見られる。"},"expectation":{"title":"効果的な対応方法の発見","detail":"子どもに片付けの習慣を身につけさせるための最適なアプローチを見つけたいという期待がある。"}},"key_points":[{"title":"パジャマの片付けが進まない","detail":"何度言っても改善されず、この状況が「奇異である」と感じられているとのこと。","highlight":"何度言っても変わらない","quote":"あみはなぜパジャマを片付けないんだろう"},{"title":"食器の片付けも課題","detail":"パジャマと同様に、食器についても片付けが習慣化していないという話が出た。","highlight":"複数の片付けが課題","quote":"食器も片付けない。これもまた一つの悩みである"},{"title":"アプローチ方法を模索中","detail":"困る状態に持っていくべきか、それとも繰り返し言い続けるべきか、最適な手段が明確になっていない状況とのこと。","highlight":"困る状態か粘り強い指導か","quote":"困る状態に持っていくというのが良いのだろうか。それともひどく言い続けるということが大切なんだろうか"},{"title":"子どもの行動変化に関する葛藤","detail":"変えること自体が間違いなのではないか、という根本的な疑問も感じられているとのこと。","highlight":"変えることの正当性を問う","quote":"変えること自体が間違いなのか"}],"next_topics":[{"label":"話題ネタ1","title":"子どもの片付け習慣の作り方","detail":"パジャマや食器など複数の物の片付けが進まない状況について、心理学的アプローチや具体的な仕組み作りなどの解決策を探る話題として活用できます。","icon":"star"},{"label":"話題ネタ2","title":"躾けと本人の主体性のバランス","detail":"繰り返し言い続けることと困る状態に持っていくこと、どちらが効果的か、親の働きかけと子どもの自発性についての深い思考が伝わる話題です。","icon":"heart"}],"next_actions":[{"title":"片付けの新しいアプローチを試行","deadline":"今週中"},{"title":"改善効果の実際の結果を観察","deadline":"来週中"}],"self_evaluation":{"good_points":["問題の根本を問い直す思考力が示されている","複数の対応策を自ら模索する前向きな姿勢","葛藤を言語化して整理しようとしている"],"improvements":[{"title":"一人で考え込みすぎている傾向","detail":"「どうしよう。という日々である」という終わり方から、答えが見つからないまま堂々巡りしている状況が伝わる。","suggestion":"具体的な事例や専門家の意見などを取り入れ、別の視点からの検討を進める"},{"title":"対応策の検証が不十分","detail":"「困る状態に持っていく」「言い続ける」という２つのアプローチを挙げながらも、それぞれの効果検証や試行がされていない様子。","suggestion":"どちらか一つを試験的に実施し、実際の効果を丁寧に観察・記録することが重要"},{"title":"現在の手法の効果測定が曖昧","detail":"「何度言ってもダメ」という判断をしているが、どの程度の期間で、どのような工夫をした上での評価なのか明確ではない。","suggestion":"期間、回数、伝え方の工夫など、より具体的な条件を設定して評価し直す"}]},"keywords":["子どもの躾け","片付け習慣","パジャマ","食器","アプローチ","親子関係","行動改善","習慣化","子育ての葛藤"]}</script>
+<script>lucide.createIcons();</script>
+</body>
+</html>
