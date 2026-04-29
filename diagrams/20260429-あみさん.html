@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<title>商談メモ: あみさんさんとの対話型</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<style>
+  body { background: #f8fafc; color: #1e293b; font-family: 'Hiragino Kana Gothic ProN','Hiragino Sans','Yu Gothic','Meiryo',sans-serif; -webkit-tap-highlight-color: transparent; }
+  .ads-card { background: #fff; border: 1px solid #e2e8f0; border-radius: 1rem; }
+  @media print { .no-print { display: none !important; } }
+</style>
+</head>
+<body class="min-h-screen pb-16" style="padding-bottom:env(safe-area-inset-bottom,16px)">
+
+<!-- ヘッダー -->
+<header class="sticky top-0 z-10 bg-white/90 backdrop-blur border-b border-slate-200">
+  <div class="max-w-2xl mx-auto px-4 py-3 flex items-center justify-between">
+    <span class="text-base font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-full">商談メモ</span>
+    <button onclick="window.print()" class="no-print flex items-center gap-1.5 text-sm text-slate-400 hover:text-blue-600 transition-colors">
+      <i data-lucide="printer" class="w-4 h-4"></i> PDF
+    </button>
+  </div>
+</header>
+
+<main class="max-w-2xl mx-auto px-4 py-8 space-y-8">
+
+  
+  <!-- 要約・概要 -->
+  <section>
+    <h2 class="text-lg font-black text-slate-700 mb-3 flex items-center gap-2">
+      <i data-lucide="file-text" class="w-5 h-5 text-slate-500"></i> 要約・概要
+    </h2>
+    <div class="ads-card p-6">
+      <p class="text-base text-slate-700 leading-relaxed whitespace-pre-line">パジャマと食器の片付けについて、何度言っても改善されない状況への悩みが語られた。相手は変えることが難しいという実感を持っているとのこと。罰したり厳しく言い続けるべきか、困る状態に導くべきかなど、複数のアプローチ方法について検討されたが、有効な解決策は見出されていないとのこと。日々この問題と向き合い、試行錯誤を続けている状況とのことであった。</p>
+    </div>
+  </section>
+
+  <!-- ヒーロー -->
+  <div class="ads-card p-6">
+    <p class="text-xs text-slate-400 mb-1">これはデモ用サンプルです</p>
+    <h1 class="text-2xl sm:text-3xl font-black text-slate-900 leading-tight mb-2">
+      あみさんさんとの対話型
+    </h1>
+    <p class="text-base text-slate-500 mb-4">家事分担について相談</p>
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-base">
+      <div>
+        <p class="text-slate-400 flex items-center gap-1 mb-0.5"><i data-lucide="calendar" class="w-3.5 h-3.5"></i> 日時</p>
+        <p class="font-semibold text-slate-700">2026年4月29日</p>
+      </div>
+      <div>
+        <p class="text-slate-400 flex items-center gap-1 mb-0.5"><i data-lucide="user" class="w-3.5 h-3.5"></i> 相手</p>
+        <p class="font-semibold text-slate-700">あみさん</p>
+        
+        
+      </div>
+      <div><p class="text-slate-400 flex items-center gap-1 mb-0.5"><i data-lucide="map-pin" class="w-3.5 h-3.5"></i> 場所</p><p class="font-semibold text-slate-700">不明</p></div>
+      <div><p class="text-slate-400 flex items-center gap-1 mb-0.5"><i data-lucide="users" class="w-3.5 h-3.5"></i> 同席者</p><p class="text-slate-700 text-sm">先方: あみ</p></div>
+    </div>
+  </div>
+
+  <!-- 相手を知る -->
+  <section>
+    <h2 class="text-lg font-black text-slate-700 mb-3 flex items-center gap-2">
+      <i data-lucide="user-search" class="w-5 h-5 text-blue-500"></i> 相手を知る
+    </h2>
+    <div class="grid sm:grid-cols-3 gap-3">
+      <div class="ads-card border-amber-200 bg-amber-50 p-4">
+    <p class="text-base font-bold text-amber-600 uppercase tracking-wide mb-1">課題</p>
+    <p class="text-base font-black text-amber-700 leading-snug mb-2">家事の片付けができない問題</p>
+    <p class="text-sm text-slate-600 leading-relaxed">パジャマと食器を何度言っても片付けない。指摘や注意が効果を上げていない状況が継続している</p>
+  </div>
+      <div class="ads-card border-blue-200 bg-blue-50 p-4">
+    <p class="text-base font-bold text-blue-600 uppercase tracking-wide mb-1">価値観</p>
+    <p class="text-base font-black text-blue-700 leading-snug mb-2">コミュニケーションの課題</p>
+    <p class="text-sm text-slate-600 leading-relaxed">相手との関係性を保ちながら、行動を変えさせるための効果的な方法を模索している</p>
+  </div>
+      <div class="ads-card border-green-200 bg-green-50 p-4">
+    <p class="text-base font-bold text-green-600 uppercase tracking-wide mb-1">期待</p>
+    <p class="text-base font-black text-green-700 leading-snug mb-2">家事習慣の改善</p>
+    <p class="text-sm text-slate-600 leading-relaxed">言葉で伝えるだけでなく、自然と家事を片付ける習慣が身につく状態を実現したい</p>
+  </div>
+    </div>
+  </section>
+
+  <!-- キーポイント -->
+  <section>
+    <h2 class="text-lg font-black text-slate-700 mb-3 flex items-center gap-2">
+      <i data-lucide="star" class="w-5 h-5 text-amber-500"></i> キーポイント
+    </h2>
+    <div class="space-y-3">
+      <div class="ads-card p-5">
+    <div class="flex items-start gap-3">
+      <span class="shrink-0 w-7 h-7 rounded-full bg-amber-500 text-white text-sm font-black flex items-center justify-center">1</span>
+      <div class="flex-1 min-w-0">
+        <p class="text-lg font-black text-slate-800 leading-snug mb-2">パジャマの放置</p>
+        <p class="text-base text-slate-600 leading-relaxed mb-2">何度言っても片付けられない状態が継続している</p>
+        <blockquote class="border-l-4 border-amber-300 pl-3 text-base text-amber-700 italic leading-snug">&ldquo;何度言ってもダメなものはダメである&rdquo;</blockquote>
+        <p class="text-base font-bold text-blue-600 mt-2">繰り返しの指摘が効果的でない</p>
+      </div>
+    </div>
+  </div><div class="ads-card p-5">
+    <div class="flex items-start gap-3">
+      <span class="shrink-0 w-7 h-7 rounded-full bg-amber-500 text-white text-sm font-black flex items-center justify-center">2</span>
+      <div class="flex-1 min-w-0">
+        <p class="text-lg font-black text-slate-800 leading-snug mb-2">食器の未片付け</p>
+        <p class="text-base text-slate-600 leading-relaxed mb-2">パジャマと同様に、注意しても改善されていない</p>
+        <blockquote class="border-l-4 border-amber-300 pl-3 text-base text-amber-700 italic leading-snug">&ldquo;食器も片付けない。これもまた一つの悩みである&rdquo;</blockquote>
+        <p class="text-base font-bold text-blue-600 mt-2">複数の問題が並行している</p>
+      </div>
+    </div>
+  </div><div class="ads-card p-5">
+    <div class="flex items-start gap-3">
+      <span class="shrink-0 w-7 h-7 rounded-full bg-amber-500 text-white text-sm font-black flex items-center justify-center">3</span>
+      <div class="flex-1 min-w-0">
+        <p class="text-lg font-black text-slate-800 leading-snug mb-2">アプローチ方法の検討</p>
+        <p class="text-base text-slate-600 leading-relaxed mb-2">厳しく言い続ける方法と、困る状態に導く方法の二つが候補として検討されている</p>
+        <blockquote class="border-l-4 border-amber-300 pl-3 text-base text-amber-700 italic leading-snug">&ldquo;困る状態に持っていくというのが良いのだろうか。それともひどく言い続けるということが大切なんだろうか&rdquo;</blockquote>
+        <p class="text-base font-bold text-blue-600 mt-2">有効な解決策が見出せていない</p>
+      </div>
+    </div>
+  </div><div class="ads-card p-5">
+    <div class="flex items-start gap-3">
+      <span class="shrink-0 w-7 h-7 rounded-full bg-amber-500 text-white text-sm font-black flex items-center justify-center">4</span>
+      <div class="flex-1 min-w-0">
+        <p class="text-lg font-black text-slate-800 leading-snug mb-2">根本的な疑問</p>
+        <p class="text-base text-slate-600 leading-relaxed mb-2">相手の行動を変えようとすること自体が適切かどうかの疑問が生じている</p>
+        <blockquote class="border-l-4 border-amber-300 pl-3 text-base text-amber-700 italic leading-snug">&ldquo;変えること自体が間違いなのか&rdquo;</blockquote>
+        <p class="text-base font-bold text-blue-600 mt-2">変えるべきか受け入れるべきかの葛藤</p>
+      </div>
+    </div>
+  </div>
+    </div>
+  </section>
+
+  <!-- 次回の話題ネタ -->
+  
+  <section>
+    <h2 class="text-lg font-black text-slate-700 mb-3 flex items-center gap-2">
+      <i data-lucide="message-circle" class="w-5 h-5 text-purple-500"></i> 次回また話したいこと
+    </h2>
+    <div class="grid sm:grid-cols-2 gap-3">
+      <div class="ads-card border-purple-200 bg-purple-50 p-4">
+    <p class="text-base font-bold text-purple-500 uppercase tracking-wide mb-2 flex items-center gap-1.5">
+      <i data-lucide="lightbulb" class="w-4 h-4"></i> 話題ネタ1
+    </p>
+    <p class="text-base font-black text-purple-800 leading-snug mb-1">効果的な家事指導方法</p>
+    <p class="text-sm text-slate-600 leading-relaxed">言葉での指摘が効かない場合、行動心理学的なアプローチや習慣形成のテクニックについて次回相談したい</p>
+  </div><div class="ads-card border-purple-200 bg-purple-50 p-4">
+    <p class="text-base font-bold text-purple-500 uppercase tracking-wide mb-2 flex items-center gap-1.5">
+      <i data-lucide="heart" class="w-4 h-4"></i> 話題ネタ2
+    </p>
+    <p class="text-base font-black text-purple-800 leading-snug mb-1">相手の行動特性の理解</p>
+    <p class="text-sm text-slate-600 leading-relaxed">あみさんが片付けられない理由や背景について、より深く理解するための聞き取りを次回実施したい</p>
+  </div>
+    </div>
+  </section>
+
+  <!-- ネクストアクション -->
+  
+  <section>
+    <h2 class="text-lg font-black text-slate-700 mb-3 flex items-center gap-2">
+      <i data-lucide="check-square" class="w-5 h-5 text-green-500"></i> ネクストアクション
+    </h2>
+    <div class="space-y-2">
+      <div class="ads-card p-4 flex items-start gap-3">
+    <i data-lucide="arrow-right-circle" class="w-5 h-5 text-green-500 shrink-0 mt-0.5"></i>
+    <div class="flex-1 min-w-0">
+      <div class="flex items-center gap-2 mb-0.5 flex-wrap">
+        <p class="text-lg font-black text-slate-800">あみさんとの対話を設定</p>
+        <span class="text-sm font-bold px-2 py-0.5 rounded-full border bg-amber-50 border-amber-200 text-amber-700">今週中</span>
+      </div>
+      <p class="text-sm text-slate-500 leading-relaxed">片付けられない理由について、責めるのではなく理由を聞く機会を作る</p>
+    </div>
+  </div><div class="ads-card p-4 flex items-start gap-3">
+    <i data-lucide="arrow-right-circle" class="w-5 h-5 text-green-500 shrink-0 mt-0.5"></i>
+    <div class="flex-1 min-w-0">
+      <div class="flex items-center gap-2 mb-0.5 flex-wrap">
+        <p class="text-lg font-black text-slate-800">自分のコミュニケーション方法を見直す</p>
+        <span class="text-sm font-bold px-2 py-0.5 rounded-full border bg-amber-50 border-amber-200 text-amber-700">来週中</span>
+      </div>
+      <p class="text-sm text-slate-500 leading-relaxed">繰り返しの指摘が逆効果になっていないか検証する</p>
+    </div>
+  </div>
+    </div>
+  </section>
+
+  <!-- キーワード -->
+  
+
+  <!-- 自己評価 -->
+  
+  <section>
+    <h2 class="text-lg font-black text-slate-700 mb-3 flex items-center gap-2">
+      <i data-lucide="bar-chart-2" class="w-5 h-5 text-rose-500"></i> 自己評価
+    </h2>
+    <div class="space-y-3">
+      <div class="ads-card border-rose-100 bg-rose-50 p-5">
+    <div class="flex items-start gap-3">
+      <i data-lucide="alert-circle" class="w-5 h-5 text-rose-400 shrink-0 mt-0.5"></i>
+      <div class="flex-1 min-w-0">
+        <p class="text-base font-black text-slate-800 mb-1">一方的な指摘になっていないか</p>
+        <p class="text-base text-slate-600 leading-relaxed mb-3">「何度言ってもダメ」という表現から、相手の話を十分に聞かずに指摘を繰り返している可能性がある。相手が片付けられない理由を丁寧に聞く姿勢が不足しているとのこと</p>
+        <div class="bg-white border border-rose-100 rounded-xl p-3">
+          <p class="text-sm font-bold text-rose-500 mb-1">改善案</p>
+          <p class="text-base text-slate-700">次回は相手に対して『なぜ片付けられないのか』『片付けるのに何が障害になっているのか』という開かれた質問をしてみる</p>
+        </div>
+      </div>
+    </div>
+  </div><div class="ads-card border-rose-100 bg-rose-50 p-5">
+    <div class="flex items-start gap-3">
+      <i data-lucide="alert-circle" class="w-5 h-5 text-rose-400 shrink-0 mt-0.5"></i>
+      <div class="flex-1 min-w-0">
+        <p class="text-base font-black text-slate-800 mb-1">感情的な疲労が言葉に表れている</p>
+        <p class="text-base text-slate-600 leading-relaxed mb-3">『困る』『どうしよう』といった言葉の繰り返しから、問題解決ではなく感情的な不満を相手にぶつけている可能性がある</p>
+        <div class="bg-white border border-rose-100 rounded-xl p-3">
+          <p class="text-sm font-bold text-rose-500 mb-1">改善案</p>
+          <p class="text-base text-slate-700">自分の感情を落ち着けた上で、冷静かつ建設的な対話を心がける</p>
+        </div>
+      </div>
+    </div>
+  </div><div class="ads-card border-rose-100 bg-rose-50 p-5">
+    <div class="flex items-start gap-3">
+      <i data-lucide="alert-circle" class="w-5 h-5 text-rose-400 shrink-0 mt-0.5"></i>
+      <div class="flex-1 min-w-0">
+        <p class="text-base font-black text-slate-800 mb-1">相手を変えることへの執着</p>
+        <p class="text-base text-slate-600 leading-relaxed mb-3">「変えること自体が間違いなのか」という疑問を口にしながらも、なお相手を変えようとしている矛盾が感じられる</p>
+        <div class="bg-white border border-rose-100 rounded-xl p-3">
+          <p class="text-sm font-bold text-rose-500 mb-1">改善案</p>
+          <p class="text-base text-slate-700">相手の個性や特性を受け入れた上で、どのようなルールや環境設定が現実的かを再度検討する</p>
+        </div>
+      </div>
+    </div>
+  </div>
+    </div>
+    
+    <div class="ads-card p-5 mt-3">
+      <div class="flex items-center gap-2 mb-3">
+        <i data-lucide="check" class="w-4 h-4 text-green-500 shrink-0"></i>
+        <p class="text-lg font-bold text-slate-700">できていたこと</p>
+      </div>
+      <ul class="space-y-3 text-base text-slate-500">
+        <li class="flex items-start gap-2"><span class="text-green-500 font-bold shrink-0 mt-0.5">•</span><span>複数の解決策を主体的に検討しようとしている</span></li><li class="flex items-start gap-2"><span class="text-green-500 font-bold shrink-0 mt-0.5">•</span><span>相手を責めるのではなく、自分の働きかけ方に疑問を持つ視点がある</span></li><li class="flex items-start gap-2"><span class="text-green-500 font-bold shrink-0 mt-0.5">•</span><span>問題を単純に考えず、根本的な課題設定を試みている</span></li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<footer class="max-w-2xl mx-auto px-4 pt-6 pb-10 border-t border-slate-200/60">
+  <p class="text-base text-slate-400 text-center">AI-Driven School の図解ツールで自動生成</p>
+</footer>
+
+<!-- 編集ボタン（右下 FAB） -->
+
+<a href="https://script.google.com/macros/s/AKfycbyvk0c4seawQU-EnPLsky84_RknUcgWu4hcG-HcHRzlrIeX-glk0qgcgOD2jcOt0dzG-w/exec?slug=20260429-あみさん" class="no-print fixed bottom-6 right-6 z-50 flex items-center gap-2 bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white font-bold text-base px-5 py-3 rounded-full shadow-lg transition-colors" style="bottom:calc(1.5rem + env(safe-area-inset-bottom,0px))">
+  <i data-lucide="pencil" class="w-4 h-4"></i> 編集
+</a>
+
+<script id="meeting-data" type="application/json">{"meeting":{"date":"2026年4月29日","person_name":"あみさん","headline":"家事分担について相談","summary_overview":"パジャマと食器の片付けについて、何度言っても改善されない状況への悩みが語られた。相手は変えることが難しいという実感を持っているとのこと。罰したり厳しく言い続けるべきか、困る状態に導くべきかなど、複数のアプローチ方法について検討されたが、有効な解決策は見出されていないとのこと。日々この問題と向き合い、試行錯誤を続けている状況とのことであった。","scene_type":"対話型","attendees_self":"","attendees_other":"あみ","company":"","role":"","location":"不明"},"know_them":{"issue":{"title":"家事の片付けができない問題","detail":"パジャマと食器を何度言っても片付けない。指摘や注意が効果を上げていない状況が継続している"},"values":{"title":"コミュニケーションの課題","detail":"相手との関係性を保ちながら、行動を変えさせるための効果的な方法を模索している"},"expectation":{"title":"家事習慣の改善","detail":"言葉で伝えるだけでなく、自然と家事を片付ける習慣が身につく状態を実現したい"}},"key_points":[{"title":"パジャマの放置","detail":"何度言っても片付けられない状態が継続している","highlight":"繰り返しの指摘が効果的でない","quote":"何度言ってもダメなものはダメである"},{"title":"食器の未片付け","detail":"パジャマと同様に、注意しても改善されていない","highlight":"複数の問題が並行している","quote":"食器も片付けない。これもまた一つの悩みである"},{"title":"アプローチ方法の検討","detail":"厳しく言い続ける方法と、困る状態に導く方法の二つが候補として検討されている","highlight":"有効な解決策が見出せていない","quote":"困る状態に持っていくというのが良いのだろうか。それともひどく言い続けるということが大切なんだろうか"},{"title":"根本的な疑問","detail":"相手の行動を変えようとすること自体が適切かどうかの疑問が生じている","highlight":"変えるべきか受け入れるべきかの葛藤","quote":"変えること自体が間違いなのか"}],"next_topics":[{"label":"話題ネタ1","title":"効果的な家事指導方法","detail":"言葉での指摘が効かない場合、行動心理学的なアプローチや習慣形成のテクニックについて次回相談したい","icon":"lightbulb"},{"label":"話題ネタ2","title":"相手の行動特性の理解","detail":"あみさんが片付けられない理由や背景について、より深く理解するための聞き取りを次回実施したい","icon":"heart"}],"next_actions":[{"title":"あみさんとの対話を設定","detail":"片付けられない理由について、責めるのではなく理由を聞く機会を作る","deadline":"今週中"},{"title":"自分のコミュニケーション方法を見直す","detail":"繰り返しの指摘が逆効果になっていないか検証する","deadline":"来週中"}],"self_evaluation":{"good_points":["複数の解決策を主体的に検討しようとしている","相手を責めるのではなく、自分の働きかけ方に疑問を持つ視点がある","問題を単純に考えず、根本的な課題設定を試みている"],"improvements":[{"title":"一方的な指摘になっていないか","detail":"「何度言ってもダメ」という表現から、相手の話を十分に聞かずに指摘を繰り返している可能性がある。相手が片付けられない理由を丁寧に聞く姿勢が不足しているとのこと","suggestion":"次回は相手に対して『なぜ片付けられないのか』『片付けるのに何が障害になっているのか』という開かれた質問をしてみる"},{"title":"感情的な疲労が言葉に表れている","detail":"『困る』『どうしよう』といった言葉の繰り返しから、問題解決ではなく感情的な不満を相手にぶつけている可能性がある","suggestion":"自分の感情を落ち着けた上で、冷静かつ建設的な対話を心がける"},{"title":"相手を変えることへの執着","detail":"「変えること自体が間違いなのか」という疑問を口にしながらも、なお相手を変えようとしている矛盾が感じられる","suggestion":"相手の個性や特性を受け入れた上で、どのようなルールや環境設定が現実的かを再度検討する"}]}}</script>
+<script>lucide.createIcons();</script>
+</body>
+</html>
