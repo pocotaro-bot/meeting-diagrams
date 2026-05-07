@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<title>商談メモ: 末藤さんとの対話型</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<style>
+  body { background: #f8fafc; color: #1e293b; font-family: 'Hiragino Kana Gothic ProN','Hiragino Sans','Yu Gothic','Meiryo',sans-serif; -webkit-tap-highlight-color: transparent; }
+  .ads-card { background: #fff; border: 1px solid #e2e8f0; border-radius: 1rem; }
+  @media print { .no-print { display: none !important; } }
+</style>
+</head>
+<body class="min-h-screen pb-16" style="padding-bottom:env(safe-area-inset-bottom,16px)">
+
+<!-- ヘッダー -->
+<header class="sticky top-0 z-10 bg-white/90 backdrop-blur border-b border-slate-200">
+  <div class="max-w-2xl mx-auto px-4 py-3 flex items-center justify-between">
+    <span class="text-base font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-full">商談メモ</span>
+    <button onclick="window.print()" class="no-print flex items-center gap-1.5 text-sm text-slate-400 hover:text-blue-600 transition-colors">
+      <i data-lucide="printer" class="w-4 h-4"></i> PDF
+    </button>
+  </div>
+</header>
+
+<main class="max-w-2xl mx-auto px-4 py-8 space-y-8">
+
+  
+  <!-- 要約・概要 -->
+  <section>
+    <h2 class="text-lg font-black text-slate-700 mb-3 flex items-center gap-2">
+      <i data-lucide="file-text" class="w-5 h-5 text-slate-500"></i> 要約・概要
+    </h2>
+    <div class="ads-card p-6">
+      <p class="text-base text-slate-700 leading-relaxed whitespace-pre-line">熊本出身の末藤執行役員と初めてお会いした。地域の共通点（熊本県矢部・宮崎・九州学院といった体育の強豪校）で盛り上がり、相手は卓球の経験者とのこと。その後、エアドッグジャパンの主力商品であるエアドッグについて本題に入った。
+
+末藤さんによると、エアドッグは複数の自治体とパートナーシップを結んでいるとのこと。現在、トヨタ自動車（鹿児島地域）とも協定を結んでおり、災害時の対応を想定した連携が進んでいるという話が出た。具体的には、平時にトヨタ店舗にエアドッグを設置しておき、災害発生時には電気自動車の電源を利用して避難所にエアドッグを運び込むという体制を構想しているとのこと。
+
+過去のノト自身の事例では、エアドッグが700台寄贈されたにもかかわらず、数ヶ月間梱包されたままで被災者に届かなかったという話も聞いた。災害時には食料や水が優先されるため、空気清浄機は後回しにされてしまったというのが教訓だと述べていた。こうした背景から、事前準備型の防災対策としてトヨタとの協業が生まれたということのようだ。
+
+当社としては、宮崎県の自治体との定期的な防災ネットワーク会合があるので、そうした場面でエアドッグの紹介ができればという実感を持った。また、帰り際には、当社の江木田社長が猫を飼っているので家庭用のエアドッグが欲しいという話でも盛り上がったとのことだった。</p>
+    </div>
+  </section>
+
+  <!-- ヒーロー -->
+  <div class="ads-card p-6">
+    <p class="text-xs text-slate-400 mb-1">これはデモ用サンプルです</p>
+    <h1 class="text-2xl sm:text-3xl font-black text-slate-900 leading-tight mb-2">
+      末藤さんとの対話型
+    </h1>
+    <p class="text-base text-slate-500 mb-4">エアドッグの自治体連携と防災対策について</p>
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-base">
+      <div>
+        <p class="text-slate-400 flex items-center gap-1 mb-0.5"><i data-lucide="calendar" class="w-3.5 h-3.5"></i> 日時</p>
+        <p class="font-semibold text-slate-700">2026年5月7日</p>
+      </div>
+      <div>
+        <p class="text-slate-400 flex items-center gap-1 mb-0.5"><i data-lucide="user" class="w-3.5 h-3.5"></i> 相手</p>
+        <p class="font-semibold text-slate-700">末藤</p>
+        <p class="text-slate-500 text-sm">エアドッグジャパン</p>
+        <p class="text-slate-500 text-sm">エアドッグジャパン執行役員</p>
+      </div>
+      <div><p class="text-slate-400 flex items-center gap-1 mb-0.5"><i data-lucide="map-pin" class="w-3.5 h-3.5"></i> 場所</p><p class="font-semibold text-slate-700">不明</p></div>
+      
+    </div>
+  </div>
+
+  <!-- 相手を知る -->
+  <section>
+    <h2 class="text-lg font-black text-slate-700 mb-3 flex items-center gap-2">
+      <i data-lucide="user-search" class="w-5 h-5 text-blue-500"></i> 相手を知る
+    </h2>
+    <div class="grid sm:grid-cols-3 gap-3">
+      <div class="ads-card border-amber-200 bg-amber-50 p-4">
+    <p class="text-base font-bold text-amber-600 uppercase tracking-wide mb-1">課題</p>
+    <p class="text-base font-black text-amber-700 leading-snug mb-2">災害時の空気清浄機のロジスティクス</p>
+    <p class="text-sm text-slate-600 leading-relaxed">過去のノト自身の事例では、エアドッグ700台が寄贈されたものの数ヶ月間梱包されたままで被災者に届かなかったという課題があるとのこと。災害時には食料や水が優先順位が高く、空気清浄機は必要性が認識されにくいという問題を指摘していた。</p>
+  </div>
+      <div class="ads-card border-blue-200 bg-blue-50 p-4">
+    <p class="text-base font-bold text-blue-600 uppercase tracking-wide mb-1">価値観</p>
+    <p class="text-base font-black text-blue-700 leading-snug mb-2">事前準備型の防災対策</p>
+    <p class="text-sm text-slate-600 leading-relaxed">末藤さんは、災害が発生した後の対応ではなく、事前に公民館やトヨタ店舗などの拠点にエアドッグを配置しておくことで、感染症やインフルエンザなどの被害拡大を防止できるという考え方を強調していたとのこと。</p>
+  </div>
+      <div class="ads-card border-green-200 bg-green-50 p-4">
+    <p class="text-base font-bold text-green-600 uppercase tracking-wide mb-1">期待</p>
+    <p class="text-base font-black text-green-700 leading-snug mb-2">宮崎県内での自治体パートナーシップ構築</p>
+    <p class="text-sm text-slate-600 leading-relaxed">末藤さんは、宮崎県内の自治体との協定構築を希望しており、既存のパートナーシップ自治体と同様のスキームを宮崎でも実現したいという意思を示していたとのこと。当社の防災ネットワーク会合を活用した紹介の可能性も出ていた。</p>
+  </div>
+    </div>
+  </section>
+
+  <!-- キーポイント -->
+  <section>
+    <h2 class="text-lg font-black text-slate-700 mb-3 flex items-center gap-2">
+      <i data-lucide="star" class="w-5 h-5 text-amber-500"></i> キーポイント
+    </h2>
+    <div class="space-y-3">
+      <div class="ads-card p-5">
+    <div class="flex items-start gap-3">
+      <span class="shrink-0 w-7 h-7 rounded-full bg-amber-500 text-white text-sm font-black flex items-center justify-center">1</span>
+      <div class="flex-1 min-w-0">
+        <p class="text-lg font-black text-slate-800 leading-snug mb-2">トヨタとの防災連携スキーム</p>
+        <p class="text-base text-slate-600 leading-relaxed mb-2">トヨタ自動車（鹿児島）との協定で、平時にトヨタ店舗にエアドッグを設置しておき、災害発生時には電気自動車の電源を確保しながら避難所に運び込むという仕組みを構想しているとのこと。</p>
+        
+        <p class="text-base font-bold text-blue-600 mt-2">平時に配置、災害時に運用する</p>
+      </div>
+    </div>
+  </div><div class="ads-card p-5">
+    <div class="flex items-start gap-3">
+      <span class="shrink-0 w-7 h-7 rounded-full bg-amber-500 text-white text-sm font-black flex items-center justify-center">2</span>
+      <div class="flex-1 min-w-0">
+        <p class="text-lg font-black text-slate-800 leading-snug mb-2">自治体との既存パートナーシップ</p>
+        <p class="text-base text-slate-600 leading-relaxed mb-2">エアドッグは既に複数の自治体とパートナーシップ協定を結んでいるとのこと。具体的な自治体名は会話中に忘れられてしまったが、宮崎県内での同様の協定構築を目指しているという話が出た。</p>
+        
+        <p class="text-base font-bold text-blue-600 mt-2">複数自治体での協定実績</p>
+      </div>
+    </div>
+  </div><div class="ads-card p-5">
+    <div class="flex items-start gap-3">
+      <span class="shrink-0 w-7 h-7 rounded-full bg-amber-500 text-white text-sm font-black flex items-center justify-center">3</span>
+      <div class="flex-1 min-w-0">
+        <p class="text-lg font-black text-slate-800 leading-snug mb-2">ノト自身事例の教訓</p>
+        <p class="text-base text-slate-600 leading-relaxed mb-2">ノト自身の際にエアドッグ700台が寄贈されたものの、数ヶ月間梱包されたままで被災者に届かなかったという事例から、災害後の対応ではなく事前準備が重要だという認識に至ったとのこと。</p>
+        
+        <p class="text-base font-bold text-blue-600 mt-2">事前配置の重要性</p>
+      </div>
+    </div>
+  </div><div class="ads-card p-5">
+    <div class="flex items-start gap-3">
+      <span class="shrink-0 w-7 h-7 rounded-full bg-amber-500 text-white text-sm font-black flex items-center justify-center">4</span>
+      <div class="flex-1 min-w-0">
+        <p class="text-lg font-black text-slate-800 leading-snug mb-2">災害時の優先順位の課題</p>
+        <p class="text-base text-slate-600 leading-relaxed mb-2">災害直後は食料や水が優先される傾向があり、空気清浄機のような製品は後回しにされてしまう傾向があるという話が出た。このため、事前配置による被災者の感染症対策が重要だとの認識を示していたとのこと。</p>
+        
+        <p class="text-base font-bold text-blue-600 mt-2">食料・水が最優先</p>
+      </div>
+    </div>
+  </div><div class="ads-card p-5">
+    <div class="flex items-start gap-3">
+      <span class="shrink-0 w-7 h-7 rounded-full bg-amber-500 text-white text-sm font-black flex items-center justify-center">5</span>
+      <div class="flex-1 min-w-0">
+        <p class="text-lg font-black text-slate-800 leading-snug mb-2">防災ネットワークでの紹介機会</p>
+        <p class="text-base text-slate-600 leading-relaxed mb-2">当社が定期的に開催している宮崎県の自治体向け防災ネットワーク会合において、エアドッグの紹介ができる可能性があるという実感を得たとのこと。</p>
+        
+        <p class="text-base font-bold text-blue-600 mt-2">定期的な自治体会合を活用</p>
+      </div>
+    </div>
+  </div>
+    </div>
+  </section>
+
+  <!-- 次回の話題ネタ -->
+  
+  <section>
+    <h2 class="text-lg font-black text-slate-700 mb-3 flex items-center gap-2">
+      <i data-lucide="message-circle" class="w-5 h-5 text-purple-500"></i> 次回また話したいこと
+    </h2>
+    <div class="grid sm:grid-cols-2 gap-3">
+      <div class="ads-card border-purple-200 bg-purple-50 p-4">
+    <p class="text-base font-bold text-purple-500 uppercase tracking-wide mb-2 flex items-center gap-1.5">
+      <i data-lucide="heart" class="w-4 h-4"></i> 話題ネタ1
+    </p>
+    <p class="text-base font-black text-purple-800 leading-snug mb-1">九州学院などの熊本スポーツ文化</p>
+    <p class="text-sm text-slate-600 leading-relaxed">相手の末藤さんが卓球部出身で、九州学院などの熊本の体育強豪校の話題で盛り上がったエピソード。村上選手や陸上選手の話も出た。相手が地元への愛着とスポーツへの関心を持っていることが伝わり、次回の人間関係構築に活用できる。</p>
+  </div><div class="ads-card border-purple-200 bg-purple-50 p-4">
+    <p class="text-base font-bold text-purple-500 uppercase tracking-wide mb-2 flex items-center gap-1.5">
+      <i data-lucide="smile" class="w-4 h-4"></i> 話題ネタ2
+    </p>
+    <p class="text-base font-black text-purple-800 leading-snug mb-1">ペット・猫との共通の関心</p>
+    <p class="text-sm text-slate-600 leading-relaxed">会社の江木田社長が猫を飼っており、家庭用エアドッグが欲しいという話が出た。帰り際に盛り上がった雑談で、相手も猫に関する関心があると予想される。個人的な関係構築のきっかけになりうる。</p>
+  </div>
+    </div>
+  </section>
+
+  <!-- ネクストアクション -->
+  
+  <section>
+    <h2 class="text-lg font-black text-slate-700 mb-3 flex items-center gap-2">
+      <i data-lucide="check-square" class="w-5 h-5 text-green-500"></i> ネクストアクション
+    </h2>
+    <div class="space-y-2">
+      <div class="ads-card p-4 flex items-start gap-3">
+    <i data-lucide="arrow-right-circle" class="w-5 h-5 text-green-500 shrink-0 mt-0.5"></i>
+    <div class="flex-1 min-w-0">
+      <div class="flex items-center gap-2 mb-0.5 flex-wrap">
+        <p class="text-lg font-black text-slate-800">防災ネットワーク会合でのエアドッグ紹介打ち合わせ</p>
+        <span class="text-sm font-bold px-2 py-0.5 rounded-full border bg-amber-50 border-amber-200 text-amber-700">来週中</span>
+      </div>
+      <p class="text-sm text-slate-500 leading-relaxed">宮崎県自治体との定期的な防災ネットワーク会合でエアドッグを紹介するための準備を進める。末藤さんとの協力体制を確認する。</p>
+    </div>
+  </div><div class="ads-card p-4 flex items-start gap-3">
+    <i data-lucide="arrow-right-circle" class="w-5 h-5 text-green-500 shrink-0 mt-0.5"></i>
+    <div class="flex-1 min-w-0">
+      <div class="flex items-center gap-2 mb-0.5 flex-wrap">
+        <p class="text-lg font-black text-slate-800">エアドッグの自治体パートナーシップ事例収集</p>
+        <span class="text-sm font-bold px-2 py-0.5 rounded-full border bg-amber-50 border-amber-200 text-amber-700">来週中</span>
+      </div>
+      <p class="text-sm text-slate-500 leading-relaxed">会話中に出た既存パートナーシップ自治体の具体名や協定内容を末藤さんから改めて確認し、宮崎県での展開モデルを検討する資料を作成する。</p>
+    </div>
+  </div><div class="ads-card p-4 flex items-start gap-3">
+    <i data-lucide="arrow-right-circle" class="w-5 h-5 text-green-500 shrink-0 mt-0.5"></i>
+    <div class="flex-1 min-w-0">
+      <div class="flex items-center gap-2 mb-0.5 flex-wrap">
+        <p class="text-lg font-black text-slate-800">江木田社長への家庭用エアドッグの提案</p>
+        <span class="text-sm font-bold px-2 py-0.5 rounded-full border bg-amber-50 border-amber-200 text-amber-700">今週中</span>
+      </div>
+      <p class="text-sm text-slate-500 leading-relaxed">社長が猫を飼っているため、家庭用エアドッグの提案・サンプル提供について末藤さんに相談する。関係構築と実際の導入に向けた動き。</p>
+    </div>
+  </div>
+    </div>
+  </section>
+
+  <!-- キーワード -->
+  
+
+  <!-- 自己評価 -->
+  
+  <section>
+    <h2 class="text-lg font-black text-slate-700 mb-3 flex items-center gap-2">
+      <i data-lucide="bar-chart-2" class="w-5 h-5 text-rose-500"></i> 自己評価
+    </h2>
+    <div class="space-y-3">
+      <div class="ads-card border-rose-100 bg-rose-50 p-5">
+    <div class="flex items-start gap-3">
+      <i data-lucide="alert-circle" class="w-5 h-5 text-rose-400 shrink-0 mt-0.5"></i>
+      <div class="flex-1 min-w-0">
+        <p class="text-base font-black text-slate-800 mb-1">自治体名の確認不足</p>
+        <p class="text-base text-slate-600 leading-relaxed mb-3">相手が「すでにパートナーシップ協定を結んでいる自治体がある」と述べたが、その具体名を確認しないまま会話が進んでしまった。「ちょっと自治体は忘れたんですけども」という発言が出たにもかかわらず、フォローアップの質問が不十分だった。</p>
+        <div class="bg-white border border-rose-100 rounded-xl p-3">
+          <p class="text-sm font-bold text-rose-500 mb-1">改善案</p>
+          <p class="text-base text-slate-700">その場で改めて「具体的にはどちらの自治体さんですか？」と確認するか、後日メールでの確認を取ることで、宮崎展開の参考事例を把握できたはず。</p>
+        </div>
+      </div>
+    </div>
+  </div><div class="ads-card border-rose-100 bg-rose-50 p-5">
+    <div class="flex items-start gap-3">
+      <i data-lucide="alert-circle" class="w-5 h-5 text-rose-400 shrink-0 mt-0.5"></i>
+      <div class="flex-1 min-w-0">
+        <p class="text-base font-black text-slate-800 mb-1">トヨタとの協業内容の詳細化不足</p>
+        <p class="text-base text-slate-600 leading-relaxed mb-3">トヨタとの防災連携スキームについては説明を受けたが、「鹿児島のトヨタ」という曖昧な情報のままで、具体的な店舗数や配置予定数、運用体制などを深掘りしなかった。</p>
+        <div class="bg-white border border-rose-100 rounded-xl p-3">
+          <p class="text-sm font-bold text-rose-500 mb-1">改善案</p>
+          <p class="text-base text-slate-700">トヨタのどの地域・店舗が対象なのか、実装スケジュールはいつなのか、配置台数の規模など、より具体的な事業規模を把握する質問を用意しておくべきだった。</p>
+        </div>
+      </div>
+    </div>
+  </div><div class="ads-card border-rose-100 bg-rose-50 p-5">
+    <div class="flex items-start gap-3">
+      <i data-lucide="alert-circle" class="w-5 h-5 text-rose-400 shrink-0 mt-0.5"></i>
+      <div class="flex-1 min-w-0">
+        <p class="text-base font-black text-slate-800 mb-1">相手の課題解決策の提案が受動的</p>
+        <p class="text-base text-slate-600 leading-relaxed mb-3">相手が「空気清浄機は災害時に優先度が低い」という課題を述べたのに対し、「いいアイデアだ」と理解を示すにとどまり、当社としての解決提案や支援策を積極的に提示しなかった。</p>
+        <div class="bg-white border border-rose-100 rounded-xl p-3">
+          <p class="text-sm font-bold text-rose-500 mb-1">改善案</p>
+          <p class="text-base text-slate-700">例えば「防災ネットワーク会合で優先度の高い形での紹介ができるか」「自治体の防災計画にエアドッグを組み込む方法」など、当社がどのように役立てるかをより主体的に提案する姿勢が必要だった。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+    </div>
+    
+    <div class="ads-card p-5 mt-3">
+      <div class="flex items-center gap-2 mb-3">
+        <i data-lucide="check" class="w-4 h-4 text-green-500 shrink-0"></i>
+        <p class="text-lg font-bold text-slate-700">できていたこと</p>
+      </div>
+      <ul class="space-y-3 text-base text-slate-500">
+        <li class="flex items-start gap-2"><span class="text-green-500 font-bold shrink-0 mt-0.5">•</span><span>相手の地域背景や個人的な経歴（出身地・学生時代のスポーツ経験）から共通点を見つけ、雑談を通じて親近感を構築できたこと</span></li><li class="flex items-start gap-2"><span class="text-green-500 font-bold shrink-0 mt-0.5">•</span><span>相手が提示した防災対策の考え方（事前準備型）に対して、その重要性を理解し、適切に共感を示すことができたこと</span></li><li class="flex items-start gap-2"><span class="text-green-500 font-bold shrink-0 mt-0.5">•</span><span>自社の防災ネットワークという既存リソースを活用した具体的な提案ができたこと</span></li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<footer class="max-w-2xl mx-auto px-4 pt-6 pb-10 border-t border-slate-200/60">
+  <p class="text-base text-slate-400 text-center">AI-Driven School の図解ツールで自動生成</p>
+</footer>
+
+<!-- 編集ボタン（右下 FAB） -->
+
+<a href="https://script.google.com/macros/s/AKfycbyvk0c4seawQU-EnPLsky84_RknUcgWu4hcG-HcHRzlrIeX-glk0qgcgOD2jcOt0dzG-w/exec?slug=20260507-末藤" class="no-print fixed bottom-6 right-6 z-50 flex items-center gap-2 bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white font-bold text-base px-5 py-3 rounded-full shadow-lg transition-colors" style="bottom:calc(1.5rem + env(safe-area-inset-bottom,0px))">
+  <i data-lucide="pencil" class="w-4 h-4"></i> 編集
+</a>
+
+<script id="meeting-data" type="application/json">{"meeting":{"date":"2026年5月7日","person_name":"末藤","role":"エアドッグジャパン執行役員","company":"エアドッグジャパン","headline":"エアドッグの自治体連携と防災対策について","location":"不明","attendees_self":"","attendees_other":"","scene_type":"対話型","summary_overview":"熊本出身の末藤執行役員と初めてお会いした。地域の共通点（熊本県矢部・宮崎・九州学院といった体育の強豪校）で盛り上がり、相手は卓球の経験者とのこと。その後、エアドッグジャパンの主力商品であるエアドッグについて本題に入った。\n\n末藤さんによると、エアドッグは複数の自治体とパートナーシップを結んでいるとのこと。現在、トヨタ自動車（鹿児島地域）とも協定を結んでおり、災害時の対応を想定した連携が進んでいるという話が出た。具体的には、平時にトヨタ店舗にエアドッグを設置しておき、災害発生時には電気自動車の電源を利用して避難所にエアドッグを運び込むという体制を構想しているとのこと。\n\n過去のノト自身の事例では、エアドッグが700台寄贈されたにもかかわらず、数ヶ月間梱包されたままで被災者に届かなかったという話も聞いた。災害時には食料や水が優先されるため、空気清浄機は後回しにされてしまったというのが教訓だと述べていた。こうした背景から、事前準備型の防災対策としてトヨタとの協業が生まれたということのようだ。\n\n当社としては、宮崎県の自治体との定期的な防災ネットワーク会合があるので、そうした場面でエアドッグの紹介ができればという実感を持った。また、帰り際には、当社の江木田社長が猫を飼っているので家庭用のエアドッグが欲しいという話でも盛り上がったとのことだった。"},"know_them":{"issue":{"title":"災害時の空気清浄機のロジスティクス","detail":"過去のノト自身の事例では、エアドッグ700台が寄贈されたものの数ヶ月間梱包されたままで被災者に届かなかったという課題があるとのこと。災害時には食料や水が優先順位が高く、空気清浄機は必要性が認識されにくいという問題を指摘していた。"},"values":{"title":"事前準備型の防災対策","detail":"末藤さんは、災害が発生した後の対応ではなく、事前に公民館やトヨタ店舗などの拠点にエアドッグを配置しておくことで、感染症やインフルエンザなどの被害拡大を防止できるという考え方を強調していたとのこと。"},"expectation":{"title":"宮崎県内での自治体パートナーシップ構築","detail":"末藤さんは、宮崎県内の自治体との協定構築を希望しており、既存のパートナーシップ自治体と同様のスキームを宮崎でも実現したいという意思を示していたとのこと。当社の防災ネットワーク会合を活用した紹介の可能性も出ていた。"}},"key_points":[{"title":"トヨタとの防災連携スキーム","highlight":"平時に配置、災害時に運用する","detail":"トヨタ自動車（鹿児島）との協定で、平時にトヨタ店舗にエアドッグを設置しておき、災害発生時には電気自動車の電源を確保しながら避難所に運び込むという仕組みを構想しているとのこと。","quote":""},{"title":"自治体との既存パートナーシップ","highlight":"複数自治体での協定実績","detail":"エアドッグは既に複数の自治体とパートナーシップ協定を結んでいるとのこと。具体的な自治体名は会話中に忘れられてしまったが、宮崎県内での同様の協定構築を目指しているという話が出た。","quote":""},{"title":"ノト自身事例の教訓","highlight":"事前配置の重要性","detail":"ノト自身の際にエアドッグ700台が寄贈されたものの、数ヶ月間梱包されたままで被災者に届かなかったという事例から、災害後の対応ではなく事前準備が重要だという認識に至ったとのこと。","quote":""},{"title":"災害時の優先順位の課題","highlight":"食料・水が最優先","detail":"災害直後は食料や水が優先される傾向があり、空気清浄機のような製品は後回しにされてしまう傾向があるという話が出た。このため、事前配置による被災者の感染症対策が重要だとの認識を示していたとのこと。","quote":""},{"title":"防災ネットワークでの紹介機会","highlight":"定期的な自治体会合を活用","detail":"当社が定期的に開催している宮崎県の自治体向け防災ネットワーク会合において、エアドッグの紹介ができる可能性があるという実感を得たとのこと。","quote":""}],"next_topics":[{"label":"話題ネタ1","title":"九州学院などの熊本スポーツ文化","detail":"相手の末藤さんが卓球部出身で、九州学院などの熊本の体育強豪校の話題で盛り上がったエピソード。村上選手や陸上選手の話も出た。相手が地元への愛着とスポーツへの関心を持っていることが伝わり、次回の人間関係構築に活用できる。","icon":"heart"},{"label":"話題ネタ2","title":"ペット・猫との共通の関心","detail":"会社の江木田社長が猫を飼っており、家庭用エアドッグが欲しいという話が出た。帰り際に盛り上がった雑談で、相手も猫に関する関心があると予想される。個人的な関係構築のきっかけになりうる。","icon":"smile"}],"next_actions":[{"title":"防災ネットワーク会合でのエアドッグ紹介打ち合わせ","detail":"宮崎県自治体との定期的な防災ネットワーク会合でエアドッグを紹介するための準備を進める。末藤さんとの協力体制を確認する。","deadline":"来週中"},{"title":"エアドッグの自治体パートナーシップ事例収集","detail":"会話中に出た既存パートナーシップ自治体の具体名や協定内容を末藤さんから改めて確認し、宮崎県での展開モデルを検討する資料を作成する。","deadline":"来週中"},{"title":"江木田社長への家庭用エアドッグの提案","detail":"社長が猫を飼っているため、家庭用エアドッグの提案・サンプル提供について末藤さんに相談する。関係構築と実際の導入に向けた動き。","deadline":"今週中"}],"self_evaluation":{"good_points":["相手の地域背景や個人的な経歴（出身地・学生時代のスポーツ経験）から共通点を見つけ、雑談を通じて親近感を構築できたこと","相手が提示した防災対策の考え方（事前準備型）に対して、その重要性を理解し、適切に共感を示すことができたこと","自社の防災ネットワークという既存リソースを活用した具体的な提案ができたこと"],"improvements":[{"title":"自治体名の確認不足","detail":"相手が「すでにパートナーシップ協定を結んでいる自治体がある」と述べたが、その具体名を確認しないまま会話が進んでしまった。「ちょっと自治体は忘れたんですけども」という発言が出たにもかかわらず、フォローアップの質問が不十分だった。","suggestion":"その場で改めて「具体的にはどちらの自治体さんですか？」と確認するか、後日メールでの確認を取ることで、宮崎展開の参考事例を把握できたはず。"},{"title":"トヨタとの協業内容の詳細化不足","detail":"トヨタとの防災連携スキームについては説明を受けたが、「鹿児島のトヨタ」という曖昧な情報のままで、具体的な店舗数や配置予定数、運用体制などを深掘りしなかった。","suggestion":"トヨタのどの地域・店舗が対象なのか、実装スケジュールはいつなのか、配置台数の規模など、より具体的な事業規模を把握する質問を用意しておくべきだった。"},{"title":"相手の課題解決策の提案が受動的","detail":"相手が「空気清浄機は災害時に優先度が低い」という課題を述べたのに対し、「いいアイデアだ」と理解を示すにとどまり、当社としての解決提案や支援策を積極的に提示しなかった。","suggestion":"例えば「防災ネットワーク会合で優先度の高い形での紹介ができるか」「自治体の防災計画にエアドッグを組み込む方法」など、当社がどのように役立てるかをより主体的に提案する姿勢が必要だった。"}]}}</script>
+<script>lucide.createIcons();</script>
+</body>
+</html>
