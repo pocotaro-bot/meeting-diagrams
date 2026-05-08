@@ -35,7 +35,9 @@
       <i data-lucide="file-text" class="w-5 h-5 text-slate-500"></i> 要約・概要
     </h2>
     <div class="ads-card p-6">
-      <p class="text-base text-slate-700 leading-relaxed whitespace-pre-line">提供いただいたファイルは、数分間にわたって「【息を吸う音】」という音声のみが繰り返される内容となっており、実質的な商談や対話が行われていません。会話内容、相手方の意見表示、提案内容、合意事項など、商談に関わるいかなる情報も記録されていない状態です。音声ファイルの録音に何らかの技術的な問題が生じていた可能性が考えられます。</p>
+      <p class="text-base text-slate-700 leading-relaxed whitespace-pre-line">提供いただいた文字起こしは、「私: はい。相手: はい。」の繰り返しのみで、具体的な会話内容がございません。そのため、商談の背景・相手方の課題・提案内容・合意事項など、分析に必要な情報が全く抽出できない状態です。
+
+これでは商談図解の作成が困難です。恐れ入りますが、実際の会話内容を含む文字起こしをご確認の上、再度提供いただきますようお願い申し上げます。</p>
     </div>
   </section>
 
@@ -45,7 +47,7 @@
     <h1 class="text-2xl sm:text-3xl font-black text-slate-900 leading-tight mb-2">
       &lt;UNKNOWN&gt;さんとの対話型
     </h1>
-    <p class="text-base text-slate-500 mb-4">実質的な対話内容なし</p>
+    <p class="text-base text-slate-500 mb-4">内容不明なためレビュー不可</p>
     <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-base">
       <div>
         <p class="text-slate-400 flex items-center gap-1 mb-0.5"><i data-lucide="calendar" class="w-3.5 h-3.5"></i> 日時</p>
@@ -55,10 +57,10 @@
         <p class="text-slate-400 flex items-center gap-1 mb-0.5"><i data-lucide="user" class="w-3.5 h-3.5"></i> 相手</p>
         <p class="font-semibold text-slate-700">&lt;UNKNOWN&gt;</p>
         <p class="text-slate-500 text-sm">&lt;UNKNOWN&gt;</p>
-        
+        <p class="text-slate-500 text-sm">&lt;UNKNOWN&gt;</p>
       </div>
-      <div><p class="text-slate-400 flex items-center gap-1 mb-0.5"><i data-lucide="map-pin" class="w-3.5 h-3.5"></i> 場所</p><p class="font-semibold text-slate-700">不明</p></div>
-      
+      <div><p class="text-slate-400 flex items-center gap-1 mb-0.5"><i data-lucide="map-pin" class="w-3.5 h-3.5"></i> 場所</p><p class="font-semibold text-slate-700">&lt;UNKNOWN&gt;</p></div>
+      <div><p class="text-slate-400 flex items-center gap-1 mb-0.5"><i data-lucide="users" class="w-3.5 h-3.5"></i> 同席者</p><p class="text-slate-700 text-sm">先方: &lt;UNKNOWN&gt;</p><p class="text-slate-700 text-sm">自社: &lt;UNKNOWN&gt;</p></div>
     </div>
   </div>
 
@@ -70,18 +72,18 @@
     <div class="grid sm:grid-cols-3 gap-3">
       <div class="ads-card border-amber-200 bg-amber-50 p-4">
     <p class="text-base font-bold text-amber-600 uppercase tracking-wide mb-1">課題</p>
-    <p class="text-base font-black text-amber-700 leading-snug mb-2">対話内容が記録されていない</p>
-    <p class="text-sm text-slate-600 leading-relaxed">音声ファイルに実質的な会話が含まれていないため、相手企業の課題・ニーズを把握することができていません。</p>
+    <p class="text-base font-black text-amber-700 leading-snug mb-2">情報不足</p>
+    <p class="text-sm text-slate-600 leading-relaxed">文字起こしに実質的な会話内容がないため、相手方の課題や背景を把握できません。</p>
   </div>
       <div class="ads-card border-blue-200 bg-blue-50 p-4">
     <p class="text-base font-bold text-blue-600 uppercase tracking-wide mb-1">価値観</p>
     <p class="text-base font-black text-blue-700 leading-snug mb-2">不明</p>
-    <p class="text-sm text-slate-600 leading-relaxed">対話がないため、相手企業の価値観や優先事項を判断できません。</p>
+    <p class="text-sm text-slate-600 leading-relaxed">相手方のニーズや価値観を抽出する情報がありません。</p>
   </div>
       <div class="ads-card border-green-200 bg-green-50 p-4">
     <p class="text-base font-bold text-green-600 uppercase tracking-wide mb-1">期待</p>
     <p class="text-base font-black text-green-700 leading-snug mb-2">不明</p>
-    <p class="text-sm text-slate-600 leading-relaxed">相手からの期待値や要望が記録されていないため、次回以降の対応方針を決定できません。</p>
+    <p class="text-sm text-slate-600 leading-relaxed">当初の目的や期待値を判断する材料がありません。</p>
   </div>
     </div>
   </section>
@@ -96,30 +98,10 @@
     <div class="flex items-start gap-3">
       <span class="shrink-0 w-7 h-7 rounded-full bg-amber-500 text-white text-sm font-black flex items-center justify-center">1</span>
       <div class="flex-1 min-w-0">
-        <p class="text-lg font-black text-slate-800 leading-snug mb-2">実質的な商談内容がない</p>
-        <p class="text-base text-slate-600 leading-relaxed mb-2">提供されたファイルには会話が記録されていない状態のため、キーポイントの抽出ができません。</p>
+        <p class="text-lg font-black text-slate-800 leading-snug mb-2">文字起こし内容の確認が必要</p>
+        <p class="text-base text-slate-600 leading-relaxed mb-2">提供ファイルに実質的な会話内容がなく、分析対象となるデータがございません。</p>
         
-        
-      </div>
-    </div>
-  </div><div class="ads-card p-5">
-    <div class="flex items-start gap-3">
-      <span class="shrink-0 w-7 h-7 rounded-full bg-amber-500 text-white text-sm font-black flex items-center justify-center">2</span>
-      <div class="flex-1 min-w-0">
-        <p class="text-lg font-black text-slate-800 leading-snug mb-2">音声ファイルの技術的問題の可能性</p>
-        <p class="text-base text-slate-600 leading-relaxed mb-2">「【息を吸う音】」のみが繰り返されることから、マイク感度設定やファイル録音機器に不具合があった可能性が考えられます。</p>
-        
-        
-      </div>
-    </div>
-  </div><div class="ads-card p-5">
-    <div class="flex items-start gap-3">
-      <span class="shrink-0 w-7 h-7 rounded-full bg-amber-500 text-white text-sm font-black flex items-center justify-center">3</span>
-      <div class="flex-1 min-w-0">
-        <p class="text-lg font-black text-slate-800 leading-snug mb-2">次回対応</p>
-        <p class="text-base text-slate-600 leading-relaxed mb-2">音声ファイルの再確認または商談の再実施をお勧めします。</p>
-        
-        
+        <p class="text-base font-bold text-blue-600 mt-2">ファイルの再確認をお願いします</p>
       </div>
     </div>
   </div>
@@ -135,16 +117,10 @@
     <div class="grid sm:grid-cols-2 gap-3">
       <div class="ads-card border-purple-200 bg-purple-50 p-4">
     <p class="text-base font-bold text-purple-500 uppercase tracking-wide mb-2 flex items-center gap-1.5">
-      <i data-lucide="settings" class="w-4 h-4"></i> 録音環境の確認
+      <i data-lucide="alert-circle" class="w-4 h-4"></i> 話題ネタ1
     </p>
-    <p class="text-base font-black text-purple-800 leading-snug mb-1">音声ファイル取得環境の改善</p>
-    <p class="text-sm text-slate-600 leading-relaxed">次回は、マイク設定や周辺環境の確認を行い、会話内容が正常に記録されるか事前テストを実施してください。</p>
-  </div><div class="ads-card border-purple-200 bg-purple-50 p-4">
-    <p class="text-base font-bold text-purple-500 uppercase tracking-wide mb-2 flex items-center gap-1.5">
-      <i data-lucide="repeat" class="w-4 h-4"></i> 商談の再実施
-    </p>
-    <p class="text-base font-black text-purple-800 leading-snug mb-1">改めて商談を実施</p>
-    <p class="text-sm text-slate-600 leading-relaxed">適切に音声が記録される環境で、商談内容の記録を取り直すことを推奨します。</p>
+    <p class="text-base font-black text-purple-800 leading-snug mb-1">抽出不可</p>
+    <p class="text-sm text-slate-600 leading-relaxed">具体的な会話がないため、次回の話題候補を特定できません。</p>
   </div>
     </div>
   </section>
@@ -160,19 +136,10 @@
     <i data-lucide="arrow-right-circle" class="w-5 h-5 text-green-500 shrink-0 mt-0.5"></i>
     <div class="flex-1 min-w-0">
       <div class="flex items-center gap-2 mb-0.5 flex-wrap">
-        <p class="text-lg font-black text-slate-800">音声ファイル再確認</p>
+        <p class="text-lg font-black text-slate-800">正確な文字起こしファイルの再提供</p>
         <span class="text-sm font-bold px-2 py-0.5 rounded-full border bg-amber-50 border-amber-200 text-amber-700">今週中</span>
       </div>
-      <p class="text-sm text-slate-500 leading-relaxed">提供いただいたファイル以外に、同会合の音声記録があるかを確認してください。</p>
-    </div>
-  </div><div class="ads-card p-4 flex items-start gap-3">
-    <i data-lucide="arrow-right-circle" class="w-5 h-5 text-green-500 shrink-0 mt-0.5"></i>
-    <div class="flex-1 min-w-0">
-      <div class="flex items-center gap-2 mb-0.5 flex-wrap">
-        <p class="text-lg font-black text-slate-800">録音機器の動作確認</p>
-        <span class="text-sm font-bold px-2 py-0.5 rounded-full border bg-amber-50 border-amber-200 text-amber-700">来週中</span>
-      </div>
-      <p class="text-sm text-slate-500 leading-relaxed">使用している音声録音機器やアプリケーションの設定を点検し、次回以降は正常に記録されるよう準備してください。</p>
+      <p class="text-sm text-slate-500 leading-relaxed">実際の商談会話が記録されたファイルをご確認の上、改めてご提供ください。</p>
     </div>
   </div>
     </div>
@@ -192,29 +159,26 @@
     <div class="flex items-start gap-3">
       <i data-lucide="alert-circle" class="w-5 h-5 text-rose-400 shrink-0 mt-0.5"></i>
       <div class="flex-1 min-w-0">
-        <p class="text-base font-black text-slate-800 mb-1">録音前の機器確認が不十分</p>
-        <p class="text-base text-slate-600 leading-relaxed mb-3">このような状態のファイルが提出されたということは、事前に音声ファイルの再生テストが行われていなかった可能性があります。</p>
+        <p class="text-base font-black text-slate-800 mb-1">不明</p>
+        <p class="text-base text-slate-600 leading-relaxed mb-3">会話がないため、具体的なコミュニケーション課題の特定ができません。</p>
         <div class="bg-white border border-rose-100 rounded-xl p-3">
           <p class="text-sm font-bold text-rose-500 mb-1">改善案</p>
-          <p class="text-base text-slate-700">次回以降は、重要な商談の音声を記録する際に、レコーディング開始直後に数秒間の音声テストを行い、正常に記録されていることを確認してから本体会を開始するようにしてください。</p>
-        </div>
-      </div>
-    </div>
-  </div><div class="ads-card border-rose-100 bg-rose-50 p-5">
-    <div class="flex items-start gap-3">
-      <i data-lucide="alert-circle" class="w-5 h-5 text-rose-400 shrink-0 mt-0.5"></i>
-      <div class="flex-1 min-w-0">
-        <p class="text-base font-black text-slate-800 mb-1">ファイル提出前の品質チェック漏れ</p>
-        <p class="text-base text-slate-600 leading-relaxed mb-3">商談内容が記録されていないファイルが分析用として提出されたことから、納品前のファイル確認プロセスが機能していません。</p>
-        <div class="bg-white border border-rose-100 rounded-xl p-3">
-          <p class="text-sm font-bold text-rose-500 mb-1">改善案</p>
-          <p class="text-base text-slate-700">音声ファイルをこちらに提供する前に、必ず再生して内容が記録されていることを確認するステップを組み込んでください。</p>
+          <p class="text-base text-slate-700">実際の会話内容をお確かめの上、改めてファイルをご提供ください。</p>
         </div>
       </div>
     </div>
   </div>
     </div>
     
+    <div class="ads-card p-5 mt-3">
+      <div class="flex items-center gap-2 mb-3">
+        <i data-lucide="check" class="w-4 h-4 text-green-500 shrink-0"></i>
+        <p class="text-lg font-bold text-slate-700">できていたこと</p>
+      </div>
+      <ul class="space-y-3 text-base text-slate-500">
+        <li class="flex items-start gap-2"><span class="text-green-500 font-bold shrink-0 mt-0.5">•</span><span>対面における基本的な相槌は取れている可能性がある</span></li>
+      </ul>
+    </div>
   </section>
 
 </main>
@@ -229,7 +193,7 @@
   <i data-lucide="pencil" class="w-4 h-4"></i> 編集
 </a>
 
-<script id="meeting-data" type="application/json">{"meeting":{"date":"2026年5月8日","person_name":"<UNKNOWN>","company":"<UNKNOWN>","role":"","headline":"実質的な対話内容なし","summary_overview":"提供いただいたファイルは、数分間にわたって「【息を吸う音】」という音声のみが繰り返される内容となっており、実質的な商談や対話が行われていません。会話内容、相手方の意見表示、提案内容、合意事項など、商談に関わるいかなる情報も記録されていない状態です。音声ファイルの録音に何らかの技術的な問題が生じていた可能性が考えられます。","scene_type":"対話型","attendees_self":"","attendees_other":"","location":"不明"},"know_them":{"issue":{"title":"対話内容が記録されていない","detail":"音声ファイルに実質的な会話が含まれていないため、相手企業の課題・ニーズを把握することができていません。"},"values":{"title":"不明","detail":"対話がないため、相手企業の価値観や優先事項を判断できません。"},"expectation":{"title":"不明","detail":"相手からの期待値や要望が記録されていないため、次回以降の対応方針を決定できません。"}},"key_points":[{"title":"実質的な商談内容がない","detail":"提供されたファイルには会話が記録されていない状態のため、キーポイントの抽出ができません。","highlight":""},{"title":"音声ファイルの技術的問題の可能性","detail":"「【息を吸う音】」のみが繰り返されることから、マイク感度設定やファイル録音機器に不具合があった可能性が考えられます。","highlight":""},{"title":"次回対応","detail":"音声ファイルの再確認または商談の再実施をお勧めします。","highlight":""}],"next_topics":[{"label":"録音環境の確認","title":"音声ファイル取得環境の改善","detail":"次回は、マイク設定や周辺環境の確認を行い、会話内容が正常に記録されるか事前テストを実施してください。","icon":"settings"},{"label":"商談の再実施","title":"改めて商談を実施","detail":"適切に音声が記録される環境で、商談内容の記録を取り直すことを推奨します。","icon":"repeat"}],"next_actions":[{"title":"音声ファイル再確認","deadline":"今週中","detail":"提供いただいたファイル以外に、同会合の音声記録があるかを確認してください。"},{"title":"録音機器の動作確認","deadline":"来週中","detail":"使用している音声録音機器やアプリケーションの設定を点検し、次回以降は正常に記録されるよう準備してください。"}],"self_evaluation":{"good_points":[],"improvements":[{"title":"録音前の機器確認が不十分","detail":"このような状態のファイルが提出されたということは、事前に音声ファイルの再生テストが行われていなかった可能性があります。","suggestion":"次回以降は、重要な商談の音声を記録する際に、レコーディング開始直後に数秒間の音声テストを行い、正常に記録されていることを確認してから本体会を開始するようにしてください。"},{"title":"ファイル提出前の品質チェック漏れ","detail":"商談内容が記録されていないファイルが分析用として提出されたことから、納品前のファイル確認プロセスが機能していません。","suggestion":"音声ファイルをこちらに提供する前に、必ず再生して内容が記録されていることを確認するステップを組み込んでください。"}]}}</script>
+<script id="meeting-data" type="application/json">{"meeting":{"date":"2026年5月8日","person_name":"<UNKNOWN>","headline":"内容不明なためレビュー不可","summary_overview":"提供いただいた文字起こしは、「私: はい。相手: はい。」の繰り返しのみで、具体的な会話内容がございません。そのため、商談の背景・相手方の課題・提案内容・合意事項など、分析に必要な情報が全く抽出できない状態です。\n\nこれでは商談図解の作成が困難です。恐れ入りますが、実際の会話内容を含む文字起こしをご確認の上、再度提供いただきますようお願い申し上げます。","scene_type":"対話型","company":"<UNKNOWN>","role":"<UNKNOWN>","location":"<UNKNOWN>","attendees_self":"<UNKNOWN>","attendees_other":"<UNKNOWN>"},"know_them":{"issue":{"title":"情報不足","detail":"文字起こしに実質的な会話内容がないため、相手方の課題や背景を把握できません。"},"values":{"title":"不明","detail":"相手方のニーズや価値観を抽出する情報がありません。"},"expectation":{"title":"不明","detail":"当初の目的や期待値を判断する材料がありません。"}},"key_points":[{"title":"文字起こし内容の確認が必要","detail":"提供ファイルに実質的な会話内容がなく、分析対象となるデータがございません。","highlight":"ファイルの再確認をお願いします"}],"next_topics":[{"label":"話題ネタ1","title":"抽出不可","detail":"具体的な会話がないため、次回の話題候補を特定できません。","icon":"alert-circle"}],"next_actions":[{"title":"正確な文字起こしファイルの再提供","deadline":"今週中","detail":"実際の商談会話が記録されたファイルをご確認の上、改めてご提供ください。"}],"self_evaluation":{"good_points":["対面における基本的な相槌は取れている可能性がある"],"improvements":[{"title":"不明","detail":"会話がないため、具体的なコミュニケーション課題の特定ができません。","suggestion":"実際の会話内容をお確かめの上、改めてファイルをご提供ください。"}]}}</script>
 <script>lucide.createIcons();</script>
 </body>
 </html>
